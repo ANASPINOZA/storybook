@@ -1,0 +1,83 @@
+<div class="div">
+    <div class="div-2">
+      <div class="div-3">Informations Patient</div>
+      <button class="div-4">Choisir un patient existant</button>
+    </div>
+    <div class="div-5"></div>
+    <div class="div-6">
+      <div class="div-7">
+        <div class="div-8">
+          <div class="column">
+            <div class="div-9">
+              <div class="div-10">Nom</div>
+              <input type="text" class="div-11" [placeholder]="familyNamePlaceholder" />
+            </div>
+          </div>
+          <div class="column-2">
+            <div class="div-13">
+              <div class="div-14">Prénom</div>
+              <input type="text" class="div-15"[placeholder]="namePlaceholder" />
+            </div>
+          </div>
+          <div class="column-3">
+            <div class="div-13">
+              <div class="div-17">Téléphone</div>
+              <input
+                type="text"
+                class="div-15"
+                [placeholder]="phonePlaceholder"
+               
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div-7">
+        <div class="div-8">
+          <div class="column-4">
+            <div class="div-16">
+              <div class="div-12">Address</div>
+              <input
+                type="text"
+                class="div-22"
+                [placeholder]="addressPlaceholder"
+              />
+            </div>
+          </div>
+  
+          <div class="column-5">
+            <div class="div-16">
+              <div class="div-12">ville</div>
+              <input type="text" class="div-23" [placeholder]="cityPlaceholder" />
+          </div>
+        </div>
+      </div>
+  
+      <div class="div-24">Antécédants</div>
+      <input
+        type="text"
+        class="div-25"
+        [placeholder]="AntecedentPlaceholder"
+      />
+      <div class="custom-check-container">
+        <span>Mutuelle</span>
+        <label class="custom-check">
+          Oui
+          <input type="radio" name="customCheck" value="yes" />
+          <span class="checkmark"></span>
+        </label>
+        <label class="custom-check">
+          No
+          <input type="radio" name="customCheck" value="no" />
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      <div class="div-27">Remarque</div>
+      <input
+        type="text"
+        class="div-28"
+        [placeholder]="remarkPlaceholder"
+      />
+      <!-- <button [ngStyle]="{ 'background-color': backgroundColor }" class="button-suivant">Suivant</button> -->
+    </div>
+  </div>

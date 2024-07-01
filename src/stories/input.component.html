@@ -1,0 +1,16 @@
+<!-- <input
+  [ngClass]="classes"
+  [placeholder]="placeholder"
+  [ngStyle]="{ 'border-radius': borferRadius + 'px' , 'background-color': backgroundColor, 'border-width': borderWidth}"
+  /> -->
+
+  
+  <!-- [(ngModel)]="value" -->
+
+  <input
+  [ngClass]="classes"
+  [placeholder]="placeholder"
+  [ngStyle]="{ 'border-radius': borferRadius + 'px' , 'background-color': backgroundColor, 'border-width': borderWidth}"
+  [value]="value"
+  (input)="onInput($event)"
+/>

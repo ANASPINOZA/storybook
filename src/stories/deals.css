@@ -1,0 +1,143 @@
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    color: #fff;
+    overflow: hidden;
+    /* padding: 80px 60px 0; */
+    position: relative;
+    aspect-ratio: 1.36;
+    width: 100%;
+  }
+
+  .main-image {
+    position: absolute;
+    /* inset: 0; */
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+  }
+
+  .price-tag {
+    background-color: #c15b00;
+    display: flex;
+    gap: 13px;
+    margin-top: 121px;
+    padding: 16px 15px;
+    position: relative;
+  }
+
+  .price-label {
+    align-self: start;
+    font: 400 14px/214% Roboto, sans-serif;
+    letter-spacing: 0.28px;
+  }
+
+  .price-amount {
+    flex-grow: 1;
+    font: 700 23px/130% Roboto, sans-serif;
+    letter-spacing: 0.46px;
+  }
+
+  .package-content {
+    color: #303030;
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    margin-top: 15px;
+    padding: 0 23px;
+    /* width: 100%; */
+  }
+
+  .package-title {
+    font: 24px/142% Roboto, sans-serif;
+    letter-spacing: 0.48px;
+  }
+
+  .secondary-image {
+    aspect-ratio: 6.25;
+    margin-top: 9px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    width: 108px;
+  }
+
+  .package-description {
+    color: #a5a5a5;
+    font: 500 10px/16px Roboto, sans-serif;
+    letter-spacing: 0.2px;
+    margin-top: 14px;
+  }
+
+  .location-info {
+    display: flex;
+    gap: 11px;
+    font-size: 12px;
+    letter-spacing: 0.24px;
+    line-height: 133%;
+    margin-top: 14px;
+    white-space: nowrap;
+  }
+
+  .location-icon {
+    aspect-ratio: 0.7;
+    object-fit: contain;
+    object-position: center;
+    width: 12px;
+  }
+
+  .location-text {
+    font-family: Roboto, sans-serif;
+    margin: auto 0;
+  }
+
+  .duration-info {
+    display: flex;
+    gap: 9px;
+    font-size: 12px;
+    letter-spacing: 0.24px;
+    line-height: 133%;
+    margin-top: 10px;
+  }
+
+  .duration-icon {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: 16px;
+  }
+
+  .duration-text {
+    font-family: Roboto, sans-serif;
+    flex-grow: 1;
+    margin: auto 0;
+  }
+
+  .book-button {
+    align-items: center;
+    background-color: #f18904;
+    border-radius: 25px;
+    box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.16);
+    color: #fff;
+    font: 900 16px/212.5% Roboto, sans-serif;
+    justify-content: center;
+    letter-spacing: 0.32px;
+    margin-top: 25px;
+    padding: 19px 60px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    /* border-color: transparent; */
+    border : none;
+  }
+
+  .package-card {
+    background-color: #fcf2f1;
+    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.16);
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+    padding-bottom: 14px;
+  }

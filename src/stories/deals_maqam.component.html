@@ -1,0 +1,34 @@
+    <div class="package-card">
+      <div class="image-container">
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f76a29704f019baee0a279e9f63b8965ee55f384a041eca272da9e243df8e849?apiKey=f644630b81d540c5aba02169a7be7c6a&" class="main-image" alt="Travel destination image" />
+        <div
+        [ngStyle]="{ 'background-color': priceBackgroundColor }"
+        class="price-tag">
+          <span class="price-label">From</span>
+          <!-- <span class="price-amount">15000 MAD</span> -->
+          <span class="price-amount">{{price}} MAD</span>
+        </div>
+      </div>
+      <div class="package-content">
+        <!-- <h1 class="package-title">Marin Skyline</h1> -->
+        <h1 class="package-title"> {{title}} </h1>
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/13667f0bec3264bc95506bcd7beb8f68cfaf06ccbd053478ed737d46bdd796b6?apiKey=f644630b81d540c5aba02169a7be7c6a&" class="secondary-image" alt="Marin Skyline view" />
+        <p class="package-description"> Lorem Ipsum est un texte d’espace réservé couramment utilisé dans les industries graphique, imprimée et éditoriale pour prévisualiser les ….. </p>
+        <div class="location-info">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c210cfb35e01ad7ed0db2fc878b1bd465777e2ef7dec655387908abe9fcca5e0?apiKey=f644630b81d540c5aba02169a7be7c6a&" class="location-icon" alt="Location icon" />
+          <!-- <span class="location-text">Dubai</span> -->
+          <span class="location-text">{{location}} </span>
+        </div>
+        <div class="duration-info">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ed77c43ca719e0294e8630ecfbf6ef54ba0e58e094b39eec19a5dd7715c3aede?apiKey=f644630b81d540c5aba02169a7be7c6a&" class="duration-icon" alt="Clock icon" />
+          <!-- <span class="duration-text">7 Day 6 Night</span> -->
+          <span class="duration-text">{{duration}} </span>
+        </div>
+        <!-- <a href="#" class="book-button">BOOK NOW</a> -->
+        <button
+        [ngStyle]="{ 'background-color': backgroundColor }"
+        href="#" class="book-button">{{label}}</button>
+        
+      </div>
+    </div>
+ 
