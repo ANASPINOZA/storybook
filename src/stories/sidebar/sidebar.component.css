@@ -1,0 +1,43 @@
+.sidebar {
+  border-radius: 54px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+  background-color: #000;
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 21px;
+  max-height: 100vh;
+}
+.sidebar-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar-icon {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.sidebar-icon img {
+  width: 100%;
+  height: auto;
+}
+.icon-spacing {
+  margin-top: 31px;
+}
+.icon-spacing-large {
+  margin-top: 32px;
+}
+.icon-spacing-extra {
+  margin-top: 33px;
+}
+.icon-square {
+  aspect-ratio: 1;
+}
+.icon-wide {
+  aspect-ratio: 1.12;
+}
+.icon-extra-wide {
+  aspect-ratio: 1.27;
+}
