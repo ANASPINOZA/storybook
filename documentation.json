@@ -977,6 +977,133 @@
             "templateData": "<div class=\"div\">\r\n    <div class=\"div-2\">\r\n      <div class=\"div-3\">Informations Patient</div>\r\n      <button class=\"div-4\">Choisir un patient existant</button>\r\n    </div>\r\n    <div class=\"div-5\"></div>\r\n    <div class=\"div-6\">\r\n      <div class=\"div-7\">\r\n        <div class=\"div-8\">\r\n          <div class=\"column\">\r\n            <div class=\"div-9\">\r\n              <div class=\"div-10\">Nom</div>\r\n              <input type=\"text\" class=\"div-11\" [placeholder]=\"familyNamePlaceholder\" />\r\n            </div>\r\n          </div>\r\n          <div class=\"column-2\">\r\n            <div class=\"div-13\">\r\n              <div class=\"div-14\">Prénom</div>\r\n              <input type=\"text\" class=\"div-15\"[placeholder]=\"namePlaceholder\" />\r\n            </div>\r\n          </div>\r\n          <div class=\"column-3\">\r\n            <div class=\"div-13\">\r\n              <div class=\"div-17\">Téléphone</div>\r\n              <input\r\n                type=\"text\"\r\n                class=\"div-15\"\r\n                [placeholder]=\"phonePlaceholder\"\r\n               \r\n              />\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"div-7\">\r\n        <div class=\"div-8\">\r\n          <div class=\"column-4\">\r\n            <div class=\"div-16\">\r\n              <div class=\"div-12\">Address</div>\r\n              <input\r\n                type=\"text\"\r\n                class=\"div-22\"\r\n                [placeholder]=\"addressPlaceholder\"\r\n              />\r\n            </div>\r\n          </div>\r\n  \r\n          <div class=\"column-5\">\r\n            <div class=\"div-16\">\r\n              <div class=\"div-12\">ville</div>\r\n              <input type=\"text\" class=\"div-23\" [placeholder]=\"cityPlaceholder\" />\r\n          </div>\r\n        </div>\r\n      </div>\r\n  \r\n      <div class=\"div-24\">Antécédants</div>\r\n      <input\r\n        type=\"text\"\r\n        class=\"div-25\"\r\n        [placeholder]=\"AntecedentPlaceholder\"\r\n      />\r\n      <div class=\"custom-check-container\">\r\n        <span>Mutuelle</span>\r\n        <label class=\"custom-check\">\r\n          Oui\r\n          <input type=\"radio\" name=\"customCheck\" value=\"yes\" />\r\n          <span class=\"checkmark\"></span>\r\n        </label>\r\n        <label class=\"custom-check\">\r\n          No\r\n          <input type=\"radio\" name=\"customCheck\" value=\"no\" />\r\n          <span class=\"checkmark\"></span>\r\n        </label>\r\n      </div>\r\n      <div class=\"div-27\">Remarque</div>\r\n      <input\r\n        type=\"text\"\r\n        class=\"div-28\"\r\n        [placeholder]=\"remarkPlaceholder\"\r\n      />\r\n      <!-- <button [ngStyle]=\"{ 'background-color': backgroundColor }\" class=\"button-suivant\">Suivant</button> -->\r\n    </div>\r\n  </div>"
         },
         {
+            "name": "TestComponent",
+            "id": "component-TestComponent-c9ed2e3c780886747db95d8f24212ebc65becb01b336003ff500eb7f77f47b459704b528f5080934d723a40cdc701ac84d34c10db78910d5edb153aeee9c1a57",
+            "file": "src/stories/test.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-test",
+            "styleUrls": [
+                "./test.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./test.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "defaultValue": "'500px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-test',\n  templateUrl: './test.component.html',\n  styleUrls: ['./test.component.css']\n})\nexport class TestComponent {\n\n  @Input()  width:string = '500px';\n  \n  @Input()  \n  color?:string;\n\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".test{\r\n    height: 70px;\r\n    color: red;\r\n}",
+                    "styleUrl": "./test.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<p\n[ngStyle]=\"{'font-size': size, 'color': color}\"\n>test works!\n</p>"
+        },
+        {
+            "name": "TestComponent",
+            "id": "component-TestComponent-2d8b8a0c55053489b9ca2812fa8d1f2ce560f94b29f80061e884d7aa94698b194937cb5df9d8a185bf49fdb184405b6e01ea7ca4a7e8a7c43d7e2105a57ff79d-1",
+            "file": "src/app/test/test.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-test",
+            "styleUrls": [
+                "./test.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./test.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "color",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "size",
+                    "defaultValue": "'500px'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-test',\n  templateUrl: './test.component.html',\n  styleUrls: ['./test.component.css']\n})\nexport class TestComponent {\n\n  @Input()  size:string = '500px';\n  \n  @Input()  \n  color?:string;\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".test{\r\n    height: 70px;\r\n    color: red;\r\n}",
+                    "styleUrl": "./test.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "TestComponent-1",
+            "templateData": "<p\n[ngStyle]=\"{'font-size': size, 'color': color}\"\n>test works!\n</p>"
+        },
+        {
             "name": "TextAreaComponent",
             "id": "component-TextAreaComponent-0bbf04d94fcbd6a589ccfb7812f3b227a6dac07d0a5a7c27aa7027950e833302380c6d0feb17249ef22efb040a61ae4b25b507666806c2ef603918e4b371f1bb",
             "file": "src/stories/textArea.component.ts",
@@ -1039,13 +1166,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-07e7ccf6d8b670e23112defc6731178826fc1dd968bafd0dc26f4c288f385e98a3b8d85ccba99af6e3dd552606ebd1115b88d248e9798c296c989aa158c07b22",
+            "id": "module-AppModule-adbd5a2953852b8f3cecaa8d0195c1fef442a1eb213385ee8dc5df29a9fc512cb93dc8617d772c3b0e5a471ffa77ec83801406f68d6052c4cfa291c19dcfaa1c",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { ButtonComponent } from './../stories/button.component';\nimport { InputComponent } from './../stories/input.component';\nimport { TextAreaComponent } from './../stories/textArea.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    ButtonComponent,\n    InputComponent,\n    TextAreaComponent,\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\nimport { BrowserModule } from '@angular/platform-browser';\n\nimport { AppRoutingModule } from './app-routing.module';\nimport { AppComponent } from './app.component';\nimport { ButtonComponent } from './../stories/button.component';\nimport { InputComponent } from './../stories/input.component';\nimport { TextAreaComponent } from './../stories/textArea.component';\nimport { TestComponent } from './test/test.component';\n\n@NgModule({\n  declarations: [\n    AppComponent,\n    TestComponent,\n  ],\n  imports: [\n    BrowserModule,\n    AppRoutingModule,\n    ButtonComponent,\n    InputComponent,\n    TextAreaComponent,\n  ],\n  providers: [],\n  bootstrap: [AppComponent]\n})\nexport class AppModule { }\n",
             "children": [
                 {
                     "type": "providers",
@@ -1147,7 +1274,7 @@
         ]
     },
     "coverage": {
-        "count": 11,
+        "count": 9,
         "status": "low",
         "files": [
             {
@@ -1155,6 +1282,15 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "AppComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/test/test.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TestComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/3",
                 "status": "low"
@@ -1211,6 +1347,15 @@
                 "name": "patientInfosComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/18",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/test.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TestComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {

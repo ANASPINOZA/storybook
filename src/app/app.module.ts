@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { ButtonComponent } from './../stories/button.component';
 import { InputComponent } from './../stories/input.component';
 import { TextAreaComponent } from './../stories/textArea.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    TestComponent,
   ],
   imports: [
     BrowserModule,
