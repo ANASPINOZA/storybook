@@ -1,0 +1,139 @@
+/* button-container Primary text */
+.button {
+  border-radius: 100px;
+  background-color: #5c4abd;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  font: 400 16px Inter, sans-serif;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* button-container secondary text */
+.button-label {
+  border-radius: 100px;
+  border: 2px solid rgba(92, 74, 189, 1);
+  background-color: #fff;
+  color: #5c4abd;
+  padding: 16px 32px;
+  font: 400 16px Inter, sans-serif;
+  display: inline-block;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+
+}
+
+/* button-container Primary text&icon  */
+.button-container {
+  border-radius: 100px;
+  background-color: #5c4abd;
+  display: flex;
+  gap: 8px;
+  font-size: 16px;
+  color: #fff;
+  font-weight: 400;
+  padding: 14px 32px;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.button-icon {
+  aspect-ratio: 0.63;
+  object-fit: auto;
+  object-position: center;
+  width: 10px;
+  fill: #fff;
+}
+.button-text {
+  font-family: Inter, sans-serif;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* button-container Secondary text&icon  */
+.bouton-conteneur {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  border-radius: 100px;
+  border: 2px solid #5c4abd;
+  background-color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5c4abd;
+  width: 100%;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.bouton-icone {
+  width: 10px;
+  aspect-ratio: 0.63;
+  object-fit: auto;
+  object-position: center;
+  fill: #5c4abd;
+}
+.bouton-texte {
+  font-family: Inter, sans-serif;
+}
+
+/* button-container Tertiary text&icon */
+.custom-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 32px;
+  background-color: #fff;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #5c4abd;
+  width: 100%;
+  margin-top: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.custom-button-icon {
+  aspect-ratio: 0.63;
+  object-fit: auto;
+  object-position: center;
+  width: 10px;
+  fill: #5c4abd;
+  margin-top: 4px;
+}
+.screen-reader-text {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+ /* button-container Primary Icon   */
+ 
+
+ /* button-container Secondary Icon   */

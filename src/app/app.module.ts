@@ -6,10 +6,15 @@ import { AppComponent } from './app.component';
 import { ButtonComponent } from './../stories/button.component';
 import { InputComponent } from './../stories/input.component';
 import { TextAreaComponent } from './../stories/textArea.component';
+import { BtnIconComponent } from '../stories/btn-icon/btn-icon.component';
+import { SideBarComponent } from '../stories/side-bar/side-bar.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    BtnIconComponent,
+    SideBarComponent,
   ],
   imports: [
     BrowserModule,

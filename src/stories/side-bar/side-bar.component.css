@@ -1,0 +1,146 @@
+.sidebar {
+  background-color: #5c4abd;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.102);
+  display: flex;
+  max-width: 298px;
+  flex-direction: column;
+  padding: 35px 0 19px;
+}
+
+.sidebar-title {
+  color: #fff;
+  align-self: center;
+  font: 400 28px Inter, sans-serif;
+}
+
+.dashboard-link {
+  display: flex;
+  flex-direction: column;
+  fill: #fff;
+  overflow: hidden;
+  align-self: start;
+  position: relative;
+  aspect-ratio: 4.74;
+  margin-top: 55px;
+  gap: 20px;
+  font: 700 18px Montserrat, sans-serif;
+  color: #5c4abd;
+  padding: 20px 36px;
+}
+
+.dashboard-bg {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.dashboard-icon {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 20px;
+  align-self: start;
+}
+
+.dashboard-text {
+  position: relative;
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.nav-container {
+  display: flex;
+  margin-top: 29px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 39px 0 16px;
+}
+
+.nav-title {
+  color: #fff;
+  font: 500 18px Montserrat, sans-serif;
+}
+
+.nav-item {
+  display: flex;
+  gap: 20px;
+  font: 500 18px Montserrat, sans-serif;
+  color: #fff;
+}
+
+.nav-icon {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 21px;
+}
+
+.nav-text {
+  flex-grow: 1;
+  flex-basis: auto;
+}
+
+.divider {
+  border: 2px solid #e0def5;
+  align-self: start;
+  width: 228px;
+  margin: 34px 0 0 15px;
+}
+
+.notification-container {
+  align-self: start;
+  display: flex;
+  width: 100%;
+  gap: 20px;
+  white-space: nowrap;
+  justify-content: space-between;
+  margin: 42px 0 0 15px;
+}
+
+.notification-badge {
+  border-radius: 8px;
+  background-color: #fff;
+  color: #5c4abd;
+  text-align: center;
+  letter-spacing: -0.11px;
+  justify-content: center;
+  margin: auto 0;
+  padding: 4px 0;
+  font: 400 11px/382% Inter, sans-serif;
+}
+
+.user-profile {
+  align-self: stretch;
+  display: flex;
+  margin-top: 43px;
+  gap: 10px;
+  font: 16px Montserrat, sans-serif;
+  color: #fff;
+  line-height: 144%;
+}
+
+.user-avatar {
+  aspect-ratio: 1;
+  object-fit: auto;
+  object-position: center;
+  width: 61px;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+}
+
+.user-name {
+  font-weight: 600;
+}
+
+.user-role {
+  font-weight: 300;
+  margin-top: 7px;
+}
