@@ -79,5 +79,14 @@ export const PatientInfoButton: Story = {
     borderWidth: '1px',
     // backgroundColor: '#a300cb',
   },
+
 };
 
+export const searchButton :Story = {
+  args: {
+      label: 'Search',
+      backgroundColor: '#d80c5c',
+      textColor: '#ffffff'
+    }
+
+}
