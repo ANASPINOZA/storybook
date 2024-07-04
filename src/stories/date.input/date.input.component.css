@@ -1,0 +1,58 @@
+.date-picker {
+  border-radius: 37px;
+  border: 2px solid rgba(180, 180, 180, 1);
+  background-color: #fff;
+  display: flex;
+  /* max-width: 461px; */
+  width:100%;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 27px;
+  position: relative;
+}
+
+.date-display {
+  font-family: Montserrat, sans-serif;
+  font-size: 18px;
+  color: #707070;
+  font-weight: 400;
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.calendar-input {
+  width: 29px;
+  height: 29px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.calendar-input::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
+.date-picker::after {
+  content: "";
+  position: absolute;
+  right: 27px;
+  width: 29px;
+  height: 29px;
+  background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/8c040abc14104031ef4a559c9ff9638abc732a2ef176cb893a93b03252c1405d?apiKey=57cc64fc12b74717af3404d1085676ef&');
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+.date-picker.invalid {
+border-color: red;
+}

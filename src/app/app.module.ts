@@ -6,10 +6,12 @@ import { AppComponent } from './app.component';
 import { ButtonComponent } from './../stories/button.component';
 import { InputComponent } from './../stories/input.component';
 import { TextAreaComponent } from './../stories/textArea.component';
+import { DateInputComponent } from '../stories/date.input/date.input.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DateInputComponent,
   ],
   imports: [
     BrowserModule,
