@@ -1,34 +1,4 @@
-.facebook-card {
-  width: 100%;
-  border-radius: 33px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-  border: 1px solid #fff;
-  background-color: #f5f4f1;
-  display: flex;
-  max-width: 100%;
-  flex-direction: column;
-  font-size: 20px;
-  color: #000;
-  font-weight: 700;
-  padding: 32px 235px;
-}
-
-.facebook-icon {
-  aspect-ratio: 0.53;
-  object-fit: auto;
-  object-position: center;
-  width: 39px;
-  fill: #000;
-  align-self: center;
-}
-
-.facebook-title {
-  text-align: center;
-  font-family: Montserrat, sans-serif;
-  margin-top: 37px;
-}
-.x-twitter-card {
-  width: 100%;
+.icon-card {
   border-radius: 33px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
   border: 1px solid #fff;
@@ -40,149 +10,18 @@
   color: #000;
   font-weight: 700;
   padding: 62px 57px 29px;
+  text-decoration: none;
 }
 
-.x-twitter-logo {
-  aspect-ratio: 0.53;
-  object-fit: auto;
-  object-position: center;
-  width: 39px;
-  fill: #000;
+.icon {
+  font-size: 60px;
+  color: #000;
   align-self: center;
 }
 
-.x-twitter-text {
-  text-align: center;
+.icon-title {
   font-family: Montserrat, sans-serif;
   margin-top: 37px;
-}.youtube-card {
-  width: 100%;
-  border-radius: 33px;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-  border: 1px solid #fff;
-  background-color: #f5f4f1;
-  display: flex;
-  max-width: 100%;
-  flex-direction: column;
-  font-size: 20px;
-  color: #000;
-  font-weight: 700;
-  padding: 62px 57px 29px;
-}
-
-.youtube-icon {
-  aspect-ratio: 0.53;
-  object-fit: auto;
-  object-position: center;
-  width: 39px;
-  fill: #000;
-  align-self: center;
-}
-
-.youtube-title {
-  text-align: center;
-  font-family: Montserrat, sans-serif;
-  margin-top: 37px;
-}
-
-.facebook-page-card {
-  border-radius: 33px;
-  width: 100%;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-  border: 1px solid #fff;
-  background-color: #f5f4f1;
-  display: flex;
-  max-width: 100%;
-  flex-direction: column;
-  font-size: 20px;
-  color: #000;
-  font-weight: 700;
-  padding: 59px 56px 25px;
-}
-
-.facebook-icon {
-  aspect-ratio: 0.83;
-  object-fit: auto;
-  object-position: center;
-  width: 74px;
-  fill: #fa830b;
-  align-self: center;
-}
-
-.card-title {
-  font-family: Montserrat, sans-serif;
-  margin-top: 24px;
   text-align: center;
 }
 
-.facebook-posts-card {
-  border-radius: 33px;
-  width: 100%;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-  border: 1px solid #fff;
-  background-color: #f5f4f1;
-  display: flex;
-  max-width: 100%;
-  flex-direction: column;
-  font-size: 20px;
-  color: #000;
-  font-weight: 700;
-  padding: 56px 56px 29px;
-}
-
-.facebook-icon {
-  aspect-ratio: 0.85;
-  object-fit: auto;
-  object-position: center;
-  width: 76px;
-  align-self: center;
-}
-
-.card-title {
-  font-family: Montserrat, sans-serif;
-  margin-top: 27px;
-  text-align: center;
-}
-
-
-.facebook-comments-card {
-  border-radius: 33px;
-  width: 100%;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-  border: 1px solid #fff;
-  background-color: #f5f4f1;
-  display: flex;
-  max-width: 100%;
-  flex-direction: column;
-  font-size: 20px;
-  color: #000;
-  font-weight: 700;
-  padding: 59px 21px 29px;
-}
-
-.facebook-icon {
-  aspect-ratio: 1.15;
-  object-fit: auto;
-  object-position: center;
-  width: 92px;
-  fill: #fa830b;
-  align-self: center;
-}
-
-.card-title {
-  font-family: Montserrat, sans-serif;
-  margin-top: 33px;
-  text-align: center;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
