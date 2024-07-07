@@ -4,6 +4,7 @@ import { IconComponent } from './icon.component';
 
 const meta: Meta<IconComponent> = {
   component: IconComponent,
+  tags: ['autodocs'],
 };
 
 export default meta;
@@ -13,8 +14,9 @@ export const Primary: Story = {
   // 👇 Rename this story
   name: 'primary',
   args: {
-    label: 'Facebook',
-    primary: true,
+    label: 'twitter',
+    icon: 'fa-brands fa-x-twitter'
+    // primary: true,
   },
 };
 export const secondary: Story = {
@@ -22,6 +24,7 @@ export const secondary: Story = {
   name: 'I am the primary',
   args: {
     label: 'Facebook',
-    primary: true,
+    icon:'fa-brands fa-facebook-f fa-xl'
+    // primary: true,
   },
 };
