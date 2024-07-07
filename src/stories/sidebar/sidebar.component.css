@@ -5,39 +5,34 @@
   display: flex;
   max-width: 100%;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   padding: 80px 21px;
-  max-height: 100vh;
+  margin: auto;
 }
-.sidebar-icons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+
 .sidebar-icon {
   width: 100%;
+  margin-top: 31px;
+  color: #fff;
+  font-size: 24px;
+  text-decoration: none;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
-.sidebar-icon img {
-  width: 100%;
-  height: auto;
+
+.sidebar-icon:first-child {
+  margin-top: 17px;
 }
-.icon-spacing {
-  margin-top: 31px;
-}
-.icon-spacing-large {
+
+.sidebar-icon-square {
   margin-top: 32px;
 }
-.icon-spacing-extra {
-  margin-top: 33px;
+
+.sidebar-icon-wide {
+  margin-top: 32px;
 }
-.icon-square {
-  aspect-ratio: 1;
-}
-.icon-wide {
-  aspect-ratio: 1.12;
-}
-.icon-extra-wide {
-  aspect-ratio: 1.27;
+
+.sidebar-icon-wider {
+  margin-top: 32px;
 }

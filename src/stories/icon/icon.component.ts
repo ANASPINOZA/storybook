@@ -1,20 +1,20 @@
 import { Component, Input } from '@angular/core';
-
 @Component({
   selector: 'app-icon',
   templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.css'],
   template: `
-    <a href="#" class="facebook-card" [ngStyle]="{ 'width': iconwidth}">
-      <i [ngClass]="icon" [ngStyle]="{ 'color': iconColor,}" class="facebook-icon"></i>
-      <h2 class="facebook-title" [ngStyle]="{ 'color': labelColor, }">{{ label }}</h2>
+    <a href="#" class="icon-card" >
+      <i [ngClass]="icon" class="icon " [ngStyle]="{ color: iconColor }"></i>
+      <h2 class="icon-title" [ngStyle]="{ color: labelColor }">{{ label }}</h2>
     </a>
   `,
 })
 export class IconComponent {
-  @Input() label: string = 'facebook';
-  @Input() icon: string = 'fa-brands fa-facebook-f';
-  @Input() iconColor?: string;
-  @Input() labelColor?: string;
-  @Input() iconwidth?: string;
+  @Input() label: string = 'Facebook';
+  @Input() icon?: string ;
+  // @Input() iconActions?: string ;
+  @Input() iconColor: string = '#000';
+  // @Input() labelColor: string = '#000';
+  // @Input() iconwidth: string = '100%';
 }

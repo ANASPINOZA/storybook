@@ -1,28 +1,38 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { IconComponent } from './icon.component';
 
+const colorOptions = {
+  Black: '#000',
+  Orange: '#FA830B',
+};
+
+const iconOptions = {
+  Facebook: 'fa-brands fa-facebook-f',
+  'X-Twitter': 'fa-brands fa-x-twitter',
+  YouTube: 'fa-sharp fa-solid fa-play',
+  'Get Facebook comments': 'fa-sharp fa-solid fa-share-nodes',
+  'Get Facebook Page': 'fa-solid fa-comment',
+  'Get Facebook Posts': 'fa-solid fa-flag',
+};
+
 const meta: Meta<IconComponent> = {
   component: IconComponent,
   tags: ['autodocs'],
   argTypes: {
+    label: {
+      control: 'select',
+      options: Object.keys(iconOptions),
+      mapping: iconOptions,
+    },
     iconColor: {
-      control: 'color',
-    },
-    labelColor: {
-      control: 'color',
-    },
-    iconwidth: {
-      control: 'text',
+      control: 'select',
+      options: Object.keys(colorOptions),
+      mapping: colorOptions,
     },
     icon: {
       control: 'select',
-      options: [
-        'fa-brands fa-facebook-f',
-        'fa-brands fa-twitter',
-        'fa-brands fa-instagram',
-        'fa-brands fa-linkedin-in',
-        'fa-brands fa-github',
-      ],
+      options: Object.keys(iconOptions),
+      mapping: iconOptions,
     },
   },
 };
@@ -36,15 +46,14 @@ export const Primary: Story = {
     label: 'Facebook',
     icon: 'fa-brands fa-facebook-f',
     iconColor: '#000',
-    labelColor: '#000',
-    iconwidth: '100%',
   },
 };
 
 export const Secondary: Story = {
   name: 'social media actions',
   args: {
-    label: 'Instagram',
-    icon: 'fa-brands fa-instagram',
+    label: 'Get Facebook comments',
+    icon: 'fa-sharp fa-solid fa-share-nodes',
+    iconColor: '#FA830B',
   },
 };

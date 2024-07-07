@@ -1,4 +1,4 @@
-.facebook-card {
+.icon-card {
   border-radius: 33px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
   border: 1px solid #fff;
@@ -13,17 +13,15 @@
   text-decoration: none;
 }
 
-.facebook-icon {
+.icon {
   font-size: 60px;
   color: #000;
   align-self: center;
 }
 
-.facebook-title {
+.icon-title {
   font-family: Montserrat, sans-serif;
   margin-top: 37px;
   text-align: center;
 }
-
-
 
