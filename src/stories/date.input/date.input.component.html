@@ -1,0 +1,29 @@
+<!-- <ng-template #validDate>
+    {{ othervar }}
+  </ng-template>
+  
+  <ng-template #invalidDate >
+    {{ myvar }}
+  </ng-template>
+  
+  <div class="date-picker" [ngClass]="{ 'valid': isValidDate(date), 'invalid': isValidDate(date) == false }">
+    <input type="text" class="date-display" placeholder="yyyy-mm-dd" [(ngModel)]="date" data-test="date-input">
+    <input type="date" class="calendar-input" (input)="updateDate($event)">
+  </div>
+  
+  <div *ngIf="isValidDate(date); then validDate else invalidDate" data-test="date-input"></div> -->
+
+  <ng-template #validDate>
+    {{ othervar }}
+  </ng-template>
+  
+  <ng-template #invalidDate >
+    {{ myvar }}
+  </ng-template>
+  
+  <div class="date-picker" [ngClass]="{'invalid': isValidDate(date) == false }">
+    <input type="text" class="date-display" placeholder="yyyy-mm-dd" [(ngModel)]="date">
+    <input type="date" class="calendar-input" (input)="updateDate($event)">
+  </div>
+  
+  <div *ngIf="isValidDate(date); then validDate else invalidDate"></div>
