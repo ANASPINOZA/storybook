@@ -1,20 +1,21 @@
 .facebook-button {
   border-radius: 33px;
   border: 1px solid;
-  border-color: #fa830b;
+  border-color: var(--border-color, #fa830b);
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
-  background-color: #fa830b;
+  background-color: var(--background-color, #fa830b);
   display: flex;
-  align-items: center;
   justify-content: center;
   padding: 11px 20px;
   font-size: 13px;
-  color: #fff;
+  color: var(--color, #fff);
   font-weight: 700;
+  align-items: baseline;
 }
 
 .button-text {
   font-family: Montserrat, sans-serif;
+  color: var(--label-color, #fff);
 }
 
 .icon {
@@ -22,4 +23,5 @@
   height: 17px;
   object-fit: contain;
   margin-left: 10px;
+  fill: var(--icon-color, #fff);
 }

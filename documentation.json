@@ -284,7 +284,7 @@
         },
         {
             "name": "ButtonsComponent",
-            "id": "component-ButtonsComponent-b8cafff655bceac6d7a9f4ae9872879df2f109b85bd7ebdd9418d2100294f0058be3e2c0de9b1a5f95544153ca29a7c509203f8e402097ee9b10a4e7cf994229",
+            "id": "component-ButtonsComponent-029c1981b049a79305cb7b1ac3523429c5f0a3faeb59f1d43489c6d59f82a5ed0ebd22a98dc3611df647a704816585d557c93182b9bc45311ec5f6a32541d2d7",
             "file": "src/stories/buttons/buttons.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -328,10 +328,26 @@
                     "decorators": []
                 },
                 {
+                    "name": "Icon",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
                     "name": "IconColor",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 13,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
                     "type": "string",
                     "decorators": []
                 },
@@ -356,17 +372,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-buttons',\n  templateUrl: './buttons.component.html',\n  styleUrls: ['./buttons.component.css']\n})\nexport class ButtonsComponent {\n@Input() backgroundColor:string ='#fa830b' ;\n@Input() Color?:string  ;\n@Input() borderColor?:string  ;\n@Input() LabelColor?:string  ;\n@Input() IconColor?:string  ;\n\n\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-buttons',\n  templateUrl: './buttons.component.html',\n  styleUrls: ['./buttons.component.css']\n})\nexport class ButtonsComponent {\n  @Input() backgroundColor: string = '#fa830b';\n  @Input() Color?: string;\n  @Input() borderColor?: string;\n  @Input() LabelColor?: string;\n  @Input() IconColor?: string;\n  @Input() Icon?: string;\n  @Input() label?: string;\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".facebook-button {\r\n  border-radius: 33px;\r\n  border: 1px solid;\r\n  border-color: #fa830b;\r\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);\r\n  background-color: #fa830b;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  padding: 11px 20px;\r\n  font-size: 13px;\r\n  color: #fff;\r\n  font-weight: 700;\r\n}\r\n\r\n.button-text {\r\n  font-family: Montserrat, sans-serif;\r\n}\r\n\r\n.icon {\r\n  width: 9px;\r\n  height: 17px;\r\n  object-fit: contain;\r\n  margin-left: 10px;\r\n}\r\n",
+                    "data": ".facebook-button {\r\n  border-radius: 33px;\r\n  border: 1px solid;\r\n  border-color: var(--border-color, #fa830b);\r\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);\r\n  background-color: var(--background-color, #fa830b);\r\n  display: flex;\r\n  justify-content: center;\r\n  padding: 11px 20px;\r\n  font-size: 13px;\r\n  color: var(--color, #fff);\r\n  font-weight: 700;\r\n  align-items: baseline;\r\n}\r\n\r\n.button-text {\r\n  font-family: Montserrat, sans-serif;\r\n  color: var(--label-color, #fff);\r\n}\r\n\r\n.icon {\r\n  width: 9px;\r\n  height: 17px;\r\n  object-fit: contain;\r\n  margin-left: 10px;\r\n  fill: var(--icon-color, #fff);\r\n}\r\n",
                     "styleUrl": "./buttons.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<button class=\"facebook-button\"  [ngStyle]=\"{ 'background-color': backgroundColor ,'color':Color , 'border-color' : borderColor}\">\n  <span class=\"button-text\" [ngStyle]=\"{ 'color': LabelColor}\">Facebook</span>\n  <i class=\"fa-brands fa-facebook-f icon\"  [ngStyle]=\"{ 'color': IconColor}\"  ></i>\n</button>\n"
+            "templateData": "<div class=\"button-container\">\r\n  <button\r\n    class=\"facebook-button\"\r\n    [ngStyle]=\"{\r\n      'background-color': backgroundColor,\r\n      'color': Color,\r\n      'border-color': borderColor\r\n    }\"\r\n  >\r\n    <span class=\"button-text\" [ngStyle]=\"{ 'color': LabelColor }\">\r\n     {{label}}\r\n    </span>\r\n    <i [ngClass]=\"Icon\" class=\"icon\" [ngStyle]=\"{ color: IconColor }\"></i>\r\n  </button>\r\n</div>\r\n"
         },
         {
             "name": "dealsComponent",
@@ -1395,7 +1411,7 @@
                 "linktype": "component",
                 "name": "ButtonsComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
