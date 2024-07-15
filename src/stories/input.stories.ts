@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { InputComponent } from './input.component';
+import { EmailValidator, NgModel } from '@angular/forms';
 
 export default {
   title: 'Example/CustomInput',
@@ -21,6 +22,7 @@ export default {
         control: { type: 'select' },
         options: ['number', 'string'],
       },
+
     
   },
 //   parameters: { 

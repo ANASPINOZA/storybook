@@ -793,6 +793,128 @@
             "templateData": "<!-- <input\r\n  [ngClass]=\"classes\"\r\n  [placeholder]=\"placeholder\"\r\n  [ngStyle]=\"{ 'border-radius': borferRadius + 'px' , 'background-color': backgroundColor, 'border-width': borderWidth}\"\r\n  /> -->\r\n\r\n  \r\n  <!-- [(ngModel)]=\"value\" -->\r\n\r\n  <input\r\n  [ngClass]=\"classes\"\r\n  [placeholder]=\"placeholder\"\r\n  [ngStyle]=\"{ 'border-radius': borferRadius + 'px' , 'background-color': backgroundColor, 'border-width': borderWidth}\"\r\n  [value]=\"value\"\r\n  (input)=\"onInput($event)\"\r\n/>"
         },
         {
+            "name": "InputsComponent",
+            "id": "component-InputsComponent-980e76487bb97ea41ed80e33a3010688039f3c8d9169d1d8cdde3dd42e70dc54d5e700bd85fcab3e89e3f725e19e1d4c7dfccc4cdbbef87c44eb9f8f847be9cd",
+            "file": "src/stories/inputs/inputs.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-inputs",
+            "styleUrls": [
+                "./inputs.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./inputs.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string[]",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "isDropdownOpen",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "selectOption",
+                    "args": [
+                        {
+                            "name": "option",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "option",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "toggleDropdown",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-inputs',\n  templateUrl: './inputs.component.html',\n  styleUrls: ['./inputs.component.css']\n})\nexport class InputsComponent {\n  @Input() type: string = 'text';\n  @Input() options: string[] = [];\n  @Input() label: string = '';\n\n  isDropdownOpen = false;\n\n  toggleDropdown() {\n    this.isDropdownOpen = !this.isDropdownOpen;\n  }\n\n  selectOption(option: string) {\n    console.log(`Selected: ${option}`);\n    this.isDropdownOpen = false;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ":host {\r\n    display: inline-block;\r\n  }\r\n  \r\n  .dropdown {\r\n    position: relative;\r\n    display: inline-block;\r\n  }\r\n  \r\n  .dropbtn {\r\n    background-color: white;\r\n    color: #555;\r\n    padding: 16px;\r\n    font-size: 16px;\r\n    border: 1px solid #ccc;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    width: 200px;\r\n    text-align: left;\r\n  }\r\n  \r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    background-color: #fff;\r\n    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\r\n    z-index: 1;\r\n    width: 100%;\r\n    border-radius: 5px;\r\n    margin-top: 5px;\r\n  }\r\n  \r\n  .dropdown-content a {\r\n    color: black;\r\n    padding: 12px 16px;\r\n    text-decoration: none;\r\n    display: block;\r\n  }\r\n  \r\n  .dropdown-content a:hover {\r\n    background-color: #f1f1f1;\r\n  }\r\n  \r\n  .dropdown-content.show {\r\n    display: block;\r\n  }\r\n  \r\n  .dropdown:hover .dropbtn {\r\n    background-color: #f1f1f1;\r\n  }\r\n  ",
+                    "styleUrl": "./inputs.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div>\n    <label>{{ label }}</label>\n    <ng-container [ngSwitch]=\"type\">\n      <input *ngSwitchCase=\"'text'\" type=\"text\" />\n      <div *ngSwitchCase=\"'select'\" class=\"dropdown\">\n        <button class=\"dropbtn\" (click)=\"toggleDropdown()\">Choose option</button>\n        <div class=\"dropdown-content\" [class.show]=\"isDropdownOpen\">\n          <a href=\"#\" *ngFor=\"let option of options\" (click)=\"selectOption(option)\">{{ option }}</a>\n        </div>\n      </div>\n    </ng-container>\n  </div>\n  "
+        },
+        {
             "name": "InputTextComponent",
             "id": "component-InputTextComponent-cba0cc37c986d8ef7d61d62d3fe3240d48b933b832586e7b6789c51a18e0fcba5ba446ff6039efc124a75613f228b3ffaf6c04d6e11966d565bd09207a9e875e",
             "file": "src/stories/input-text/input-text.component.ts",
@@ -1238,13 +1360,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-8a009057d08da5452aa23706c6803fe3c899b2b482748f5a35d890eb4747fa521bc058c8d55401699ba5b46466a8fc85b53996cc82e729c2f1f8dd5c6ab20ba7",
+            "id": "module-AppModule-7ade4eb3b73bb82cb132f7ad15239b06104ab8b1533c0c5bd259d3a303dc3784be957c0e8d10a3dcaf5bc6c8d2f8aaa1538731c69d6e5897d4f81a2bb62902b3",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { InputComponent } from './../stories/input.component';\r\nimport { TextAreaComponent } from './../stories/textArea.component';\r\nimport { SideBarComponent } from '../stories/side-bar/side-bar.component';\r\nimport { InputTextComponent } from '../stories/input-text/input-text.component';\r\nimport { ButtonComponent } from '../stories/buttonstory/button.component';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ButtonComponent,\r\n    SideBarComponent,\r\n   InputTextComponent,\r\n                  \r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    \r\n    InputComponent,\r\n    TextAreaComponent,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { InputComponent } from './../stories/input.component';\r\nimport { TextAreaComponent } from './../stories/textArea.component';\r\nimport { SideBarComponent } from '../stories/side-bar/side-bar.component';\r\nimport { InputTextComponent } from '../stories/input-text/input-text.component';\r\nimport { ButtonComponent } from '../stories/buttonstory/button.component';\r\nimport { InputsComponent } from 'src/stories/inputs/inputs.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ButtonComponent,\r\n    SideBarComponent,\r\n   InputTextComponent,\r\n   InputsComponent,\r\n\r\n                  \r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    \r\n    InputComponent,\r\n    TextAreaComponent,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1258,6 +1380,9 @@
                         },
                         {
                             "name": "InputTextComponent"
+                        },
+                        {
+                            "name": "InputsComponent"
                         },
                         {
                             "name": "SideBarComponent"
@@ -1414,6 +1539,15 @@
                 "coveragePercent": 54,
                 "coverageCount": "6/11",
                 "status": "good"
+            },
+            {
+                "filePath": "src/stories/inputs/inputs.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
             },
             {
                 "filePath": "src/stories/page.component.ts",
