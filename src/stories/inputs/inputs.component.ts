@@ -9,6 +9,7 @@ export class InputsComponent {
   @Input() type: string = 'text';
   @Input() options: string[] = [];
   @Input() label: string = '';
+  @Input() placeholder: string = '';
 
   isDropdownOpen = false;
 

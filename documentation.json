@@ -794,7 +794,7 @@
         },
         {
             "name": "InputsComponent",
-            "id": "component-InputsComponent-980e76487bb97ea41ed80e33a3010688039f3c8d9169d1d8cdde3dd42e70dc54d5e700bd85fcab3e89e3f725e19e1d4c7dfccc4cdbbef87c44eb9f8f847be9cd",
+            "id": "component-InputsComponent-30b2c5e335b2b828a4d613e39c3bc113a3e9890afb715fca44e5e4054a8a73255dd581aaa814670d23e79b169948106b3cb6f7d672943e73d3c321448324d381",
             "file": "src/stories/inputs/inputs.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -831,6 +831,15 @@
                     "decorators": []
                 },
                 {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
                     "name": "type",
                     "defaultValue": "'text'",
                     "deprecated": false,
@@ -850,7 +859,7 @@
                     "type": "",
                     "optional": false,
                     "description": "",
-                    "line": 13
+                    "line": 14
                 }
             ],
             "methodsClass": [
@@ -867,7 +876,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 19,
+                    "line": 20,
                     "deprecated": false,
                     "deprecationMessage": "",
                     "jsdoctags": [
@@ -888,7 +897,7 @@
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 15,
+                    "line": 16,
                     "deprecated": false,
                     "deprecationMessage": ""
                 }
@@ -902,17 +911,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-inputs',\n  templateUrl: './inputs.component.html',\n  styleUrls: ['./inputs.component.css']\n})\nexport class InputsComponent {\n  @Input() type: string = 'text';\n  @Input() options: string[] = [];\n  @Input() label: string = '';\n\n  isDropdownOpen = false;\n\n  toggleDropdown() {\n    this.isDropdownOpen = !this.isDropdownOpen;\n  }\n\n  selectOption(option: string) {\n    console.log(`Selected: ${option}`);\n    this.isDropdownOpen = false;\n  }\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-inputs',\r\n  templateUrl: './inputs.component.html',\r\n  styleUrls: ['./inputs.component.css']\r\n})\r\nexport class InputsComponent {\r\n  @Input() type: string = 'text';\r\n  @Input() options: string[] = [];\r\n  @Input() label: string = '';\r\n  @Input() placeholder: string = '';\r\n\r\n  isDropdownOpen = false;\r\n\r\n  toggleDropdown() {\r\n    this.isDropdownOpen = !this.isDropdownOpen;\r\n  }\r\n\r\n  selectOption(option: string) {\r\n    console.log(`Selected: ${option}`);\r\n    this.isDropdownOpen = false;\r\n  }\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host {\r\n    display: inline-block;\r\n  }\r\n  \r\n  .dropdown {\r\n    position: relative;\r\n    display: inline-block;\r\n  }\r\n  \r\n  .dropbtn {\r\n    background-color: white;\r\n    color: #555;\r\n    padding: 16px;\r\n    font-size: 16px;\r\n    border: 1px solid #ccc;\r\n    cursor: pointer;\r\n    border-radius: 5px;\r\n    width: 200px;\r\n    text-align: left;\r\n  }\r\n  \r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    background-color: #fff;\r\n    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\r\n    z-index: 1;\r\n    width: 100%;\r\n    border-radius: 5px;\r\n    margin-top: 5px;\r\n  }\r\n  \r\n  .dropdown-content a {\r\n    color: black;\r\n    padding: 12px 16px;\r\n    text-decoration: none;\r\n    display: block;\r\n  }\r\n  \r\n  .dropdown-content a:hover {\r\n    background-color: #f1f1f1;\r\n  }\r\n  \r\n  .dropdown-content.show {\r\n    display: block;\r\n  }\r\n  \r\n  .dropdown:hover .dropbtn {\r\n    background-color: #f1f1f1;\r\n  }\r\n  ",
+                    "data": ":host {\r\n    display: inline-block;\r\n  }\r\n  \r\n  .dropdown {\r\n    position: relative;\r\n    display: inline-block;\r\n    border-radius: 100px;\r\n\r\n  }\r\n  \r\n  .dropbtn {\r\n    background-color: white;\r\n    color: #555;\r\n    padding: 16px;\r\n    font-size: 16px;\r\n    border: 1px solid #ccc;\r\n    cursor: pointer;\r\n    border-radius: 100px;\r\n    text-align: left;\r\n    width: 1000px;\r\n\r\n  }\r\n  \r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    background-color: #fff;\r\n    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\r\n    z-index: 1;\r\n    border-radius: 5px;\r\n    margin-top: 5px;\r\n     width: 100%;\r\n     border-radius: 10px;\r\n  }\r\n  .dropdown-content a {\r\n    color: #838383;\r\n    padding: 12px 16px;\r\n    text-decoration: none;\r\n    display: block;\r\n    font-family: \"Montserrat\", sans-serif;\r\n    font-optical-sizing: auto;\r\n    font-weight: 100;\r\n    font-style: normal;\r\n  }\r\n  \r\n  .dropdown-content a:hover {\r\n    background-color: #5C4ABD;\r\n  }\r\n  \r\n  .dropdown-content.show {\r\n    display: block;\r\n  }\r\n  \r\n  .dropdown:hover .dropbtn {\r\n    background-color: #f1f1f1;\r\n    border-color: #5C4ABD;\r\n    border-width: 2px;\r\n  }\r\n label{\r\n    font-family: \"Montserrat\", sans-serif;\r\n    font-optical-sizing: auto;\r\n    font-weight: 300;\r\n    font-style: normal;\r\n }\r\n.label{\r\n  display: flex;\r\n  flex-direction: column;\r\n }\r\n\r\n .text{\r\n    font-family: \"Montserrat\", sans-serif;\r\n    border-radius: 100px;\r\n    border: 1px solid #838383;\r\n    padding: 10px 20px;\r\n    font-size: 16px;\r\n    width: 100%;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n    outline: none;\r\n }",
                     "styleUrl": "./inputs.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<div>\n    <label>{{ label }}</label>\n    <ng-container [ngSwitch]=\"type\">\n      <input *ngSwitchCase=\"'text'\" type=\"text\" />\n      <div *ngSwitchCase=\"'select'\" class=\"dropdown\">\n        <button class=\"dropbtn\" (click)=\"toggleDropdown()\">Choose option</button>\n        <div class=\"dropdown-content\" [class.show]=\"isDropdownOpen\">\n          <a href=\"#\" *ngFor=\"let option of options\" (click)=\"selectOption(option)\">{{ option }}</a>\n        </div>\n      </div>\n    </ng-container>\n  </div>\n  "
+            "templateData": "<div class=\"label\">\r\n    <label>{{ label }}</label>\r\n    <ng-container [ngSwitch]=\"type\">\r\n        <input *ngSwitchCase=\"'text'\" class=\"text-input\" type=\"text\" [placeholder]=\"placeholder\"/>\r\n        <div *ngSwitchCase=\"'select'\" class=\"dropdown\">\r\n        <button class=\"dropbtn\" (click)=\"toggleDropdown()\">Choose option</button>\r\n        <div class=\"dropdown-content\" [class.show]=\"isDropdownOpen\">\r\n          <a href=\"#\" *ngFor=\"let option of options\" (click)=\"selectOption(option)\">{{ option }}</a>\r\n        </div>\r\n      </div>\r\n    </ng-container>\r\n  </div>\r\n  "
         },
         {
             "name": "InputTextComponent",
@@ -1546,7 +1555,7 @@
                 "linktype": "component",
                 "name": "InputsComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {

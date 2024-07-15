@@ -17,6 +17,9 @@ const meta: Meta<InputsComponent> = {
     label: {
       control: 'text',
     },
+    placeholder: {
+      control: 'text',
+    },
   },
 };
 
@@ -28,6 +31,7 @@ export const Primary: Story = {
   args: {
     type: 'text',
     label: 'Text Input',
+    placeholder: 'Text',
   },
 };
 

@@ -1,13 +1,14 @@
 <div class="label">
     <label>{{ label }}</label>
     <ng-container [ngSwitch]="type">
-      <input *ngSwitchCase="'text'" class="text" type="text" />
-      <div *ngSwitchCase="'select'" class="dropdown">
+        <input *ngSwitchCase="'text'" class="text" type="text" [placeholder]="placeholder"/>
+        <div *ngSwitchCase="'select'" class="dropdown">
         <button class="dropbtn" (click)="toggleDropdown()">Choose option</button>
         <div class="dropdown-content" [class.show]="isDropdownOpen">
           <a href="#" *ngFor="let option of options" (click)="selectOption(option)">{{ option }}</a>
         </div>
       </div>
+      
     </ng-container>
   </div>
   
