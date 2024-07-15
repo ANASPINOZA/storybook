@@ -1,0 +1,12 @@
+<div class="input-container" [ngStyle]="{'width': width}">
+  <label *ngIf="label">{{ label }}</label>
+  <div class="custom-select" *ngIf="type === 'select'">
+    <select [(ngModel)]="value">
+      <option value="" disabled hidden>Select an option</option>
+      <option *ngFor="let option of options" [value]="option.value">{{ option.label }}</option>
+    </select>
+  </div>
+  <div *ngIf="type === 'text'">
+    <input type="text" [(ngModel)]="value" [placeholder]="placeholder" />
+  </div>
+</div>

@@ -14,7 +14,10 @@
 }
 
 .button-text {
-  font-family: Montserrat, sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
   color: var(--label-color, #fff);
 }
 

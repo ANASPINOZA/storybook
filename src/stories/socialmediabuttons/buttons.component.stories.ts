@@ -6,10 +6,14 @@ const colorOptions = {
   Pink: '#DA0621',
   White: '#fff',
 };
+const bgcolorOptions = {
+  Yellow: '#fa830b',
+  White: '#fff',
+};
 const labelOptions = {
   facebook: 'facebook',
-  instagram: 'instagram',
-  twitter: 'twitter',
+  youtube: 'Youtube',
+  twitter: 'X-Twitter',
 };
 
 const iconsOptions = {
@@ -44,7 +48,7 @@ const meta: Meta<ButtonsComponent> = {
     },
     backgroundColor: {
       control: 'select',
-      options: Object.keys(colorOptions),
+      options: Object.keys(bgcolorOptions),
       mapping: colorOptions,
     },
     Color: {

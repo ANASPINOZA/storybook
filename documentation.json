@@ -114,7 +114,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-buttons></app-buttons>\r\n"
+            "templateData": "<app-mainbutton></app-mainbutton>\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -284,8 +284,8 @@
         },
         {
             "name": "ButtonsComponent",
-            "id": "component-ButtonsComponent-029c1981b049a79305cb7b1ac3523429c5f0a3faeb59f1d43489c6d59f82a5ed0ebd22a98dc3611df647a704816585d557c93182b9bc45311ec5f6a32541d2d7",
-            "file": "src/stories/buttons/buttons.component.ts",
+            "id": "component-ButtonsComponent-c0624c3c6399491d78efb258096540b67681649abc16366577267ecdaf9901030e5869bd1d03e7c667ad8d89ba0eaa3e3758203f1a45c2af60605148a0b1f6ce",
+            "file": "src/stories/socialmediabuttons/buttons.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -372,11 +372,11 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-buttons',\n  templateUrl: './buttons.component.html',\n  styleUrls: ['./buttons.component.css']\n})\nexport class ButtonsComponent {\n  @Input() backgroundColor: string = '#fa830b';\n  @Input() Color?: string;\n  @Input() borderColor?: string;\n  @Input() LabelColor?: string;\n  @Input() IconColor?: string;\n  @Input() Icon?: string;\n  @Input() label?: string;\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-buttons',\r\n  templateUrl: './buttons.component.html',\r\n  styleUrls: ['./buttons.component.css']\r\n})\r\nexport class ButtonsComponent {\r\n  @Input() backgroundColor: string = '#fa830b';\r\n  @Input() Color?: string;\r\n  @Input() borderColor?: string;\r\n  @Input() LabelColor?: string;\r\n  @Input() IconColor?: string;\r\n  @Input() Icon?: string;\r\n  @Input() label?: string;\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".facebook-button {\r\n  border-radius: 33px;\r\n  border: 1px solid;\r\n  border-color: var(--border-color, #fa830b);\r\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);\r\n  background-color: var(--background-color, #fa830b);\r\n  display: flex;\r\n  justify-content: center;\r\n  padding: 11px 20px;\r\n  font-size: 13px;\r\n  color: var(--color, #fff);\r\n  font-weight: 700;\r\n  align-items: baseline;\r\n}\r\n\r\n.button-text {\r\n  font-family: Montserrat, sans-serif;\r\n  color: var(--label-color, #fff);\r\n}\r\n\r\n.icon {\r\n  width: 9px;\r\n  height: 17px;\r\n  object-fit: contain;\r\n  margin-left: 10px;\r\n  fill: var(--icon-color, #fff);\r\n}\r\n",
+                    "data": ".facebook-button {\r\n  border-radius: 33px;\r\n  border: 1px solid;\r\n  border-color: var(--border-color, #fa830b);\r\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);\r\n  background-color: var(--background-color, #fa830b);\r\n  display: flex;\r\n  justify-content: center;\r\n  padding: 11px 20px;\r\n  font-size: 13px;\r\n  color: var(--color, #fff);\r\n  font-weight: 700;\r\n  align-items: baseline;\r\n}\r\n\r\n.button-text {\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: 700;\r\n  font-style: normal;\r\n  color: var(--label-color, #fff);\r\n}\r\n\r\n.icon {\r\n  width: 9px;\r\n  height: 17px;\r\n  object-fit: contain;\r\n  margin-left: 10px;\r\n  fill: var(--icon-color, #fff);\r\n}\r\n",
                     "styleUrl": "./buttons.component.css"
                 }
             ],
@@ -856,6 +856,179 @@
             "templateData": "<!-- <input\r\n  [ngClass]=\"classes\"\r\n  [placeholder]=\"placeholder\"\r\n  [ngStyle]=\"{ 'border-radius': borferRadius + 'px' , 'background-color': backgroundColor, 'border-width': borderWidth}\"\r\n  /> -->\r\n\r\n  \r\n  <!-- [(ngModel)]=\"value\" -->\r\n\r\n  <input\r\n  [ngClass]=\"classes\"\r\n  [placeholder]=\"placeholder\"\r\n  [ngStyle]=\"{ 'border-radius': borferRadius + 'px' , 'background-color': backgroundColor, 'border-width': borderWidth}\"\r\n  [value]=\"value\"\r\n  (input)=\"onInput($event)\"\r\n/>"
         },
         {
+            "name": "InputsComponent",
+            "id": "component-InputsComponent-5596256d6d3d6e58a2db234f441769d8b8625cc751086cec7ed85fe0f0b970a3675deaf286e6d13320f5cf573f553e4998a23d7f69c1493375fc69e18c34bad0",
+            "file": "src/stories/inputs/inputs.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-inputs",
+            "styleUrls": [
+                "./inputs.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./inputs.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "'Destination'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "literal type[]",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "\"select\" | \"text\"",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "defaultValue": "'50%'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "value",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-inputs',\n  templateUrl: './inputs.component.html',\n  styleUrls: ['./inputs.component.css']\n})\nexport class InputsComponent {\n  @Input() type: 'select' | 'text' = 'text';\n  @Input() options: { value: string, label: string }[] = [];\n  @Input() label: string = 'Destination';\n  @Input() placeholder: string = '';\n  @Input() width: string = '50%';\n  value: string = '';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".input-container {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  margin: 10px 0;\r\n  font-size: small;\r\n  font-family: \"Montserrat\", sans-serif;\r\n}\r\n\r\nlabel {\r\n  display: block;\r\n  margin-bottom: 5px;\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: bold;\r\n  font-style: normal;\r\n}\r\n\r\n.custom-select {\r\n  position: relative;\r\n  width: 100%;\r\n}\r\n\r\n.custom-select select {\r\n  width: 100%;\r\n  padding: 10px;\r\n  padding-left: 20px;\r\n  border-radius: 25px;\r\n  border: 1px solid #707070;\r\n  appearance: none;\r\n  -webkit-appearance: none;\r\n  -moz-appearance: none;\r\n  padding-right: 30px;\r\n  background: url('data:image/svg+xml;utf8,<svg width=\"19\" height=\"9\" viewBox=\"0 0 19 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M17.298 1.25L9.5 8.32488L1.70196 1.25H17.298Z\" fill=\"black\" stroke=\"#707070\"/></svg>')\r\n    no-repeat;\r\n  background-position: right 10px top 50%;\r\n  background-size: 10px;\r\n  font-size: 14px;\r\n  cursor: pointer;\r\n}\r\n\r\n.custom-select select option {\r\n\r\n  background-color: #d5d5d5e8;\r\n  border-bottom: 1px solid #ccc;\r\n  font-size: 14px;\r\n  color: #707070;\r\n\r\n}\r\n\r\n.custom-select select option:hover {\r\n  background-color: white;\r\n}\r\n\r\n.custom-select select option:checked {\r\n  background-color: #e0e0e0;\r\n  color: #707070;\r\n  font-weight: 600;\r\n\r\n}\r\n\r\n.custom-select select option::before {\r\n  content: \"\";\r\n  display: inline-block;\r\n  width: 16px;\r\n  height: 16px;\r\n  margin-right: 10px;\r\n  border-radius: 50%;\r\n  border: 2px solid #ccc;\r\n  vertical-align: middle;\r\n}\r\n\r\n.custom-select select option:checked::before {\r\n  background-color: #ff007f; /* Change this color to match your design */\r\n  border-color: #ff007f;\r\n}\r\n\r\ninput[type=\"text\"] {\r\n  width: 100%;\r\n  padding: 10px;\r\n  border-radius: 37px;\r\n  border: 1px solid #707070;\r\n  font-size: small;\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: 400;\r\n  font-style: normal;\r\n}\r\n",
+                    "styleUrl": "./inputs.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"input-container\" [ngStyle]=\"{'width': width}\">\n  <label *ngIf=\"label\">{{ label }}</label>\n  <div class=\"custom-select\" *ngIf=\"type === 'select'\">\n    <select [(ngModel)]=\"value\">\n      <option value=\"\" disabled hidden>Select an option</option>\n      <option *ngFor=\"let option of options\" [value]=\"option.value\">{{ option.label }}</option>\n    </select>\n  </div>\n  <div *ngIf=\"type === 'text'\">\n    <input type=\"text\" [(ngModel)]=\"value\" [placeholder]=\"placeholder\" />\n  </div>\n</div>\n"
+        },
+        {
+            "name": "MainbuttonComponent",
+            "id": "component-MainbuttonComponent-e0b94f933796beceb48a9c92284c6eb2514bc40f31c0c94ac345c94462afd7559e99ec8396a5c6ca3d2cc1e43916894e53a62cde7640bbe2651b14ff9ff4410c",
+            "file": "src/stories/mainbutton/mainbutton.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-mainbutton",
+            "styleUrls": [
+                "./mainbutton.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./mainbutton.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "backgroundColor",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "width",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-mainbutton',\n  templateUrl: './mainbutton.component.html',\n  styleUrls: ['./mainbutton.component.css'],\n})\nexport class MainbuttonComponent {\n  @Input() label: string = '';\n  @Input() width: string = '';\n  @Input() backgroundColor: string = '';\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".search-button {\r\n  background-color: #d00255;\r\n  color: white;\r\n  border: none;\r\n  border-radius: 20px;\r\n  padding: 10px 20px;\r\n  font-size: 16px;\r\n  cursor: pointer;\r\n  width: 100%;\r\n  outline: none;\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: bold;\r\n  font-style: normal;\r\n}\r\n\r\n\r\n",
+                    "styleUrl": "./mainbutton.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<button [ngStyle]=\"{'width': width , 'background-color' : backgroundColor  }\" class=\"search-button\">{{label}}</button>\n"
+        },
+        {
             "name": "PageComponent",
             "id": "component-PageComponent-92f4cc9cc0054ccf9d578fc1ebe06b6d7ed1424277151dbedd6cfe73ba15609d9919dcba6e9acbd021b43117d9ce1f28adf6630c681037299b01a4c726c15a8e",
             "file": "src/stories/page.component.ts",
@@ -1267,13 +1440,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-10800879348c95339214cdc59f8e5532464b4e2b6e08453356943c3f6f76e03ea5bcc71e9b2201047496dfb5c9d5fa452336e36ccdfe8c3192194cad1ac92962",
+            "id": "module-AppModule-d9c040a8d9a0bc17c5309a42f8cbfa8a68a5db473679a775d3019e4939c607980970e89d801f4b48d664146fae4d5b393b011e1ba0723c3885065200c2362eed",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { TextAreaComponent } from './../stories/textArea.component';\r\nimport { IconComponent } from '../stories/icon/icon.component';\r\nimport { SidebarComponent } from '../stories/sidebar/sidebar.component';\r\nimport { ButtonsComponent } from '../stories/buttons/buttons.component';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent, IconComponent, SidebarComponent, ButtonsComponent],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    TextAreaComponent,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { TextAreaComponent } from './../stories/textArea.component';\r\nimport { IconComponent } from '../stories/icon/icon.component';\r\nimport { SidebarComponent } from '../stories/sidebar/sidebar.component';\r\nimport { ButtonsComponent } from '../stories/socialmediabuttons/buttons.component';\r\nimport { InputsComponent } from '../stories/inputs/inputs.component';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { MainbuttonComponent } from '../stories/mainbutton/mainbutton.component';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent, IconComponent, SidebarComponent, ButtonsComponent, InputsComponent, MainbuttonComponent],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    FormsModule,\r\n    TextAreaComponent,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1290,6 +1463,12 @@
                         },
                         {
                             "name": "IconComponent"
+                        },
+                        {
+                            "name": "InputsComponent"
+                        },
+                        {
+                            "name": "MainbuttonComponent"
                         },
                         {
                             "name": "SidebarComponent"
@@ -1384,7 +1563,7 @@
         ]
     },
     "coverage": {
-        "count": 8,
+        "count": 7,
         "status": "low",
         "files": [
             {
@@ -1404,15 +1583,6 @@
                 "coveragePercent": 50,
                 "coverageCount": "5/10",
                 "status": "medium"
-            },
-            {
-                "filePath": "src/stories/buttons/buttons.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "ButtonsComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/8",
-                "status": "low"
             },
             {
                 "filePath": "src/stories/deals_maqam.component.ts",
@@ -1451,6 +1621,24 @@
                 "status": "good"
             },
             {
+                "filePath": "src/stories/inputs/inputs.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/mainbutton/mainbutton.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MainbuttonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/page.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -1475,6 +1663,15 @@
                 "name": "SidebarComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/socialmediabuttons/buttons.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ButtonsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
