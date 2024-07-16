@@ -10,9 +10,10 @@ import { ButtonsComponent } from '../stories/socialmediabuttons/buttons.componen
 import { InputsComponent } from '../stories/inputs/inputs.component';
 import { FormsModule } from '@angular/forms';
 import { MainbuttonComponent } from '../stories/mainbutton/mainbutton.component';
+import { NavbarComponent } from '../stories/navbar/navbar.component';
 
 @NgModule({
-  declarations: [AppComponent, IconComponent, SidebarComponent, ButtonsComponent, InputsComponent, MainbuttonComponent],
+  declarations: [AppComponent, IconComponent, SidebarComponent, ButtonsComponent, InputsComponent, MainbuttonComponent, NavbarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

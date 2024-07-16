@@ -958,7 +958,7 @@
         },
         {
             "name": "MainbuttonComponent",
-            "id": "component-MainbuttonComponent-e0b94f933796beceb48a9c92284c6eb2514bc40f31c0c94ac345c94462afd7559e99ec8396a5c6ca3d2cc1e43916894e53a62cde7640bbe2651b14ff9ff4410c",
+            "id": "component-MainbuttonComponent-2a213c2fa803361c08f386b2b0f1438cc9b33a44fef532a1b1e5a5ce02383b6916fc2c23ee5376b60d6c9578cd3f7d50c9336b97ac0a2f29e338f67b390fa12c",
             "file": "src/stories/mainbutton/mainbutton.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -981,7 +981,7 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 12,
                     "type": "string",
                     "decorators": []
                 },
@@ -991,6 +991,15 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 9,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "labelColor",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
                     "type": "string",
                     "decorators": []
                 },
@@ -1016,7 +1025,7 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-mainbutton',\n  templateUrl: './mainbutton.component.html',\n  styleUrls: ['./mainbutton.component.css'],\n})\nexport class MainbuttonComponent {\n  @Input() label: string = '';\n  @Input() width: string = '';\n  @Input() backgroundColor: string = '';\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-mainbutton',\n  templateUrl: './mainbutton.component.html',\n  styleUrls: ['./mainbutton.component.css'],\n})\nexport class MainbuttonComponent {\n  @Input() label: string = '';\n  @Input() width: string = '';\n  @Input() labelColor: string = '';\n  @Input() backgroundColor: string = '';\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
@@ -1026,7 +1035,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<button [ngStyle]=\"{'width': width , 'background-color' : backgroundColor  }\" class=\"search-button\">{{label}}</button>\n"
+            "templateData": "<button [ngStyle]=\"{'width': width , 'background-color' : backgroundColor ,'color' : labelColor }\" class=\"search-button\">{{label}}</button>\n"
         },
         {
             "name": "PageComponent",
@@ -1635,7 +1644,7 @@
                 "linktype": "component",
                 "name": "MainbuttonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/4",
+                "coverageCount": "0/5",
                 "status": "low"
             },
             {

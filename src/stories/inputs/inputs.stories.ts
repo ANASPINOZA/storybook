@@ -4,16 +4,19 @@ import { InputsComponent } from './inputs.component';
 
 const meta: Meta<InputsComponent> = {
   component: InputsComponent,
-  tags:['autodocs'],
+  tags: ['autodocs'],
   argTypes: {
+    inputmode: {
+      control: {
+        type: 'select',
+        options: ['number', 'text'],
+      },
+    },
     type: {
       control: {
         type: 'select',
-        options: ['select', 'text'],
+        options: ['normal', 'disabled'],
       },
-    },
-    options: {
-      control: 'object',
     },
     placeholder: {
       control: 'text',
@@ -31,17 +34,34 @@ export default meta;
 type Story = StoryObj<InputsComponent>;
 
 export const Primary: Story = {
-  name:'input ',
+  name: 'text Input ',
 
   args: {
-    options: [
-      { value: 'video', label: 'Video' },
-      { value: 'channel', label: 'Channel' },
-      { value: 'playlist', label: 'Playlist' },
-      { value: 'film', label: 'Film' },],
-   type : 'select',
-    placeholder: 'Enter text...',
+    placeholder: 'Enter word to search',
     width: '50%',
+    inputmode:'text',
+    type:'normal'
   },
 };
+export const Secondry: Story = {
+  name: 'number Input ',
 
+  args: {
+    placeholder: 'Enter word to search',
+    width: '50%',
+    inputmode:'numeric',
+    type:'disabled'
+
+  },
+};
+export const tertorial: Story = {
+  name: 'disabled Input ',
+
+  args: {
+    placeholder: 'Enter word to search',
+    width: '50%',
+    inputmode:'text',
+    type:'disabled'
+
+  },
+};

@@ -8,75 +8,18 @@
 
 label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-weight: bold;
   font-style: normal;
 }
 
-.custom-select {
-  position: relative;
+
+
+input {
   width: 100%;
-}
-
-.custom-select select {
-  width: 100%;
-  padding: 10px;
-  padding-left: 20px;
-  border-radius: 25px;
-  border: 1px solid #707070;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  padding-right: 30px;
-  background: url('data:image/svg+xml;utf8,<svg width="19" height="9" viewBox="0 0 19 9" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.298 1.25L9.5 8.32488L1.70196 1.25H17.298Z" fill="black" stroke="#707070"/></svg>')
-    no-repeat;
-  background-position: right 10px top 50%;
-  background-size: 10px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.custom-select select option {
-
-  background-color: #d5d5d5e8;
-  border-bottom: 1px solid #ccc;
-  font-size: 14px;
-  color: #707070;
-
-}
-
-.custom-select select option:hover {
-  background-color: white;
-}
-
-.custom-select select option:checked {
-  background-color: #e0e0e0;
-  color: #707070;
-  font-weight: 600;
-
-}
-
-.custom-select select option::before {
-  content: "";
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  margin-right: 10px;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  vertical-align: middle;
-}
-
-.custom-select select option:checked::before {
-  background-color: #ff007f; /* Change this color to match your design */
-  border-color: #ff007f;
-}
-
-input[type="text"] {
-  width: 100%;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 37px;
   border: 1px solid #707070;
   font-size: small;
@@ -85,3 +28,4 @@ input[type="text"] {
   font-weight: 400;
   font-style: normal;
 }
+

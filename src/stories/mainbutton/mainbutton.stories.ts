@@ -58,3 +58,25 @@ export const Secondary: Story = {
 
   },
 };
+export const tertorial: Story = {
+  name: 'Details button',
+
+  args: {
+    label: 'Details',
+    width: '20%',
+    backgroundColor: bgoptions.yellow,
+    labelColor: labeloptions.white,
+
+  },
+};
+export const fouth: Story = {
+  name: 'Copy URL button',
+
+  args: {
+    label: 'Copy URL',
+    width: '20%',
+    backgroundColor: bgoptions.yellow,
+    labelColor: labeloptions.white,
+
+  },
+};
