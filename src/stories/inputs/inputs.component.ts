@@ -7,18 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class InputsComponent {
   @Input() type: string = 'text';
-  @Input() options: string[] = [];
+  @Input() options: {value: string ,label: string  }[] = [];
   @Input() label: string = '';
   @Input() placeholder: string = '';
+value: string = '';
 
-  isDropdownOpen = false;
-
-  toggleDropdown() {
-    this.isDropdownOpen = !this.isDropdownOpen;
-  }
-
-  selectOption(option: string) {
-    console.log(`Selected: ${option}`);
-    this.isDropdownOpen = false;
-  }
+ 
 }

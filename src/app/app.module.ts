@@ -8,6 +8,11 @@ import { SideBarComponent } from '../stories/side-bar/side-bar.component';
 import { InputTextComponent } from '../stories/input-text/input-text.component';
 import { ButtonComponent } from '../stories/buttonstory/button.component';
 import { InputsComponent } from 'src/stories/inputs/inputs.component';
+import { FormsModule } from '@angular/forms';
+import { NavigationComponent } from '../stories/navigation/navigation.component';
+import { CheckboxComponent } from '../stories/checkbox/checkbox.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -16,15 +21,19 @@ import { InputsComponent } from 'src/stories/inputs/inputs.component';
     SideBarComponent,
    InputTextComponent,
    InputsComponent,
-
+   NavigationComponent,
+   CheckboxComponent,
+   
                   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    FormsModule,
     InputComponent,
     TextAreaComponent,
+    ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

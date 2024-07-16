@@ -31,15 +31,21 @@ export const Primary: Story = {
   args: {
     type: 'text',
     label: 'Text Input',
-    placeholder: 'Text',
+    placeholder: 'Enter text here',
   },
 };
 
 export const Dropdown: Story = {
   name: 'Dropdown',
+
   args: {
     type: 'select',
-    options: ['Option 1', 'Option 2', 'Option 3', 'Option 4'],
+    options: [
+      { value: 'option1', label: 'Option 1' },
+      { value: 'option2', label: 'Option 2' },
+    ],
     label: 'Dropdown Input',
+    placeholder: 'Select an option',
+
   },
 };

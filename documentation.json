@@ -114,7 +114,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-input-text></app-input-text>\r\n\r\n\r\n\r\n\r\n\r\n"
+            "templateData": "<!-- <app-input-text></app-input-text> -->\r\n<!-- <app-side-bar></app-side-bar> -->\r\n\r\n<!-- <app-navigation></app-navigation> -->\r\n\r\n<!-- <app-checkbox></app-checkbox> -->\r\n\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -392,6 +392,137 @@
             "duplicateId": 1,
             "duplicateName": "ButtonComponent-1",
             "templateData": "\r\n<button class=\"button-label button\">button label</button>\r\n"
+        },
+        {
+            "name": "CheckboxComponent",
+            "id": "component-CheckboxComponent-097abea051f2dcb4c86cf5ce466aa7910b0b4a9caca6a86337dfd324ec82cb29ba151b890d5174bf9a64850ea323c88e56f05a6085fd80c26cad379f2dbc22c0",
+            "file": "src/stories/checkbox/checkbox.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-checkbox",
+            "styleUrls": [
+                "./checkbox.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./checkbox.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "checkboxText",
+                    "defaultValue": "\"J'ai lu et j’accepte\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "privacyLink",
+                    "defaultValue": "\"/privacy\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "showError",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "termsLink",
+                    "defaultValue": "\"/terms\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 23,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n  selector: 'app-checkbox',\n  templateUrl: './checkbox.component.html',\n  styleUrls: ['./checkbox.component.css']\n})\nexport class CheckboxComponent implements OnInit {\n  @Input() checkboxText: string = \"J'ai lu et j’accepte\";\n  @Input() termsLink: string = \"/terms\";\n  @Input() privacyLink: string = \"/privacy\";\n  @Input() showError: boolean = false;\n\n  form: FormGroup;\n\n  constructor(private fb: FormBuilder) {\n    this.form = this.fb.group({\n      acceptTerms: [false, Validators.requiredTrue]\n    });\n  }\n\n  ngOnInit(): void {\n    if (this.showError) {\n      this.form.controls['acceptTerms'].markAsTouched();\n    }\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".checkbox-container {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  \r\n  .checkbox-label {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  \r\n  .checkbox-label input[type=\"checkbox\"] {\r\n    appearance: none;\r\n    width: 20px;\r\n    height: 20px;\r\n    border: 2px solid #5C4ABD;\r\n    border-radius: 4px;\r\n    background-color: #fff; /* default background color */\r\n    margin-right: 8px;\r\n    position: relative;\r\n  }\r\n  \r\n  .checkbox-label input[type=\"checkbox\"]:checked {\r\n    background-color: #5C4ABD;\r\n    border-color: #5C4ABD;\r\n  }\r\n  \r\n  .checkbox-label input[type=\"checkbox\"]:checked::after {\r\n    content: '';\r\n    position: absolute;\r\n    top: 2px;\r\n    left: 6px;\r\n    width: 6px;\r\n    height: 12px;\r\n    border: solid white;\r\n    border-width: 0 2px 2px 0;\r\n    transform: rotate(45deg);\r\n  }\r\n  \r\n  .checkbox-label input[type=\"checkbox\"].error-border {\r\n    border-color: red;\r\n  }\r\n  \r\n  .checkbox-text {\r\n    font-size: 14px;\r\n    color: #000;\r\n  }\r\n  ",
+                    "styleUrl": "./checkbox.component.css"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 15,
+                "jsdoctags": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div [formGroup]=\"form\" class=\"checkbox-container\">\n    <label class=\"checkbox-label\">\n      <input \n        type=\"checkbox\" \n        formControlName=\"acceptTerms\" \n        [ngClass]=\"{'error-border': form.controls['acceptTerms'].invalid && form.controls['acceptTerms'].touched}\"\n      />\n      <span class=\"checkbox-text\">\n        {{ checkboxText }} \n        <a [href]=\"termsLink\" target=\"_blank\">les conditions d’utilisation</a> \n        et \n        <a [href]=\"privacyLink\" target=\"_blank\">la politique de confidentialité</a>.\n      </span>\n    </label>\n  </div>\n  "
         },
         {
             "name": "dealsComponent",
@@ -794,7 +925,7 @@
         },
         {
             "name": "InputsComponent",
-            "id": "component-InputsComponent-30b2c5e335b2b828a4d613e39c3bc113a3e9890afb715fca44e5e4054a8a73255dd581aaa814670d23e79b169948106b3cb6f7d672943e73d3c321448324d381",
+            "id": "component-InputsComponent-4509e62ce464ed2e43c92a505b80ca08e6e2ce1630f51003bdf85985163f341dcbe430dc47fbd2c8ea0f32d00e7a84dcfa0e94353065758ca53be511aa10cd86",
             "file": "src/stories/inputs/inputs.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -827,7 +958,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 10,
-                    "type": "string[]",
+                    "type": "literal type[]",
                     "decorators": []
                 },
                 {
@@ -852,56 +983,17 @@
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "isDropdownOpen",
-                    "defaultValue": "false",
+                    "name": "value",
+                    "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "",
+                    "type": "string",
                     "optional": false,
                     "description": "",
-                    "line": 14
+                    "line": 13
                 }
             ],
-            "methodsClass": [
-                {
-                    "name": "selectOption",
-                    "args": [
-                        {
-                            "name": "option",
-                            "type": "string",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 20,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "option",
-                            "type": "string",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "toggleDropdown",
-                    "args": [],
-                    "optional": false,
-                    "returnType": "void",
-                    "typeParameters": [],
-                    "line": 16,
-                    "deprecated": false,
-                    "deprecationMessage": ""
-                }
-            ],
+            "methodsClass": [],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -911,17 +1003,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-inputs',\r\n  templateUrl: './inputs.component.html',\r\n  styleUrls: ['./inputs.component.css']\r\n})\r\nexport class InputsComponent {\r\n  @Input() type: string = 'text';\r\n  @Input() options: string[] = [];\r\n  @Input() label: string = '';\r\n  @Input() placeholder: string = '';\r\n\r\n  isDropdownOpen = false;\r\n\r\n  toggleDropdown() {\r\n    this.isDropdownOpen = !this.isDropdownOpen;\r\n  }\r\n\r\n  selectOption(option: string) {\r\n    console.log(`Selected: ${option}`);\r\n    this.isDropdownOpen = false;\r\n  }\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-inputs',\r\n  templateUrl: './inputs.component.html',\r\n  styleUrls: ['./inputs.component.css']\r\n})\r\nexport class InputsComponent {\r\n  @Input() type: string = 'text';\r\n  @Input() options: {value: string ,label: string  }[] = [];\r\n  @Input() label: string = '';\r\n  @Input() placeholder: string = '';\r\nvalue: string = '';\r\n\r\n \r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ":host {\r\n    display: inline-block;\r\n  }\r\n  \r\n  .dropdown {\r\n    position: relative;\r\n    display: inline-block;\r\n    border-radius: 100px;\r\n\r\n  }\r\n  \r\n  .dropbtn {\r\n    background-color: white;\r\n    color: #555;\r\n    padding: 16px;\r\n    font-size: 16px;\r\n    border: 1px solid #ccc;\r\n    cursor: pointer;\r\n    border-radius: 100px;\r\n    text-align: left;\r\n    width: 1000px;\r\n\r\n  }\r\n  \r\n  .dropdown-content {\r\n    display: none;\r\n    position: absolute;\r\n    background-color: #fff;\r\n    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\r\n    z-index: 1;\r\n    border-radius: 5px;\r\n    margin-top: 5px;\r\n     width: 100%;\r\n     border-radius: 10px;\r\n  }\r\n  .dropdown-content a {\r\n    color: #838383;\r\n    padding: 12px 16px;\r\n    text-decoration: none;\r\n    display: block;\r\n    font-family: \"Montserrat\", sans-serif;\r\n    font-optical-sizing: auto;\r\n    font-weight: 100;\r\n    font-style: normal;\r\n  }\r\n  \r\n  .dropdown-content a:hover {\r\n    background-color: #5C4ABD;\r\n  }\r\n  \r\n  .dropdown-content.show {\r\n    display: block;\r\n  }\r\n  \r\n  .dropdown:hover .dropbtn {\r\n    background-color: #f1f1f1;\r\n    border-color: #5C4ABD;\r\n    border-width: 2px;\r\n  }\r\n label{\r\n    font-family: \"Montserrat\", sans-serif;\r\n    font-optical-sizing: auto;\r\n    font-weight: 300;\r\n    font-style: normal;\r\n }\r\n.label{\r\n  display: flex;\r\n  flex-direction: column;\r\n }\r\n\r\n .text{\r\n    font-family: \"Montserrat\", sans-serif;\r\n    border-radius: 100px;\r\n    border: 1px solid #838383;\r\n    padding: 10px 20px;\r\n    font-size: 16px;\r\n    width: 100%;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n    outline: none;\r\n }",
+                    "data": ".dropdown {\r\n    border-radius: 100px;\r\n    margin-top: 9px;\r\n    width: 100%;\r\n  }  \r\n  .dropbtn {\r\n    background-color: white;\r\n    color: #555;\r\n    padding: 16px;\r\n    font-size: 16px;\r\n    border: 1px solid #ccc;\r\n    cursor: pointer;\r\n    border-radius: 100px;\r\n    text-align: left;\r\n    width: 100%;\r\n  }\r\n  select{\r\n    appearance: none;\r\n\r\n  }\r\n  .dropdown-content {\r\n    position: absolute;\r\n    background-color: #fff;\r\n    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\r\n    z-index: 1;\r\n    border-radius:15px;\r\n    margin-top: 5px;\r\n    max-width: 100%;\r\n   width: 97%;\r\n   padding: 20px;\r\n  }\r\n  .dropdown-content .option {\r\n    color: #5C4ABD;\r\n    padding: 12px 16px;\r\n    text-decoration: none;\r\n    display: block;\r\n    font-family: \"Montserrat\", sans-serif;\r\n    font-optical-sizing: auto;\r\n    font-weight: 100;\r\n    font-style: normal;\r\n  }\r\n  .dropdown-content .option:hover {\r\n    background-color: rgb(92, 74, 189);\r\n    color: white;\r\n  }\r\n  .dropdown-content.show {\r\n    display: block;\r\n  }\r\n  .dropdown:hover .dropbtn {\r\n    background-color: #f1f1f1;\r\n    border-color: #5C4ABD;\r\n    border-width: 2px;\r\n    \r\n  }\r\n label{\r\n    font-family: \"Montserrat\", sans-serif;\r\n    font-optical-sizing: auto;\r\n    font-weight: 300;\r\n    font-style: normal;\r\n }\r\n.label{\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n }\r\n .text{\r\n    font-family: \"Montserrat\", sans-serif;\r\n    border-radius: 100px;\r\n    border: 1px solid #d2d2d2;\r\n    padding: 16px 20px;\r\n    font-size: 16px;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n    outline: none;\r\n    max-width: 100%;\r\n    width: 95%;\r\n    margin-top: 9px;\r\n } \r\n",
                     "styleUrl": "./inputs.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"label\">\r\n    <label>{{ label }}</label>\r\n    <ng-container [ngSwitch]=\"type\">\r\n        <input *ngSwitchCase=\"'text'\" class=\"text-input\" type=\"text\" [placeholder]=\"placeholder\"/>\r\n        <div *ngSwitchCase=\"'select'\" class=\"dropdown\">\r\n        <button class=\"dropbtn\" (click)=\"toggleDropdown()\">Choose option</button>\r\n        <div class=\"dropdown-content\" [class.show]=\"isDropdownOpen\">\r\n          <a href=\"#\" *ngFor=\"let option of options\" (click)=\"selectOption(option)\">{{ option }}</a>\r\n        </div>\r\n      </div>\r\n    </ng-container>\r\n  </div>\r\n  "
+            "templateData": "<div class=\"label\">\r\n    <label>{{ label }}</label>\r\n    <ng-container [ngSwitch]=\"type\">\r\n        <input *ngSwitchCase=\"'text'\" class=\"text\" type=\"text\" [placeholder]=\"placeholder\"/>\r\n        <div *ngSwitchCase=\"'select'\" class=\"dropdown\">\r\n        <!-- <button class=\"dropbtn\" (click)=\"toggleDropdown()\">Choose option</button>\r\n        <div class=\"dropdown-content\" [class.show]=\"isDropdownOpen\">\r\n          <a href=\"#\" *ngFor=\"let option of options\" (click)=\"selectOption(option)\">{{ option }}</a>\r\n        </div> -->\r\n        <select class=\"dropbtn\" [(ngModel)]=\"value\" >\r\n     <option class=\"dropdown-content\" selected disabled>{{placeholder}}</option>\r\n     <option class=\"dropdown-content option\" *ngFor=\"let option of options\" [value]=\"option.value\">{{ option.value }}</option>\r\n    \r\n    </select>\r\n      </div>\r\n      \r\n    </ng-container>\r\n  </div>  "
         },
         {
             "name": "InputTextComponent",
@@ -966,6 +1058,50 @@
             "stylesData": "",
             "extends": [],
             "templateData": "<input type=\"password\" class=\"styled-input\" placeholder=\"Type password\">\n"
+        },
+        {
+            "name": "NavigationComponent",
+            "id": "component-NavigationComponent-40bdbce81ba86fe014633e76a1e07ac305b8a2df3947b0cdb00271b9bdac1d90d35f332d9373aa3109c495a3f68b98efe18a57dfbdcd011eb9d78c3fdd81bef5",
+            "file": "src/stories/navigation/navigation.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-navigation",
+            "styleUrls": [
+                "./navigation.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./navigation.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-navigation',\n  templateUrl: './navigation.component.html',\n  styleUrls: ['./navigation.component.css']\n})\nexport class NavigationComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".sidebar {\r\n    width: 170px;\r\n    background-color: #f7f7ff;\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n    padding: 20px;\r\n  }\r\n  \r\n  .logo {\r\n    text-align: center;\r\n    margin-bottom: 20px;\r\n  }\r\n  \r\n  .logo img {\r\n    max-width: 100%;\r\n  }\r\n  \r\n  .dashboard-link {\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 10px;\r\n    background-color: #5c4abd;\r\n    border-radius: 8px;\r\n    color: #fff;\r\n    text-decoration: none;\r\n    margin-bottom: 20px;\r\n  }\r\n  \r\n  .dashboard-icon {\r\n    margin-right: 10px;\r\n  }\r\n  \r\n  .nav-container {\r\n    flex-grow: 1;\r\n  }\r\n  \r\n  .nav-item {\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 10px;\r\n    margin-bottom: 10px;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .nav-icon {\r\n    margin-right: 10px;\r\n  }\r\n  \r\n  .nav-text {\r\n    color: #333;\r\n  }\r\n  \r\n  .divider {\r\n    border-top: 1px solid #e0e0e0;\r\n    margin: 20px 0;\r\n  }\r\n  \r\n  .notification-container {\r\n    margin-bottom: 20px;\r\n  }\r\n  \r\n  .notification-item {\r\n    display: flex;\r\n    align-items: center;\r\n    margin-bottom: 10px;\r\n  }\r\n  \r\n  .notification-icon {\r\n    margin-right: 10px;\r\n  }\r\n  \r\n  .notification-text {\r\n    flex-grow: 1;\r\n  }\r\n  \r\n  .notification-badge {\r\n    background-color: #5c4abd;\r\n    color: #fff;\r\n    padding: 2px 8px;\r\n    border-radius: 12px;\r\n    font-size: 12px;\r\n  }\r\n  \r\n  .profile {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  \r\n  .profile img {\r\n    border-radius: 50%;\r\n    margin-right: 10px;\r\n  }\r\n  \r\n  .profile-info {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n  \r\n  .profile-name {\r\n    font-weight: bold;\r\n    color: #333;\r\n  }\r\n  \r\n  .profile-role {\r\n    color: #888;\r\n  }\r\n  ",
+                    "styleUrl": "./navigation.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<!-- src/app/sidebar/sidebar.component.html -->\n<div class=\"sidebar\">\n    <div class=\"logo\">\n      <img src=\"path-to-your-logo\" alt=\"e-voucher path\">\n    </div>\n    <div class=\"nav-container\">\n      <a href=\"#\" class=\"dashboard-link\">\n        <div class=\"dashboard-bg\"></div>\n        <svg class=\"dashboard-icon\" viewBox=\"0 0 23 23\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M11.5 0.5C5.69998 0.5 0.5 5.69998 0.5 11.5C0.5 17.3 5.69998 22.5 11.5 22.5C17.3 22.5 22.5 17.3 22.5 11.5C22.5 5.69998 17.3 0.5 11.5 0.5ZM11.5 20.5C6.80498 20.5 2.5 16.195 2.5 11.5C2.5 6.80498 6.80498 2.5 11.5 2.5C16.195 2.5 20.5 6.80498 20.5 11.5C20.5 16.195 16.195 20.5 11.5 20.5ZM10.5 6.5H12.5V12.5H10.5V6.5ZM10.5 14.5H12.5V16.5H10.5V14.5Z\" fill=\"white\" />\n        </svg>\n        <span class=\"dashboard-text\">Tableau de bord</span>\n      </a>\n      <nav>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for List Icon -->\n          </svg>\n          <span class=\"nav-text\">Liste demandes</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Identity Icon -->\n          </svg>\n          <span class=\"nav-text\">Identité patient</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Requests Icon -->\n          </svg>\n          <span class=\"nav-text\">Demandes en cours</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Archive Icon -->\n          </svg>\n          <span class=\"nav-text\">Demandes archivés</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Labs Icon -->\n          </svg>\n          <span class=\"nav-text\">Liste Laboratoires</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Couriers Icon -->\n          </svg>\n          <span class=\"nav-text\">Listes coursiers</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Doctors Icon -->\n          </svg>\n          <span class=\"nav-text\">Listes médecins</span>\n        </div>\n      </nav>\n      <div class=\"divider\"></div>\n      <div class=\"notification-container\">\n        <div class=\"notification-item\">\n          <svg class=\"notification-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Notification Icon -->\n          </svg>\n          <span class=\"notification-text\">Notification</span>\n          <span class=\"notification-badge\">6</span>\n        </div>\n        <div class=\"notification-item\">\n          <svg class=\"notification-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Messages Icon -->\n          </svg>\n          <span class=\"notification-text\">Messages</span>\n        </div>\n        <div class=\"notification-item\">\n          <svg class=\"notification-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Settings Icon -->\n          </svg>\n          <span class=\"notification-text\">Paramètre</span>\n        </div>\n      </div>\n    </div>\n    <div class=\"profile\">\n      <img src=\"path-to-profile-picture\" alt=\"Dr Slimani Amlah\">\n      <div class=\"profile-info\">\n        <span class=\"profile-name\">Dr Slimani Amlah</span>\n        <span class=\"profile-role\">Administrateur</span>\n      </div>\n    </div>\n  </div>\n  "
         },
         {
             "name": "PageComponent",
@@ -1298,13 +1434,13 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".sidebar {\r\n  background-color: #5c4abd;\r\n  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.102);\r\n  display: flex;\r\n  max-width: 298px;\r\n  flex-direction: column;\r\n  padding: 35px 0 19px;\r\n}\r\n\r\n.sidebar-title {\r\n  color: #fff;\r\n  align-self: center;\r\n  font: 400 28px Inter, sans-serif;\r\n}\r\n\r\n.dashboard-link {\r\n  display: flex;\r\n  flex-direction: column;\r\n  fill: #fff;\r\n  overflow: hidden;\r\n  align-self: start;\r\n  position: relative;\r\n  aspect-ratio: 4.74;\r\n  margin-top: 55px;\r\n  gap: 20px;\r\n  font: 700 18px Montserrat, sans-serif;\r\n  color: #5c4abd;\r\n  padding: 20px 36px;\r\n}\r\n\r\n.dashboard-bg {\r\n  position: absolute;\r\n  inset: 0;\r\n  height: 100%;\r\n  width: 100%;\r\n  object-fit: cover;\r\n  object-position: center;\r\n}\r\n\r\n.dashboard-icon {\r\n  aspect-ratio: 1;\r\n  object-fit: auto;\r\n  object-position: center;\r\n  width: 20px;\r\n  align-self: start;\r\n}\r\n\r\n.dashboard-text {\r\n  position: relative;\r\n  flex-grow: 1;\r\n  flex-basis: auto;\r\n}\r\n\r\n.nav-container {\r\n  display: flex;\r\n  margin-top: 29px;\r\n  width: 100%;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  padding: 0 39px 0 16px;\r\n}\r\n\r\n.nav-title {\r\n  color: #fff;\r\n  font: 500 18px Montserrat, sans-serif;\r\n}\r\n\r\n.nav-item {\r\n  display: flex;\r\n  gap: 20px;\r\n  font: 500 18px Montserrat, sans-serif;\r\n  color: #fff;\r\n}\r\n\r\n.nav-icon {\r\n  aspect-ratio: 1;\r\n  object-fit: auto;\r\n  object-position: center;\r\n  width: 21px;\r\n}\r\n\r\n.nav-text {\r\n  flex-grow: 1;\r\n  flex-basis: auto;\r\n}\r\n\r\n.divider {\r\n  border: 2px solid #e0def5;\r\n  align-self: start;\r\n  width: 228px;\r\n  margin: 34px 0 0 15px;\r\n}\r\n\r\n.notification-container {\r\n  align-self: start;\r\n  display: flex;\r\n  width: 100%;\r\n  gap: 20px;\r\n  white-space: nowrap;\r\n  justify-content: space-between;\r\n  margin: 42px 0 0 15px;\r\n}\r\n\r\n.notification-badge {\r\n  border-radius: 8px;\r\n  background-color: #fff;\r\n  color: #5c4abd;\r\n  text-align: center;\r\n  letter-spacing: -0.11px;\r\n  justify-content: center;\r\n  margin: auto 0;\r\n  padding: 4px 0;\r\n  font: 400 11px/382% Inter, sans-serif;\r\n}\r\n\r\n.user-profile {\r\n  align-self: stretch;\r\n  display: flex;\r\n  margin-top: 43px;\r\n  gap: 10px;\r\n  font: 16px Montserrat, sans-serif;\r\n  color: #fff;\r\n  line-height: 144%;\r\n}\r\n\r\n.user-avatar {\r\n  aspect-ratio: 1;\r\n  object-fit: auto;\r\n  object-position: center;\r\n  width: 61px;\r\n}\r\n\r\n.user-info {\r\n  display: flex;\r\n  flex-direction: column;\r\n  margin: auto 0;\r\n}\r\n\r\n.user-name {\r\n  font-weight: 600;\r\n}\r\n\r\n.user-role {\r\n  font-weight: 300;\r\n  margin-top: 7px;\r\n}",
+                    "data": "  .sidebar {\r\n  width: 180px;\r\n  height: 100vh;\r\n  background-color: #f0f0ff;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  /* margin: auto; */\r\n\r\n}\r\n.logo img {\r\n  width: 40px;\r\n  height: 40px;\r\n  margin-bottom: 20px;\r\n}\r\n.menu1 {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  flex-grow: 1;\r\n  justify-content: space-between; \r\n}\r\n.menu {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: space-around;\r\n  flex-grow: 1;\r\n  width: 100%;\r\n}\r\n.items1{\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.items2{\r\n  display: flex;\r\n  width: 100%;\r\n  flex-direction: column;\r\n  margin-top: 20px;\r\n  margin-bottom: -15px;\r\n}\r\n.menu-item {\r\n  margin: 10px 0;\r\n  text-decoration: none;\r\n  color: black;\r\n}\r\n.menu-item i {\r\n  font-size: 24px;\r\n}\r\na {\r\nwidth: 100%;\r\ntext-align: center;}\r\n.divider {\r\n  width: 80%;\r\n  height: 1px;\r\n  background-color: #ccc;\r\n  margin: 9px 0;\r\n}\r\n.profile img {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 50%;\r\n  margin-bottom: 20px;\r\n}\r\n.items1{\r\n  width: 100%;\r\nalign-items: center;\r\n}\r\n",
                     "styleUrl": "./side-bar.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<aside class=\"sidebar\">\n  <h1 class=\"sidebar-title\">e-voucher path</h1>\n  <a href=\"#\" class=\"dashboard-link\">\n    <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/e8a82cd33225f27918e36eeeae9436560551a0a7cef1bda1ecddfca919f795cd?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"\" class=\"dashboard-bg\" />\n    <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/41a5cd9330add4f1940a9be512249cb3186aed84c2b6a2729e367064fcc4996c?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"Dashboard icon\" class=\"dashboard-icon\" />\n    <span class=\"dashboard-text\">Tableau de bord</span>\n  </a>\n  <div class=\"nav-container\">\n    <h2 class=\"nav-title\">Liste demandes</h2>\n    <a href=\"#\" class=\"nav-item\" style=\"margin-top: 48px;\">\n      <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/09eb2c1febd192cbcbd7701e360c6141d966726a290908174888a12fb9bce6ea?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"Patient identity icon\" class=\"nav-icon\" style=\"aspect-ratio: 1.28; width: 23px;\" />\n      <span class=\"nav-text\">Identité patient</span>\n    </a>\n    <a href=\"#\" class=\"nav-item\" style=\"margin: 43px 0 0 19px;\">\n      <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/72b709fa653f07858ffcdc9e46c2d9c81e0b8a7dc1c8ea54d4d7fc7c23c190e2?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"Current requests icon\" class=\"nav-icon\" style=\"aspect-ratio: 1.05;\" />\n      <span class=\"nav-text\">Demandes en cours</span>\n    </a>\n    <a href=\"#\" class=\"nav-item\" style=\"margin: 41px 0 0 19px;\">\n      <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/90ab62f568af2ed752f96deae572b5dad83c50739de0629d1d8f3e6c5bcf39ae?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"Archived requests icon\" class=\"nav-icon\" style=\"aspect-ratio: 0.95;\" />\n      <span class=\"nav-text\">Demandes archivés</span>\n    </a>\n    <a href=\"#\" class=\"nav-item\" style=\"margin-top: 102px;\">\n      <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/a66bf0cdf0b4a6f969335760a77c482b1312c50ae0323e4150383575e9b98603?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"Courier list icon\" class=\"nav-icon\" style=\"aspect-ratio: 0.95;\" />\n      <span class=\"nav-text\">Listes coursiers</span>\n    </a>\n    <a href=\"#\" class=\"nav-item\" style=\"margin-top: 40px;\">\n      <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/f0a679702fd1bc8466b98beb05518f1fb9614d8e72323ff98e1f5dce05c51b81?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"Doctor list icon\" class=\"nav-icon\" />\n      <span class=\"nav-text\">Listes médecins</span>\n    </a>\n  </div>\n  <hr class=\"divider\" />\n  <div class=\"notification-container\">\n    <a href=\"#\" class=\"nav-item\">\n      <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/f0e6461d65e7a3b962f58a17f6fcf4029dea488ac4d7ceb7a0d6cc840be90139?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"Notification icon\" class=\"nav-icon\" style=\"aspect-ratio: 0.91; width: 20px;\" />\n      <span class=\"nav-text\">Notification</span>\n    </a>\n    <span class=\"notification-badge\">6</span>\n  </div>\n  <a href=\"#\" class=\"nav-item\" style=\"margin: 39px 0 0 19px;\">\n    <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/e758c996a8ca25fd8789670a63665c2fd1df2c1bf4a9ced8fc34ef27a4a61842?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"Messages icon\" class=\"nav-icon\" style=\"aspect-ratio: 1.22; width: 22px;\" />\n    <span class=\"nav-text\">Messages</span>\n  </a>\n  <a href=\"#\" class=\"nav-item\" style=\"margin: 40px 0 0 19px;\">\n    <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/2f85e6b16533bea4b81f1f43de105aa051f7c7e83ec9a5129c7b5971d6b22272?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"Settings icon\" class=\"nav-icon\" style=\"aspect-ratio: 1; width: 22px;\" />\n    <span class=\"nav-text\">Paramétre</span>\n  </a>\n  <div class=\"user-profile\">\n    <img src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/c1c064c4af7bee6b052aa88716aae9813f50a271f9b854c110ca3d8389c10e27?apiKey=a344534572a0466dba893851fbc6de83&\" alt=\"User avatar\" class=\"user-avatar\" />\n    <div class=\"user-info\">\n      <span class=\"user-name\">Dr Slimani Amlah</span>\n      <span class=\"user-role\">Adminstrateur</span>\n    </div>\n  </div>\n</aside>"
+            "templateData": "\n<div class=\"sidebar\">\n  <div class=\"logo\">\n      <img src=\"assets/img/Groupe 19120.png\" alt=\"e-voucher path\">\n  </div>\n  <div class=\"menu menu1\">\n      <a href=\"#\" class=\"menu-item\" > \n      <svg width=\"20\" height=\"18\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M17.153 20.7571C16.4026 20.7571 15.902 20.2576 15.902 19.5072V8.25721C15.902 7.50684 16.4026 7.00734 17.153 7.00734H19.6527C20.402 7.00734 20.9026 7.50684 20.9026 8.25721V19.5072C20.9026 20.2576 20.402 20.7571 19.6527 20.7571H17.153ZM9.65261 20.7571C8.90222 20.7571 8.40273 20.2576 8.40273 19.5072V2.00671C8.40273 1.25746 8.90222 0.756836 9.65261 0.756836H12.1523C12.9027 0.756836 13.4022 1.25746 13.4022 2.00671V19.5072C13.4022 20.2576 12.9027 20.7571 12.1523 20.7571H9.65261ZM2.15223 20.7571C1.40298 20.7571 0.902344 20.2576 0.902344 19.5072V14.5077C0.902344 13.7573 1.40298 13.2567 2.15223 13.2567H4.65196C5.40235 13.2567 5.90299 13.7573 5.90299 14.5077V19.5072C5.90299 20.2576 5.40235 20.7571 4.65196 20.7571H2.15223Z\" fill=\"black\"/>\n         </svg>\n         <span class=\"dashboard-text\">Tableau de bord</span>  \n         </a>\n         <div class=\"items1\">\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 23 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M11.2396 4.56763C11.2396 4.07883 11.6358 3.68262 12.1246 3.68262H18.2755C18.7642 3.68262 19.1605 4.07883 19.1605 4.56763C19.1605 5.05641 18.7642 5.45263 18.2755 5.45263H12.1246C11.6358 5.45263 11.2396 5.05641 11.2396 4.56763ZM12.1246 9.03693H18.2755C18.7642 9.03693 19.1605 8.64071 19.1605 8.15192C19.1605 7.66312 18.7642 7.26691 18.2755 7.26691H12.1246C11.6358 7.26691 11.2396 7.66312 11.2396 8.15192C11.2396 8.64071 11.6358 9.03693 12.1246 9.03693ZM18.2755 12.6655H13.8947C13.4059 12.6655 13.0096 13.0617 13.0096 13.5505C13.0096 14.0393 13.4059 14.4355 13.8947 14.4355H18.2755C18.7642 14.4355 19.1605 14.0393 19.1605 13.5505C19.1605 13.0617 18.7642 12.6655 18.2755 12.6655ZM4.35916 10.1432H8.03098C8.48335 10.1432 8.8501 9.77785 8.8501 9.3272V9.248C8.8501 8.03535 8.02633 7.01145 6.90719 6.70055C7.42939 6.43906 7.78808 5.89939 7.78808 5.27563C7.78808 4.39584 7.07486 3.68262 6.19507 3.68262C5.31528 3.68262 4.60205 4.39584 4.60205 5.27563C4.60205 5.89983 4.96123 6.43982 5.48405 6.70111C4.35779 7.01835 3.54004 8.06965 3.54004 9.29026V9.32717C3.54004 9.77785 3.90679 10.1432 4.35916 10.1432ZM4.42505 14.4355H10.3546C10.8434 14.4355 11.2396 14.0393 11.2396 13.5505C11.2396 13.0617 10.8434 12.6655 10.3546 12.6655H4.42505C3.93626 12.6655 3.54004 13.0617 3.54004 13.5505C3.54004 14.0393 3.93626 14.4355 4.42505 14.4355ZM22.6562 1.02759V17.0905C22.6562 17.5793 22.26 17.9755 21.7712 17.9755H0.88501C0.396219 17.9755 0 17.5793 0 17.0905V1.02759C0 0.538795 0.396219 0.142578 0.88501 0.142578H21.7712C22.26 0.142578 22.6562 0.538795 22.6562 1.02759ZM20.8862 1.9126H1.77002V16.2055H20.8862V1.9126Z\" fill=\"black\"/>\n        </svg>\n        <span class=\"nav-text\">Liste demandes</span>\n        </a>\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 22 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M2.50935 0.961914H5.68785C6.77838 0.961914 7.70864 1.66113 8.05387 2.63481H18.9037C20.2874 2.63481 21.4131 3.7605 21.4131 5.14416V18.5273C21.4131 19.911 20.2874 21.0367 18.9037 21.0367H2.50935C1.12569 21.0367 0 19.911 0 18.5273V3.47126C0 2.0876 1.12569 0.961914 2.50935 0.961914ZM18.9037 19.3638C19.365 19.3638 19.7402 18.9886 19.7402 18.5273V5.14416C19.7402 4.68294 19.365 4.30771 18.9037 4.30771H7.36075C6.89879 4.30771 6.5243 3.93322 6.5243 3.47126C6.5243 3.01004 6.14907 2.63481 5.68785 2.63481H2.50935C2.04813 2.63481 1.6729 3.01004 1.6729 3.47126V18.5273C1.6729 18.9886 2.04813 19.3638 2.50935 19.3638H18.9037Z\" fill=\"black\"/>\n          <path d=\"M5.68801 12.672C5.22606 12.672 4.85156 12.2976 4.85156 11.8356C4.85156 8.60707 7.47817 5.98047 10.7067 5.98047C12.3701 5.98047 13.9607 6.69176 15.0707 7.93196C15.3788 8.2762 15.3495 8.80499 15.0053 9.11308C14.6611 9.42116 14.1323 9.39188 13.8242 9.04765C13.0311 8.16156 11.8948 7.65337 10.7067 7.65337C8.40061 7.65337 6.52446 9.52953 6.52446 11.8356C6.52446 12.2976 6.14997 12.672 5.68801 12.672Z\" fill=\"black\"/>\n          <path d=\"M10.7061 17.6906C9.04275 17.6906 7.45211 16.9793 6.3421 15.7391C6.03401 15.3949 6.06331 14.8661 6.40751 14.558C6.75174 14.2499 7.28053 14.2792 7.58862 14.6234C8.3817 15.5095 9.51799 16.0177 10.7061 16.0177C13.0122 16.0177 14.8884 14.1416 14.8884 11.8355C14.8884 11.3735 15.2628 10.999 15.7248 10.999C16.1868 10.999 16.5613 11.3735 16.5613 11.8355C16.5613 15.064 13.9347 17.6906 10.7061 17.6906Z\" fill=\"black\"/>\n          <path d=\"M14.4467 9.32664C14.0676 9.32664 13.7243 9.06718 13.6334 8.68221L13.2384 7.00931C13.1322 6.55971 13.4107 6.10919 13.8603 6.00304C14.3099 5.89689 14.7604 6.17531 14.8665 6.6249L15.2615 8.2978C15.3676 8.7474 15.0892 9.19792 14.6396 9.30407C14.575 9.31933 14.5104 9.32664 14.4467 9.32664Z\" fill=\"black\"/>\n          <path d=\"M7.3598 17.6909C6.98071 17.6909 6.63734 17.4314 6.54645 17.0465L6.15148 15.3736C6.04533 14.924 6.32374 14.4734 6.77334 14.3673C7.22294 14.2611 7.67346 14.5396 7.77961 14.9892L8.17458 16.6621C8.28073 17.1117 8.00231 17.5622 7.55271 17.6683C7.48809 17.6836 7.42344 17.6909 7.3598 17.6909Z\" fill=\"black\"/>\n          </svg>\n          <span class=\"nav-text\">Identité patient</span>\n        </a>\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 22 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M13.1466 18.5906H11.4825C11.0229 18.5906 10.6504 18.2181 10.6504 17.7586C10.6504 17.299 11.0229 16.9265 11.4825 16.9265H13.1466C13.6055 16.9265 13.9787 16.5532 13.9787 16.0944C13.9787 15.9433 13.9381 15.7957 13.8612 15.6676C13.6247 15.2735 13.7525 14.7624 14.1465 14.5259C14.5406 14.2895 15.0517 14.4173 15.2881 14.8113C15.5202 15.198 15.6429 15.6417 15.6429 16.0944C15.6429 17.4708 14.5231 18.5906 13.1466 18.5906Z\" fill=\"black\"/>\n          <path d=\"M8.15445 18.5908C6.77802 18.5908 5.6582 17.4709 5.6582 16.0945C5.6582 15.6419 5.78088 15.1982 6.01295 14.8115L6.797 13.5047C7.03343 13.1107 7.54456 12.9828 7.9386 13.2193C8.33266 13.4557 8.46045 13.9668 8.22401 14.3609L7.43994 15.6677C7.36302 15.7959 7.32237 15.9435 7.32237 16.0945C7.32237 16.5533 7.69565 16.9266 8.15445 16.9266C8.614 16.9266 8.98654 17.2992 8.98654 17.7587C8.98654 18.2183 8.614 18.5908 8.15445 18.5908Z\" fill=\"black\"/>\n          <path d=\"M12.8637 13.2178C12.5811 13.2178 12.3055 13.0737 12.1494 12.8137L11.3654 11.5069C11.2131 11.2531 10.946 11.1017 10.6508 11.1017C10.3557 11.1017 10.0886 11.2531 9.93634 11.5069C9.69992 11.9009 9.18881 12.0287 8.79474 11.7923C8.40068 11.5559 8.27289 11.0447 8.50934 10.6507C8.95831 9.90237 9.7789 9.4375 10.6508 9.4375C11.5228 9.4375 12.3434 9.90237 12.7924 10.6507L13.5764 11.9575C13.8129 12.3515 13.6851 12.8626 13.291 13.0991C13.157 13.1795 13.0094 13.2178 12.8637 13.2178Z\" fill=\"black\"/>\n          <path d=\"M0.832082 4.44531H5.65816C5.87884 4.44531 6.09048 4.53298 6.24653 4.68903L7.66698 6.10948H20.4692C20.9288 6.10948 21.3013 6.48202 21.3013 6.94156V21.087C21.3013 21.5465 20.9288 21.919 20.4692 21.919H0.832082C0.372538 21.919 0 21.5465 0 21.087V5.2774C0 4.81786 0.372538 4.44531 0.832082 4.44531ZM5.3135 6.10948H1.66416V20.2549H19.6371V7.77365H7.32232C7.10164 7.77365 6.88999 7.68597 6.73395 7.52994L5.3135 6.10948Z\" fill=\"black\"/>\n          <path d=\"M17.3075 7.7735C16.848 7.7735 16.4754 7.40096 16.4754 6.94141V2.11534H4.82628V5.27725C4.82628 5.7368 4.45374 6.10933 3.99419 6.10933C3.53465 6.10933 3.16211 5.7368 3.16211 5.27725V1.28325C3.16211 0.823706 3.53465 0.451172 3.99419 0.451172H17.3075C17.7671 0.451172 18.1396 0.823706 18.1396 1.28325V6.94141C18.1396 7.40096 17.7671 7.7735 17.3075 7.7735Z\" fill=\"black\"/>\n          </svg>\n          <span class=\"nav-text\">Demandes en cours</span>\n\n        </a>\n      </div>\n<div class=\"items2\">\n\n  <a href=\"#\" class=\"menu-item \">\n    <svg width=\"20\" height=\"18\" viewBox=\"0 0 22 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M16.5062 17.615H12.5871C12.1286 17.615 11.7568 17.2432 11.7568 16.7847V12.8655C11.7568 12.4069 12.1286 12.0352 12.5871 12.0352H16.5062C16.9647 12.0352 17.3364 12.4069 17.3364 12.8655V16.7847C17.3364 17.2432 16.9647 17.615 16.5062 17.615ZM13.4174 15.9544H15.6758V13.6958H13.4174V15.9544Z\" fill=\"black\"/>\n      <path d=\"M20.4251 17.615H16.506C16.0475 17.615 15.6758 17.2432 15.6758 16.7847V12.8655C15.6758 12.4069 16.0475 12.0352 16.506 12.0352H20.4251C20.8837 12.0352 21.2554 12.4069 21.2554 12.8655V16.7847C21.2554 17.2432 20.8837 17.615 20.4251 17.615ZM17.3363 15.9544H19.5948V13.6958H17.3363V15.9544Z\" fill=\"black\"/>\n      <path d=\"M12.5872 15.9541H16.5062C16.9647 15.9541 17.3364 16.3258 17.3364 16.7844V20.7036C17.3364 21.1621 16.9647 21.5338 16.5062 21.5338H12.5872C12.1286 21.5338 11.7568 21.1621 11.7568 20.7036V16.7844C11.7568 16.3258 12.1286 15.9541 12.5872 15.9541ZM15.6758 17.6147H13.4175V19.8732H15.6758V17.6147Z\" fill=\"black\"/>\n      <path d=\"M16.5061 15.9541H20.4251C20.8837 15.9541 21.2554 16.3258 21.2554 16.7844V20.7036C21.2554 21.1621 20.8837 21.5338 20.4251 21.5338H16.5061C16.0475 21.5338 15.6758 21.1621 15.6758 20.7036V16.7844C15.6758 16.3258 16.0475 15.9541 16.5061 15.9541ZM19.5948 17.6147H17.3364V19.8732H19.5948V17.6147Z\" fill=\"black\"/>\n      <path d=\"M10.0299 13.6959C6.33075 13.6959 3.32129 10.6863 3.32129 6.98711C3.32129 3.28786 6.33075 0.27832 10.0299 0.27832C13.729 0.27832 16.7385 3.28786 16.7385 6.98711C16.7385 10.6863 13.729 13.6959 10.0299 13.6959ZM10.0299 1.93895C7.24642 1.93895 4.9819 4.20354 4.9819 6.98711C4.9819 9.77066 7.24642 12.0352 10.0299 12.0352C12.8133 12.0352 15.0779 9.77066 15.0779 6.98711C15.0779 4.20354 12.8133 1.93895 10.0299 1.93895Z\" fill=\"black\"/>\n      <path d=\"M12.5875 21.5341H0.830292C0.371735 21.5341 0 21.1624 0 20.7038C0 15.9239 3.88864 12.0352 8.66843 12.0352H12.5875C13.0461 12.0352 13.4178 12.4069 13.4178 12.8655C13.4178 13.324 13.0461 13.6958 12.5875 13.6958H8.66843C5.08517 13.6958 2.12146 16.3992 1.70953 19.8735H12.5875C13.0461 19.8735 13.4178 20.2452 13.4178 20.7038C13.4178 21.1624 13.0461 21.5341 12.5875 21.5341Z\" fill=\"black\"/>\n    </svg>\n    <span class=\"nav-text\">Demandes archivés</span>    \n  </a>\n  <a href=\"#\" class=\"menu-item \">  \n    <svg width=\"20\" height=\"18\" viewBox=\"0 0 22 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M20.2304 21.4323H0.822372C0.36819 21.4323 0 21.0641 0 20.6099V17.4849C0 15.2176 1.84457 13.373 4.11186 13.373H8.88162C9.3358 13.373 9.70399 13.7412 9.70399 14.1954C9.70399 14.6496 9.3358 15.0178 8.88162 15.0178H4.11186C2.75149 15.0178 1.64474 16.1245 1.64474 17.4849V19.7876H19.408V17.4849C19.408 16.1245 18.3012 15.0178 16.9409 15.0178H12.1711C11.7169 15.0178 11.3487 14.6496 11.3487 14.1954C11.3487 13.7412 11.7169 13.373 12.1711 13.373H16.9409C19.2082 13.373 21.0527 15.2176 21.0527 17.4849V20.6099C21.0527 21.0641 20.6845 21.4323 20.2304 21.4323Z\" fill=\"black\"/>\n      <path d=\"M15.4604 8.43913C15.0062 8.43913 14.638 8.07094 14.638 7.61676V4.49175C14.638 3.13137 13.5312 2.02463 12.1709 2.02463H8.88139C7.52102 2.02463 6.41427 3.13137 6.41427 4.49175V7.61676C6.41427 8.07094 6.04608 8.43913 5.5919 8.43913C5.13773 8.43913 4.76953 8.07094 4.76953 7.61676V4.49175C4.76953 2.22446 6.6141 0.379883 8.88139 0.379883H12.1709C14.4382 0.379883 16.2827 2.22446 16.2827 4.49175V7.61676C16.2827 8.07094 15.9146 8.43913 15.4604 8.43913Z\" fill=\"black\"/>\n      <path d=\"M7.40092 21.4323C6.94674 21.4323 6.57855 21.0641 6.57855 20.61V18.9652C6.57855 18.5117 6.20964 18.1428 5.75618 18.1428C5.30273 18.1428 4.93381 18.5117 4.93381 18.9652V20.61C4.93381 21.0641 4.56562 21.4323 4.11143 21.4323C3.65725 21.4323 3.28906 21.0641 3.28906 20.61V18.9652C3.28906 17.6048 4.39581 16.498 5.75618 16.498C7.11655 16.498 8.2233 17.6048 8.2233 18.9652V20.61C8.2233 21.0641 7.85511 21.4323 7.40092 21.4323Z\" fill=\"black\"/>\n      <path d=\"M10.5261 16.6628C9.16576 16.6628 8.05902 15.5561 8.05902 14.1957V12.551C7.22151 11.921 6.65451 10.9909 6.47514 9.96363C5.48627 9.64201 4.76953 8.7115 4.76953 7.61674C4.76953 6.25637 5.87627 5.14962 7.23664 5.14962H9.1955L9.79058 3.95947C9.92988 3.68089 10.2147 3.50488 10.5261 3.50488C10.5261 3.50488 10.5262 3.50488 10.5261 3.50488C10.8376 3.50488 11.1224 3.68088 11.2617 3.95949C11.6287 4.6936 12.3666 5.14962 13.1874 5.14962H13.8156C15.176 5.14962 16.2827 6.25637 16.2827 7.61674C16.2827 8.7115 15.566 9.64201 14.5771 9.96363C14.3978 10.9909 13.8308 11.921 12.9933 12.551V14.1957C12.9933 15.5561 11.8865 16.6628 10.5261 16.6628ZM7.23664 6.79437C6.78319 6.79437 6.41427 7.16329 6.41427 7.61674C6.41427 8.07021 6.78319 8.43912 7.23664 8.43912C7.69083 8.43912 8.05902 8.8073 8.05902 9.26149C8.05902 10.1396 8.53191 10.9587 9.29317 11.399C9.54727 11.546 9.70377 11.8173 9.70377 12.1109V14.1957C9.70377 14.6492 10.0727 15.0181 10.5261 15.0181C10.9796 15.0181 11.3485 14.6492 11.3485 14.1957V12.1109C11.3485 11.8173 11.505 11.546 11.7591 11.399C12.5204 10.9587 12.9933 10.1396 12.9933 9.26149C12.9933 8.8073 13.3614 8.43912 13.8156 8.43912C14.2691 8.43912 14.638 8.07021 14.638 7.61674C14.638 7.16329 14.2691 6.79437 13.8156 6.79437H13.1874C12.243 6.79437 11.3608 6.4521 10.6818 5.8547L10.4393 6.33977C10.3 6.61838 10.0153 6.79437 9.70377 6.79437H7.23664Z\" fill=\"black\"/>\n      <path d=\"M5.75694 18.1428C5.30276 18.1428 4.93457 17.7746 4.93457 17.3204V14.1954C4.93457 13.7412 5.30276 13.373 5.75694 13.373C6.21113 13.373 6.57931 13.7412 6.57931 14.1954V17.3204C6.57931 17.7746 6.21113 18.1428 5.75694 18.1428Z\" fill=\"black\"/>\n      <path d=\"M15.296 18.1428C14.8418 18.1428 14.4736 17.7746 14.4736 17.3204V14.1954C14.4736 13.7412 14.8418 13.373 15.296 13.373C15.7502 13.373 16.1184 13.7412 16.1184 14.1954V17.3204C16.1184 17.7746 15.7502 18.1428 15.296 18.1428Z\" fill=\"black\"/>\n    </svg>\n    <span class=\"nav-text\">Liste Laboratoires</span>\n  </a>\n  </div>\n</div>\n  <div class=\"divider\"></div>\n  <div class=\"menu\" style=\"    justify-content: space-evenly;\">\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 21 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M17.4082 13.8255V9.67185C17.4082 6.58659 15.4336 3.89626 12.715 2.89136C12.7468 2.73267 12.7644 2.5705 12.7644 2.40828C12.7644 1.07898 11.6855 0 10.3562 0C9.02686 0 7.94788 1.07898 7.94788 2.40828C7.94788 2.56697 7.96548 2.7256 7.99369 2.87723C7.05933 3.20868 6.19545 3.73404 5.45852 4.44629C4.06928 5.78619 3.30415 7.58797 3.30415 9.52023V13.8255C3.30415 13.9771 3.18073 14.1041 3.02557 14.1041C1.72448 14.1041 0.613758 15.0843 0.493873 16.3325C0.426863 17.0272 0.656097 17.7182 1.12505 18.233C1.59046 18.7443 2.2569 19.0405 2.95149 19.0405H7.20389C7.38018 20.6237 8.72714 21.8613 10.3562 21.8613C11.9852 21.8613 13.3321 20.6237 13.5084 19.0405H17.7608C18.4555 19.0405 19.1219 18.7443 19.5873 18.233C20.0527 17.7182 20.2819 17.0272 20.2184 16.3325C20.0986 15.0843 18.9844 14.1041 17.6867 14.1041C17.5316 14.104 17.4082 13.9806 17.4082 13.8255ZM10.3562 1.41038C10.9062 1.41038 11.354 1.85819 11.354 2.40822C11.354 2.45403 11.3469 2.49637 11.3399 2.54218C11.1001 2.50691 10.8568 2.48224 10.6135 2.47517C10.1939 2.46104 9.78133 2.4893 9.37233 2.54571C9.36526 2.4999 9.3582 2.45756 9.3582 2.41175C9.35831 1.85819 9.80612 1.41038 10.3562 1.41038ZM10.3562 20.4508C9.5064 20.4508 8.79415 19.8443 8.6284 19.0405H12.0839C11.9182 19.8444 11.206 20.4508 10.3562 20.4508ZM18.8151 16.4665C18.8433 16.7697 18.7481 17.0624 18.5471 17.2845C18.3391 17.5067 18.064 17.63 17.7608 17.63H2.95155C2.6483 17.63 2.37332 17.5066 2.16875 17.2845C1.96425 17.0624 1.86904 16.7697 1.89724 16.4665C1.94659 15.9341 2.4438 15.5145 3.02557 15.5145C3.95646 15.5145 4.71453 14.7564 4.71453 13.8255V9.52023C4.71453 7.97583 5.32803 6.53371 6.43875 5.4618C7.50007 4.43575 8.8823 3.8786 10.3562 3.8786C10.4267 3.8786 10.4937 3.8786 10.5642 3.88213C13.5578 3.98789 15.9978 6.58659 15.9978 9.67185V13.8255C15.9978 14.7564 16.7559 15.5145 17.6867 15.5145C18.2685 15.5145 18.7622 15.9341 18.8151 16.4665Z\" fill=\"black\"/>\n        </svg>\n        <span class=\"notification-text\">Notification</span>\n        <span class=\"notification-badge\">6</span>\n        </a>\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 23 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M1.84876 18.3545C1.09581 18.3505 0.486416 17.7411 0.482422 16.9881L0.482422 5.75052C0.486437 4.19051 1.75008 2.92687 3.31009 2.92285H16.6447C18.2076 2.92285 19.4757 4.18767 19.4797 5.75053L19.4797 13.2398C19.4797 14.8027 18.2149 16.0708 16.652 16.0748H5.53131C5.40501 16.0758 5.28225 16.1167 5.18059 16.1917L2.67442 18.0841C2.43545 18.2607 2.1459 18.3555 1.84876 18.3545ZM3.31009 4.38418C2.55714 4.38817 1.94774 4.99757 1.94375 5.75052V16.8055L4.3038 15.0226C4.6589 14.7589 5.08899 14.6156 5.53131 14.6135H16.6447C17.4034 14.6135 18.0184 13.9985 18.0184 13.2398V5.75052C18.0144 4.99757 17.405 4.38817 16.652 4.38418H3.31009Z\" fill=\"black\"/>\n        <circle cx=\"12.8596\" cy=\"9.56465\" r=\"0.730664\" fill=\"black\"/>\n        <circle cx=\"10.0246\" cy=\"9.56465\" r=\"0.730664\" fill=\"black\"/>\n        <circle cx=\"7.10176\" cy=\"9.56465\" r=\"0.730664\" fill=\"black\"/>\n        <path d=\"M21.6717 10.96C21.2681 10.96 20.941 10.6328 20.941 10.2293V2.82767C20.937 2.07472 20.3276 1.46532 19.5747 1.46133L4.86641 1.46133C4.46287 1.46133 4.13574 1.1342 4.13574 0.730664C4.13574 0.327129 4.46287 0 4.86641 0H19.5747C21.1347 0.00401545 22.3983 1.26766 22.4023 2.82767V10.2293C22.4023 10.6328 22.0752 10.96 21.6717 10.96Z\" fill=\"black\"/>\n        </svg>\n        <span class=\"notification-text\">Messages</span>\n\n        </a>\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 23 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M22.0205 12.4306L20.6214 11.6234C20.6829 11.0511 20.6829 10.4738 20.6214 9.90142L22.0205 9.09424C22.1971 8.99151 22.3256 8.82271 22.3775 8.6251C22.4294 8.42749 22.4005 8.21734 22.2972 8.04106L19.2223 2.72135C19.0112 2.35533 18.5442 2.22829 18.1768 2.43692L16.7777 3.20566C16.3068 2.88634 15.8076 2.61099 15.2863 2.38311L15.2863 0.768744C15.2863 0.344178 14.9421 0 14.5176 0H8.3676C7.94304 0 7.59886 0.344178 7.59886 0.768744V2.38311C7.07613 2.62325 6.57685 2.91149 6.1075 3.2441L4.70838 2.47536C4.34094 2.26673 3.87399 2.39376 3.66289 2.75979L0.587913 8.0795C0.484614 8.25578 0.455739 8.46593 0.507665 8.66354C0.559591 8.86114 0.688047 9.02995 0.864661 9.13268L2.26378 9.93986C2.20226 10.5122 2.20226 11.0895 2.26378 11.6618L0.864661 12.4306C0.688047 12.5333 0.559591 12.7021 0.507665 12.8997C0.455739 13.0973 0.484614 13.3075 0.587913 13.4838L3.66289 18.8035C3.87399 19.1695 4.34094 19.2965 4.70838 19.0879L6.10749 18.3192C6.57835 18.6385 7.07757 18.9138 7.59886 19.1417L7.59886 20.7561C7.59886 21.1807 7.94304 21.5248 8.3676 21.5248H14.5176C14.9421 21.5248 15.2863 21.1807 15.2863 20.7561V19.1417C15.809 18.9016 16.3083 18.6133 16.7777 18.2807L18.1768 19.0495C18.5442 19.2581 19.0112 19.1311 19.2223 18.765L22.2972 13.4453C22.487 13.087 22.3659 12.6429 22.0205 12.4306ZM19.13 10.7624C19.1276 11.1488 19.0941 11.5344 19.0301 11.9155C18.9881 12.2245 19.1369 12.5281 19.4068 12.6843L20.5829 13.3608L18.2767 17.3582L17.1082 16.6817C16.8339 16.5204 16.4884 16.5449 16.2395 16.7432C15.6361 17.2294 14.9621 17.6208 14.2408 17.904C13.9451 18.0181 13.7497 18.302 13.7488 18.619L13.7488 19.9873H9.13635V18.6344C9.13541 18.3174 8.94005 18.0335 8.64435 17.9194C7.92305 17.6362 7.24908 17.2448 6.64562 16.7586C6.39671 16.5603 6.05131 16.5358 5.77694 16.6971L4.60845 17.3736L2.30221 13.3761L3.47839 12.6996C3.74822 12.5435 3.89701 12.2398 3.85508 11.9309C3.72185 11.1679 3.72185 10.3876 3.85508 9.62467C3.89701 9.31575 3.74822 9.01209 3.47839 8.85593L2.30221 8.14868L4.60845 4.15122L5.77694 4.82771C6.05131 4.98901 6.39671 4.96456 6.64562 4.76621C7.24908 4.28007 7.92305 3.88865 8.64435 3.60541C8.94005 3.49131 9.13541 3.20742 9.13635 2.89048V1.53749H13.7488V2.89048C13.7497 3.20742 13.9451 3.49131 14.2408 3.60541C14.9621 3.88865 15.6361 4.28007 16.2395 4.76621C16.4884 4.96456 16.8339 4.98901 17.1082 4.82771L18.2767 4.15122L20.5829 8.14868L19.4068 8.82518C19.1369 8.98134 18.9881 9.285 19.0301 9.59392C19.095 9.98007 19.1284 10.3709 19.13 10.7624Z\" fill=\"black\"/>\n        <path d=\"M11.4424 6.91895C9.31952 6.91895 7.59863 8.63984 7.59863 10.7627C7.59863 12.8855 9.31952 14.6064 11.4424 14.6064C13.5652 14.6064 15.2861 12.8855 15.2861 10.7627C15.2861 8.63984 13.5652 6.91895 11.4424 6.91895ZM11.4424 13.0689C10.1687 13.0689 9.13612 12.0364 9.13612 10.7627C9.13612 9.48897 10.1687 8.45643 11.4424 8.45643C12.716 8.45643 13.7486 9.48897 13.7486 10.7627C13.7486 12.0364 12.716 13.0689 11.4424 13.0689Z\" fill=\"black\"/>\n        </svg>\n        <span class=\"notification-text\">Paramètre</span>\n\n        </a>\n  </div>\n  <div class=\"profile\">\n      <img src=\"assets/img/User Menu.png\" alt=\"Profile Picture\">\n  </div>\n</div>\n\n\n\n"
         },
         {
             "name": "TextAreaComponent",
@@ -1369,13 +1505,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-7ade4eb3b73bb82cb132f7ad15239b06104ab8b1533c0c5bd259d3a303dc3784be957c0e8d10a3dcaf5bc6c8d2f8aaa1538731c69d6e5897d4f81a2bb62902b3",
+            "id": "module-AppModule-19588bc7db013210e5da2c2f306a53a904e0f6574d3bd1cf9ba9daad187b97229f4c80dfb1fdb09652b37790de0d9b557a3fb59bc2367979149ce0e145fa5d72",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { InputComponent } from './../stories/input.component';\r\nimport { TextAreaComponent } from './../stories/textArea.component';\r\nimport { SideBarComponent } from '../stories/side-bar/side-bar.component';\r\nimport { InputTextComponent } from '../stories/input-text/input-text.component';\r\nimport { ButtonComponent } from '../stories/buttonstory/button.component';\r\nimport { InputsComponent } from 'src/stories/inputs/inputs.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ButtonComponent,\r\n    SideBarComponent,\r\n   InputTextComponent,\r\n   InputsComponent,\r\n\r\n                  \r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    \r\n    InputComponent,\r\n    TextAreaComponent,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { InputComponent } from './../stories/input.component';\r\nimport { TextAreaComponent } from './../stories/textArea.component';\r\nimport { SideBarComponent } from '../stories/side-bar/side-bar.component';\r\nimport { InputTextComponent } from '../stories/input-text/input-text.component';\r\nimport { ButtonComponent } from '../stories/buttonstory/button.component';\r\nimport { InputsComponent } from 'src/stories/inputs/inputs.component';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { NavigationComponent } from '../stories/navigation/navigation.component';\r\nimport { CheckboxComponent } from '../stories/checkbox/checkbox.component';\r\nimport { ReactiveFormsModule } from '@angular/forms';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ButtonComponent,\r\n    SideBarComponent,\r\n   InputTextComponent,\r\n   InputsComponent,\r\n   NavigationComponent,\r\n   CheckboxComponent,\r\n   \r\n                  \r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    FormsModule,\r\n    InputComponent,\r\n    TextAreaComponent,\r\n    ReactiveFormsModule,\r\n\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1388,10 +1524,16 @@
                             "name": "AppComponent"
                         },
                         {
+                            "name": "CheckboxComponent"
+                        },
+                        {
                             "name": "InputTextComponent"
                         },
                         {
                             "name": "InputsComponent"
+                        },
+                        {
+                            "name": "NavigationComponent"
                         },
                         {
                             "name": "SideBarComponent"
@@ -1483,7 +1625,7 @@
         ]
     },
     "coverage": {
-        "count": 8,
+        "count": 6,
         "status": "low",
         "files": [
             {
@@ -1509,6 +1651,15 @@
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/checkbox/checkbox.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CheckboxComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/8",
                 "status": "low"
@@ -1555,7 +1706,16 @@
                 "linktype": "component",
                 "name": "InputsComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/navigation/navigation.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavigationComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
