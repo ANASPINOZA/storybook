@@ -114,7 +114,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->\r\n<!-- * * * * * * * to get started with your project! * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n\r\n<style>\r\n    :host {\r\n      font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\r\n        Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\r\n        \"Segoe UI Symbol\";\r\n      font-size: 14px;\r\n      color: #333;\r\n      box-sizing: border-box;\r\n      -webkit-font-smoothing: antialiased;\r\n      -moz-osx-font-smoothing: grayscale;\r\n    }\r\n  \r\n    h1,\r\n    h2,\r\n    h3,\r\n    h4,\r\n    h5,\r\n    h6 {\r\n      margin: 8px 0;\r\n    }\r\n  \r\n    p {\r\n      margin: 0;\r\n    }\r\n  \r\n    .spacer {\r\n      flex: 1;\r\n    }\r\n  \r\n    .toolbar {\r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      right: 0;\r\n      height: 60px;\r\n      display: flex;\r\n      align-items: center;\r\n      background-color: #1976d2;\r\n      color: white;\r\n      font-weight: 600;\r\n    }\r\n  \r\n    .toolbar img {\r\n      margin: 0 16px;\r\n    }\r\n  \r\n    .toolbar #twitter-logo {\r\n      height: 40px;\r\n      margin: 0 8px;\r\n    }\r\n  \r\n    .toolbar #youtube-logo {\r\n      height: 40px;\r\n      margin: 0 16px;\r\n    }\r\n  \r\n    .toolbar #twitter-logo:hover,\r\n    .toolbar #youtube-logo:hover {\r\n      opacity: 0.8;\r\n    }\r\n  \r\n    .content {\r\n      display: flex;\r\n      margin: 82px auto 32px;\r\n      padding: 0 16px;\r\n      max-width: 960px;\r\n      flex-direction: column;\r\n      align-items: center;\r\n    }\r\n  \r\n    svg.material-icons {\r\n      height: 24px;\r\n      width: auto;\r\n    }\r\n  \r\n    svg.material-icons:not(:last-child) {\r\n      margin-right: 8px;\r\n    }\r\n  \r\n    .card svg.material-icons path {\r\n      fill: #888;\r\n    }\r\n  \r\n    .card-container {\r\n      display: flex;\r\n      flex-wrap: wrap;\r\n      justify-content: center;\r\n      margin-top: 16px;\r\n    }\r\n  \r\n    .card {\r\n      all: unset;\r\n      border-radius: 4px;\r\n      border: 1px solid #eee;\r\n      background-color: #fafafa;\r\n      height: 40px;\r\n      width: 200px;\r\n      margin: 0 8px 16px;\r\n      padding: 16px;\r\n      display: flex;\r\n      flex-direction: row;\r\n      justify-content: center;\r\n      align-items: center;\r\n      transition: all 0.2s ease-in-out;\r\n      line-height: 24px;\r\n    }\r\n  \r\n    .card-container .card:not(:last-child) {\r\n      margin-right: 0;\r\n    }\r\n  \r\n    .card.card-small {\r\n      height: 16px;\r\n      width: 168px;\r\n    }\r\n  \r\n    .card-container .card:not(.highlight-card) {\r\n      cursor: pointer;\r\n    }\r\n  \r\n    .card-container .card:not(.highlight-card):hover {\r\n      transform: translateY(-3px);\r\n      box-shadow: 0 4px 17px rgba(0, 0, 0, 0.35);\r\n    }\r\n  \r\n    .card-container .card:not(.highlight-card):hover .material-icons path {\r\n      fill: rgb(105, 103, 103);\r\n    }\r\n  \r\n    .card.highlight-card {\r\n      background-color: #1976d2;\r\n      color: white;\r\n      font-weight: 600;\r\n      border: none;\r\n      width: auto;\r\n      min-width: 30%;\r\n      position: relative;\r\n    }\r\n  \r\n    .card.card.highlight-card span {\r\n      margin-left: 60px;\r\n    }\r\n  \r\n    svg#rocket {\r\n      width: 80px;\r\n      position: absolute;\r\n      left: -10px;\r\n      top: -24px;\r\n    }\r\n  \r\n    svg#rocket-smoke {\r\n      height: calc(100vh - 95px);\r\n      position: absolute;\r\n      top: 10px;\r\n      right: 180px;\r\n      z-index: -10;\r\n    }\r\n  \r\n    a,\r\n    a:visited,\r\n    a:hover {\r\n      color: #1976d2;\r\n      text-decoration: none;\r\n    }\r\n  \r\n    a:hover {\r\n      color: #125699;\r\n    }\r\n  \r\n    .terminal {\r\n      position: relative;\r\n      width: 80%;\r\n      max-width: 600px;\r\n      border-radius: 6px;\r\n      padding-top: 45px;\r\n      margin-top: 8px;\r\n      overflow: hidden;\r\n      background-color: rgb(15, 15, 16);\r\n    }\r\n  \r\n    .terminal::before {\r\n      content: \"\\2022 \\2022 \\2022\";\r\n      position: absolute;\r\n      top: 0;\r\n      left: 0;\r\n      height: 4px;\r\n      background: rgb(58, 58, 58);\r\n      color: #c2c3c4;\r\n      width: 100%;\r\n      font-size: 2rem;\r\n      line-height: 0;\r\n      padding: 14px 0;\r\n      text-indent: 4px;\r\n    }\r\n  \r\n    .terminal pre {\r\n      font-family:\r\n        SFMono-Regular,\r\n        Consolas,\r\n        Liberation Mono,\r\n        Menlo,\r\n        monospace;\r\n      color: white;\r\n      padding: 0 1rem 1rem;\r\n      margin: 0;\r\n    }\r\n  \r\n    .circle-link {\r\n      height: 40px;\r\n      width: 40px;\r\n      border-radius: 40px;\r\n      margin: 8px;\r\n      background-color: white;\r\n      border: 1px solid #eeeeee;\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      cursor: pointer;\r\n      box-shadow:\r\n        0 1px 3px rgba(0, 0, 0, 0.12),\r\n        0 1px 2px rgba(0, 0, 0, 0.24);\r\n      transition: 1s ease-out;\r\n    }\r\n  \r\n    .circle-link:hover {\r\n      transform: translateY(-0.25rem);\r\n      box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);\r\n    }\r\n  \r\n    footer {\r\n      margin-top: 8px;\r\n      display: flex;\r\n      align-items: center;\r\n      line-height: 20px;\r\n    }\r\n  \r\n    footer a {\r\n      display: flex;\r\n      align-items: center;\r\n    }\r\n  \r\n    .github-star-badge {\r\n      color: #24292e;\r\n      display: flex;\r\n      align-items: center;\r\n      font-size: 12px;\r\n      padding: 3px 10px;\r\n      border: 1px solid rgba(27, 31, 35, 0.2);\r\n      border-radius: 3px;\r\n      background-image: linear-gradient(-180deg, #fafbfc, #eff3f6 90%);\r\n      margin-left: 4px;\r\n      font-weight: 600;\r\n    }\r\n  \r\n    .github-star-badge:hover {\r\n      background-image: linear-gradient(-180deg, #f0f3f6, #e6ebf1 90%);\r\n      border-color: rgba(27, 31, 35, 0.35);\r\n      background-position: -0.5em;\r\n    }\r\n  \r\n    .github-star-badge .material-icons {\r\n      height: 16px;\r\n      width: 16px;\r\n      margin-right: 4px;\r\n    }\r\n  \r\n    svg#clouds {\r\n      position: fixed;\r\n      bottom: -160px;\r\n      left: -230px;\r\n      z-index: -10;\r\n      width: 1920px;\r\n    }\r\n  \r\n    /* Responsive Styles */\r\n    @media screen and (max-width: 767px) {\r\n      .card-container > *:not(.circle-link),\r\n      .terminal {\r\n        width: 100%;\r\n      }\r\n  \r\n      .card:not(.highlight-card) {\r\n        height: 16px;\r\n        margin: 8px 0;\r\n      }\r\n  \r\n      .card.highlight-card span {\r\n        margin-left: 72px;\r\n      }\r\n  \r\n      svg#rocket-smoke {\r\n        right: 120px;\r\n        transform: rotate(-5deg);\r\n      }\r\n    }\r\n  \r\n    @media screen and (max-width: 575px) {\r\n      svg#rocket-smoke {\r\n        display: none;\r\n        visibility: hidden;\r\n      }\r\n    }\r\n  </style>\r\n  \r\n  <!-- Toolbar -->\r\n  <!-- <div class=\"toolbar\" role=\"banner\">\r\n    <img\r\n      width=\"40\"\r\n      alt=\"Angular Logo\"\r\n      src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\"\r\n    />\r\n    <span>Welcome</span>\r\n      <div class=\"spacer\"></div>\r\n      <a aria-label=\"Angular on X\" target=\"_blank\" rel=\"noopener\" href=\"https://twitter.com/angular\" title=\"X\">\r\n        <svg id=\"twitter-logo\" xmlns=\"http://www.w3.org/2000/svg\" height=\"24\" width=\"24\" data-name=\"Logo\" viewBox=\"0 0 512 512\" fill=\"#fff\">\r\n          <path d=\"M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z\"/>\r\n        </svg>\r\n      </a>\r\n      <a aria-label=\"Angular on YouTube\" target=\"_blank\" rel=\"noopener\" href=\"https://youtube.com/angular\" title=\"YouTube\">\r\n        <svg id=\"youtube-logo\" height=\"24\" width=\"24\" data-name=\"Logo\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"#fff\">\r\n          <path d=\"M0 0h24v24H0V0z\" fill=\"none\"/>\r\n          <path d=\"M21.58 7.19c-.23-.86-.91-1.54-1.77-1.77C18.25 5 12 5 12 5s-6.25 0-7.81.42c-.86.23-1.54.91-1.77 1.77C2 8.75 2 12 2 12s0 3.25.42 4.81c.23.86.91 1.54 1.77 1.77C5.75 19 12 19 12 19s6.25 0 7.81-.42c.86-.23 1.54-.91 1.77-1.77C22 15.25 22 12 22 12s0-3.25-.42-4.81zM10 15V9l5.2 3-5.2 3z\"/>\r\n        </svg>\r\n      </a>\r\n  </div> -->\r\n  \r\n  <div class=\"content\" role=\"main\">\r\n    <!-- Highlight Card -->\r\n    <!-- <div class=\"card highlight-card card-small\">\r\n  \r\n      <svg id=\"rocket\" xmlns=\"http://www.w3.org/2000/svg\" width=\"101.678\" height=\"101.678\" viewBox=\"0 0 101.678 101.678\">\r\n        <title>Rocket Ship</title>\r\n        <g id=\"Group_83\" data-name=\"Group 83\" transform=\"translate(-141 -696)\">\r\n          <circle id=\"Ellipse_8\" data-name=\"Ellipse 8\" cx=\"50.839\" cy=\"50.839\" r=\"50.839\" transform=\"translate(141 696)\" fill=\"#dd0031\"/>\r\n          <g id=\"Group_47\" data-name=\"Group 47\" transform=\"translate(165.185 720.185)\">\r\n            <path id=\"Path_33\" data-name=\"Path 33\" d=\"M3.4,42.615a3.084,3.084,0,0,0,3.553,3.553,21.419,21.419,0,0,0,12.215-6.107L9.511,30.4A21.419,21.419,0,0,0,3.4,42.615Z\" transform=\"translate(0.371 3.363)\" fill=\"#fff\"/>\r\n            <path id=\"Path_34\" data-name=\"Path 34\" d=\"M53.3,3.221A3.09,3.09,0,0,0,50.081,0,48.227,48.227,0,0,0,18.322,13.437c-6-1.666-14.991-1.221-18.322,7.218A33.892,33.892,0,0,1,9.439,25.1l-.333.666a3.013,3.013,0,0,0,.555,3.553L23.985,43.641a2.9,2.9,0,0,0,3.553.555l.666-.333A33.892,33.892,0,0,1,32.647,53.3c8.55-3.664,8.884-12.326,7.218-18.322A48.227,48.227,0,0,0,53.3,3.221ZM34.424,9.772a6.439,6.439,0,1,1,9.106,9.106,6.368,6.368,0,0,1-9.106,0A6.467,6.467,0,0,1,34.424,9.772Z\" transform=\"translate(0 0.005)\" fill=\"#fff\"/>\r\n          </g>\r\n        </g>\r\n      </svg>\r\n  \r\n      <span>{{ title }} app is running!</span>\r\n  \r\n      <svg id=\"rocket-smoke\" xmlns=\"http://www.w3.org/2000/svg\" width=\"516.119\" height=\"1083.632\" viewBox=\"0 0 516.119 1083.632\">\r\n        <title>Rocket Ship Smoke</title>\r\n        <path id=\"Path_40\" data-name=\"Path 40\" d=\"M644.6,141S143.02,215.537,147.049,870.207s342.774,201.755,342.774,201.755S404.659,847.213,388.815,762.2c-27.116-145.51-11.551-384.124,271.9-609.1C671.15,139.365,644.6,141,644.6,141Z\" transform=\"translate(-147.025 -140.939)\" fill=\"#f5f5f5\"/>\r\n      </svg>\r\n  \r\n    </div> -->\r\n  \r\n    <!-- Resources -->\r\n    <!-- <h2>Resources</h2>\r\n    <p>Here are some links to help you get started:</p> -->\r\n  \r\n    <!-- <div class=\"card-container\">\r\n      <a class=\"card\" target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z\"/></svg>\r\n        <span>Learn Angular</span>\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>    </a>\r\n  \r\n      <a class=\"card\" target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z\"/></svg>\r\n        <span>CLI Documentation</span>\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>\r\n      </a>\r\n  \r\n      <a class=\"card\" target=\"_blank\" rel=\"noopener\" href=\"https://material.angular.io\">\r\n        <svg xmlns=\"http://www.w3.org/2000/svg\" style=\"margin-right: 8px\" width=\"21.813\" height=\"23.453\" viewBox=\"0 0 179.2 192.7\"><path fill=\"#ffa726\" d=\"M89.4 0 0 32l13.5 118.4 75.9 42.3 76-42.3L179.2 32 89.4 0z\"/><path fill=\"#fb8c00\" d=\"M89.4 0v192.7l76-42.3L179.2 32 89.4 0z\"/><path fill=\"#ffe0b2\" d=\"m102.9 146.3-63.3-30.5 36.3-22.4 63.7 30.6-36.7 22.3z\"/><path fill=\"#fff3e0\" d=\"M102.9 122.8 39.6 92.2l36.3-22.3 63.7 30.6-36.7 22.3z\"/><path fill=\"#fff\" d=\"M102.9 99.3 39.6 68.7l36.3-22.4 63.7 30.6-36.7 22.4z\"/></svg>\r\n        <span>Angular Material</span>\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>\r\n      </a>\r\n  \r\n      <a class=\"card\" target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M13.5.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14c0 4.42 3.58 8 8 8s8-3.58 8-8C20 8.61 17.41 3.8 13.5.67zM11.71 19c-1.78 0-3.22-1.4-3.22-3.14 0-1.62 1.05-2.76 2.81-3.12 1.77-.36 3.6-1.21 4.62-2.58.39 1.29.59 2.65.59 4.04 0 2.65-2.15 4.8-4.8 4.8z\"/></svg>\r\n        <span>Angular Blog</span>\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>\r\n      </a>\r\n  \r\n      <a class=\"card\" target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/devtools/\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" enable-background=\"new 0 0 24 24\" height=\"24px\" viewBox=\"0 0 24 24\" width=\"24px\" fill=\"#000000\"><g><rect fill=\"none\" height=\"24\" width=\"24\"/></g><g><g><path d=\"M14.73,13.31C15.52,12.24,16,10.93,16,9.5C16,5.91,13.09,3,9.5,3S3,5.91,3,9.5C3,13.09,5.91,16,9.5,16 c1.43,0,2.74-0.48,3.81-1.27L19.59,21L21,19.59L14.73,13.31z M9.5,14C7.01,14,5,11.99,5,9.5S7.01,5,9.5,5S14,7.01,14,9.5 S11.99,14,9.5,14z\"/><polygon points=\"10.29,8.44 9.5,6 8.71,8.44 6.25,8.44 8.26,10.03 7.49,12.5 9.5,10.97 11.51,12.5 10.74,10.03 12.75,8.44\"/></g></g></svg>\r\n        <span>Angular DevTools</span>\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\"/></svg>\r\n      </a>\r\n  \r\n    </div> -->\r\n  \r\n    <!-- Next Steps -->\r\n    <!-- <h2>Next Steps</h2>\r\n    <p>What do you want to do next with your app?</p>\r\n  \r\n    <input type=\"hidden\" #selection> -->\r\n  \r\n    <!-- <div class=\"card-container\">\r\n      <button class=\"card card-small\" (click)=\"selection.value = 'component'\" tabindex=\"0\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n        <span>New Component</span>\r\n      </button>\r\n  \r\n      <button class=\"card card-small\" (click)=\"selection.value = 'material'\" tabindex=\"0\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n        <span>Angular Material</span>\r\n      </button>\r\n  \r\n      <button class=\"card card-small\" (click)=\"selection.value = 'pwa'\" tabindex=\"0\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n        <span>Add PWA Support</span>\r\n      </button>\r\n  \r\n      <button class=\"card card-small\" (click)=\"selection.value = 'dependency'\" tabindex=\"0\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n        <span>Add Dependency</span>\r\n      </button>\r\n  \r\n      <button class=\"card card-small\" (click)=\"selection.value = 'test'\" tabindex=\"0\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n        <span>Run and Watch Tests</span>\r\n      </button>\r\n  \r\n      <button class=\"card card-small\" (click)=\"selection.value = 'build'\" tabindex=\"0\">\r\n        <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z\"/></svg>\r\n        <span>Build for Production</span>\r\n      </button>\r\n    </div> -->\r\n  \r\n    <!-- Terminal -->\r\n    <!-- <div class=\"terminal\" [ngSwitch]=\"selection.value\">\r\n        <pre *ngSwitchDefault>ng generate component xyz</pre>\r\n        <pre *ngSwitchCase=\"'material'\">ng add @angular/material</pre>\r\n        <pre *ngSwitchCase=\"'pwa'\">ng add @angular/pwa</pre>\r\n        <pre *ngSwitchCase=\"'dependency'\">ng add _____</pre>\r\n        <pre *ngSwitchCase=\"'test'\">ng test</pre>\r\n        <pre *ngSwitchCase=\"'build'\">ng build</pre>\r\n    </div> -->\r\n  \r\n    <!-- Links -->\r\n    <!-- <div class=\"card-container\">\r\n      <a class=\"circle-link\" title=\"Find a Local Meetup\" href=\"https://www.meetup.com/find/?keywords=angular\" target=\"_blank\" rel=\"noopener\">\r\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24.607\" height=\"23.447\" viewBox=\"0 0 24.607 23.447\">\r\n          <title>Meetup Logo</title>\r\n          <path id=\"logo--mSwarm\" d=\"M21.221,14.95A4.393,4.393,0,0,1,17.6,19.281a4.452,4.452,0,0,1-.8.069c-.09,0-.125.035-.154.117a2.939,2.939,0,0,1-2.506,2.091,2.868,2.868,0,0,1-2.248-.624.168.168,0,0,0-.245-.005,3.926,3.926,0,0,1-2.589.741,4.015,4.015,0,0,1-3.7-3.347,2.7,2.7,0,0,1-.043-.38c0-.106-.042-.146-.143-.166a3.524,3.524,0,0,1-1.516-.69A3.623,3.623,0,0,1,2.23,14.557a3.66,3.66,0,0,1,1.077-3.085.138.138,0,0,0,.026-.2,3.348,3.348,0,0,1-.451-1.821,3.46,3.46,0,0,1,2.749-3.28.44.44,0,0,0,.355-.281,5.072,5.072,0,0,1,3.863-3,5.028,5.028,0,0,1,3.555.666.31.31,0,0,0,.271.03A4.5,4.5,0,0,1,18.3,4.7a4.4,4.4,0,0,1,1.334,2.751,3.658,3.658,0,0,1,.022.706.131.131,0,0,0,.1.157,2.432,2.432,0,0,1,1.574,1.645,2.464,2.464,0,0,1-.7,2.616c-.065.064-.051.1-.014.166A4.321,4.321,0,0,1,21.221,14.95ZM13.4,14.607a2.09,2.09,0,0,0,1.409,1.982,4.7,4.7,0,0,0,1.275.221,1.807,1.807,0,0,0,.9-.151.542.542,0,0,0,.321-.545.558.558,0,0,0-.359-.534,1.2,1.2,0,0,0-.254-.078c-.262-.047-.526-.086-.787-.138a.674.674,0,0,1-.617-.75,3.394,3.394,0,0,1,.218-1.109c.217-.658.509-1.286.79-1.918a15.609,15.609,0,0,0,.745-1.86,1.95,1.95,0,0,0,.06-1.073,1.286,1.286,0,0,0-1.051-1.033,1.977,1.977,0,0,0-1.521.2.339.339,0,0,1-.446-.042c-.1-.092-.2-.189-.307-.284a1.214,1.214,0,0,0-1.643-.061,7.563,7.563,0,0,1-.614.512A.588.588,0,0,1,10.883,8c-.215-.115-.437-.215-.659-.316a2.153,2.153,0,0,0-.695-.248A2.091,2.091,0,0,0,7.541,8.562a9.915,9.915,0,0,0-.405.986c-.559,1.545-1.015,3.123-1.487,4.7a1.528,1.528,0,0,0,.634,1.777,1.755,1.755,0,0,0,1.5.211,1.35,1.35,0,0,0,.824-.858c.543-1.281,1.032-2.584,1.55-3.875.142-.355.28-.712.432-1.064a.548.548,0,0,1,.851-.24.622.622,0,0,1,.185.539,2.161,2.161,0,0,1-.181.621c-.337.852-.68,1.7-1.018,2.552a2.564,2.564,0,0,0-.173.528.624.624,0,0,0,.333.71,1.073,1.073,0,0,0,.814.034,1.22,1.22,0,0,0,.657-.655q.758-1.488,1.511-2.978.35-.687.709-1.37a1.073,1.073,0,0,1,.357-.434.43.43,0,0,1,.463-.016.373.373,0,0,1,.153.387.7.7,0,0,1-.057.236c-.065.157-.127.316-.2.469-.42.883-.846,1.763-1.262,2.648A2.463,2.463,0,0,0,13.4,14.607Zm5.888,6.508a1.09,1.09,0,0,0-2.179.006,1.09,1.09,0,0,0,2.179-.006ZM1.028,12.139a1.038,1.038,0,1,0,.01-2.075,1.038,1.038,0,0,0-.01,2.075ZM13.782.528a1.027,1.027,0,1,0-.011,2.055A1.027,1.027,0,0,0,13.782.528ZM22.21,6.95a.882.882,0,0,0-1.763.011A.882.882,0,0,0,22.21,6.95ZM4.153,4.439a.785.785,0,1,0,.787-.78A.766.766,0,0,0,4.153,4.439Zm8.221,18.22a.676.676,0,1,0-.677.666A.671.671,0,0,0,12.374,22.658ZM22.872,12.2a.674.674,0,0,0-.665.665.656.656,0,0,0,.655.643.634.634,0,0,0,.655-.644A.654.654,0,0,0,22.872,12.2ZM7.171-.123A.546.546,0,0,0,6.613.43a.553.553,0,1,0,1.106,0A.539.539,0,0,0,7.171-.123ZM24.119,9.234a.507.507,0,0,0-.493.488.494.494,0,0,0,.494.494.48.48,0,0,0,.487-.483A.491.491,0,0,0,24.119,9.234Zm-19.454,9.7a.5.5,0,0,0-.488-.488.491.491,0,0,0-.487.5.483.483,0,0,0,.491.479A.49.49,0,0,0,4.665,18.936Z\" transform=\"translate(0 0.123)\" fill=\"#f64060\"/>\r\n        </svg>\r\n      </a>\r\n  \r\n      <a class=\"circle-link\" title=\"Join the Conversation on Discord\" href=\"https://discord.gg/angular\" target=\"_blank\" rel=\"noopener\">\r\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"26\" height=\"26\" viewBox=\"0 0 245 240\">\r\n          <title>Discord Logo</title>\r\n          <path d=\"M104.4 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1.1-6.1-4.5-11.1-10.2-11.1zM140.9 103.9c-5.7 0-10.2 5-10.2 11.1s4.6 11.1 10.2 11.1c5.7 0 10.2-5 10.2-11.1s-4.5-11.1-10.2-11.1z\"/>\r\n          <path d=\"M189.5 20h-134C44.2 20 35 29.2 35 40.6v135.2c0 11.4 9.2 20.6 20.5 20.6h113.4l-5.3-18.5 12.8 11.9 12.1 11.2 21.5 19V40.6c0-11.4-9.2-20.6-20.5-20.6zm-38.6 130.6s-3.6-4.3-6.6-8.1c13.1-3.7 18.1-11.9 18.1-11.9-4.1 2.7-8 4.6-11.5 5.9-5 2.1-9.8 3.5-14.5 4.3-9.6 1.8-18.4 1.3-25.9-.1-5.7-1.1-10.6-2.7-14.7-4.3-2.3-.9-4.8-2-7.3-3.4-.3-.2-.6-.3-.9-.5-.2-.1-.3-.2-.4-.3-1.8-1-2.8-1.7-2.8-1.7s4.8 8 17.5 11.8c-3 3.8-6.7 8.3-6.7 8.3-22.1-.7-30.5-15.2-30.5-15.2 0-32.2 14.4-58.3 14.4-58.3 14.4-10.8 28.1-10.5 28.1-10.5l1 1.2c-18 5.2-26.3 13.1-26.3 13.1s2.2-1.2 5.9-2.9c10.7-4.7 19.2-6 22.7-6.3.6-.1 1.1-.2 1.7-.2 6.1-.8 13-1 20.2-.2 9.5 1.1 19.7 3.9 30.1 9.6 0 0-7.9-7.5-24.9-12.7l1.4-1.6s13.7-.3 28.1 10.5c0 0 14.4 26.1 14.4 58.3 0 0-8.5 14.5-30.6 15.2z\"/>\r\n        </svg>\r\n      </a>\r\n    </div> -->\r\n  \r\n    <!-- Footer -->\r\n    <!-- <footer>\r\n        Love Angular?&nbsp;\r\n        <a href=\"https://github.com/angular/angular\" target=\"_blank\" rel=\"noopener\"> Give our repo a star.\r\n          <div class=\"github-star-badge\">\r\n              <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M0 0h24v24H0z\" fill=\"none\"/><path d=\"M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z\"/></svg>\r\n            Star\r\n          </div>\r\n        </a>\r\n        <a href=\"https://github.com/angular/angular\" target=\"_blank\" rel=\"noopener\">\r\n          <svg class=\"material-icons\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z\" fill=\"#1976d2\"/><path d=\"M0 0h24v24H0z\" fill=\"none\"/></svg>\r\n        </a>\r\n    </footer> -->\r\n  \r\n    <!-- <svg id=\"clouds\" xmlns=\"http://www.w3.org/2000/svg\" width=\"2611.084\" height=\"485.677\" viewBox=\"0 0 2611.084 485.677\">\r\n      <title>Gray Clouds Background</title>\r\n      <path id=\"Path_39\" data-name=\"Path 39\" d=\"M2379.709,863.793c10-93-77-171-168-149-52-114-225-105-264,15-75,3-140,59-152,133-30,2.83-66.725,9.829-93.5,26.25-26.771-16.421-63.5-23.42-93.5-26.25-12-74-77-130-152-133-39-120-212-129-264-15-54.084-13.075-106.753,9.173-138.488,48.9-31.734-39.726-84.4-61.974-138.487-48.9-52-114-225-105-264,15a162.027,162.027,0,0,0-103.147,43.044c-30.633-45.365-87.1-72.091-145.206-58.044-52-114-225-105-264,15-75,3-140,59-152,133-53,5-127,23-130,83-2,42,35,72,70,86,49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33,61.112,8.015,113.854-5.72,150.492-29.764a165.62,165.62,0,0,0,110.861-3.236c47,94,178,113,251,33,31.385,4.116,60.563,2.495,86.487-3.311,25.924,5.806,55.1,7.427,86.488,3.311,73,80,204,61,251-33a165.625,165.625,0,0,0,120,0c51,13,108,15,157-5a147.188,147.188,0,0,0,33.5-18.694,147.217,147.217,0,0,0,33.5,18.694c49,20,106,18,157,5a165.625,165.625,0,0,0,120,0c47,94,178,113,251,33C2446.709,1093.793,2554.709,922.793,2379.709,863.793Z\" transform=\"translate(142.69 -634.312)\" fill=\"#eee\"/>\r\n    </svg> -->\r\n  \r\n    <!-- <storybook-button\r\n    [primary]=\"true\"\r\n    [backgroundColor]=\"'rgba(255, 0, 0, 1)'\"\r\n    [size]=\"'large'\"\r\n    [label]=\"'Button'\"\r\n    (onClick)=\"onClick($event)\"\r\n  ></storybook-button> -->\r\n  \r\n    <div class=\"div\">\r\n\r\n        <storybook-button\r\n        [primary]=\"false\"\r\n        [buttonType]=\"'EvButton'\"\r\n        [label]=\"'EvButton'\"\r\n        (onClick)=\"onClick($event)\"\r\n      ></storybook-button>\r\n        <storybook-button\r\n        [primary]=\"true\"\r\n        [label]=\"'EvButton'\"\r\n        (onClick)=\"onClick($event)\"\r\n        ></storybook-button>\r\n        \r\n        <!-- [buttonType]=\"'EvButton'\" -->\r\n      <app-icon\r\n      [label]=\"'fa-brands fa-facebook-f'\"\r\n      [icon]=\"'fa-brands fa-facebook-f'\"\r\n      [iconColor]=\"'#000'\"\r\n      ></app-icon>\r\n\r\n      <storybook-date-input></storybook-date-input>\r\n      <!-- </div> -->\r\n    </div>\r\n  \r\n    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n    <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->\r\n    <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\r\n    <!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->\r\n    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n    <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->\r\n    <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n  \r\n    <router-outlet></router-outlet>\r\n  </div>"
+            "templateData": "<!-- <app-input-text></app-input-text> -->\r\n<!-- <app-side-bar></app-side-bar> -->\r\n\r\n<!-- <app-navigation></app-navigation> -->\r\n\r\n<!-- <app-checkbox></app-checkbox> -->\r\n\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -283,63 +283,85 @@
             }
         },
         {
-            "name": "ButtonsComponent",
-            "id": "component-ButtonsComponent-4c712c37ee27fb3889be15cd48e2a515fa223b5236eb08f58d82fa185231f1beb76c989664f4f2d6a0ebcba116f83145373425f0dec40b51fe7987369873cd74",
-            "file": "src/stories/buttons/buttons.component.ts",
+            "name": "ButtonComponent",
+            "id": "component-ButtonComponent-f30416d9d7cc6bf8f39e39071beca38406cef912f9d466edf2198dc19cd23677c4c1b6d181cb1b8b17aab0e9a1edd08f9a2a134d578d5b4c6a11bdc7c60c8a7a-1",
+            "file": "src/stories/buttonstory/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-buttons",
+            "selector": "app-button",
             "styleUrls": [
-                "./buttons.component.css"
+                "./button.component.css"
             ],
             "styles": [],
+            "template": "<div class=\"button-container\">\n  <button\n    class=\"button-label\"\n    [ngClass]=\"{ 'focus-button': isFocus }\"\n    [ngStyle]=\"{\n      'background-color': backgroundColor,\n\n      'border': border,\n      'color': labelColor\n    }\"\n  >\n    <ng-container *ngIf=\"icon === 'star'\">\n      <svg\n        width=\"10\"\n        height=\"16\"\n        viewBox=\"0 0 10 16\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path\n          d=\"M9.25033 5H5.64408L6.97533 0.94375C7.10033 0.46875 6.74096 0 6.25033 0H1.75033C1.37533 0 1.05658 0.278125 1.00658 0.65L0.00658056 8.15C-0.0527945 8.6 0.297206 9 0.750331 9H4.45971L3.01908 15.0781C2.90658 15.5531 3.26908 16 3.74721 16C4.00971 16 4.25971 15.8625 4.39721 15.625L9.89721 6.125C10.1878 5.62813 9.82846 5 9.25033 5Z\"\n          [attr.fill]=\"iconColor\"\n        />\n      </svg>\n    </ng-container>\n    {{ label }}\n  </button>\n</div>\n",
             "templateUrl": [
-                "./buttons.component.html"
+                "./button.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
                 {
                     "name": "backgroundColor",
-                    "defaultValue": "'#fa830b'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 9,
+                    "line": 41,
                     "type": "string",
                     "decorators": []
                 },
                 {
-                    "name": "borderColor",
+                    "name": "border",
+                    "defaultValue": "'2px'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 42,
                     "type": "string",
                     "decorators": []
                 },
                 {
-                    "name": "Color",
+                    "name": "icon",
+                    "defaultValue": "'none'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 10,
+                    "line": 44,
                     "type": "string",
                     "decorators": []
                 },
                 {
-                    "name": "IconColor",
+                    "name": "iconColor",
+                    "defaultValue": "'white'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 45,
                     "type": "string",
                     "decorators": []
                 },
                 {
-                    "name": "LabelColor",
+                    "name": "isFocus",
+                    "defaultValue": "false",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 43,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "label",
+                    "defaultValue": "'button label'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 39,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "labelColor",
+                    "defaultValue": "'#fff'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 40,
                     "type": "string",
                     "decorators": []
                 }
@@ -356,127 +378,100 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-buttons',\r\n  templateUrl: './buttons.component.html',\r\n  styleUrls: ['./buttons.component.css']\r\n})\r\nexport class ButtonsComponent {\r\n@Input() backgroundColor:string ='#fa830b' ;\r\n@Input() Color?:string  ;\r\n@Input() borderColor?:string  ;\r\n@Input() LabelColor?:string  ;\r\n@Input() IconColor?:string  ;\r\n\r\n\r\n}\r\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-button',\r\n  templateUrl: './button.component.html',\r\n  styleUrls: ['./button.component.css'],\r\n  template: `\r\n    <div class=\"button-container\">\r\n      <button\r\n        class=\"button-label\"\r\n        [ngClass]=\"{ 'focus-button': isFocus }\"\r\n        [ngStyle]=\"{\r\n          'background-color': backgroundColor,\r\n        \r\n          'border': border,\r\n          'color': labelColor\r\n        }\"\r\n      >\r\n        <ng-container *ngIf=\"icon === 'star'\">\r\n          <svg\r\n            width=\"10\"\r\n            height=\"16\"\r\n            viewBox=\"0 0 10 16\"\r\n            fill=\"none\"\r\n            xmlns=\"http://www.w3.org/2000/svg\"\r\n          >\r\n            <path\r\n              d=\"M9.25033 5H5.64408L6.97533 0.94375C7.10033 0.46875 6.74096 0 6.25033 0H1.75033C1.37533 0 1.05658 0.278125 1.00658 0.65L0.00658056 8.15C-0.0527945 8.6 0.297206 9 0.750331 9H4.45971L3.01908 15.0781C2.90658 15.5531 3.26908 16 3.74721 16C4.00971 16 4.25971 15.8625 4.39721 15.625L9.89721 6.125C10.1878 5.62813 9.82846 5 9.25033 5Z\"\r\n              [attr.fill]=\"iconColor\"\r\n            />\r\n          </svg>\r\n        </ng-container>\r\n        {{ label }}\r\n      </button>\r\n    </div>\r\n  `,\r\n})\r\nexport class ButtonComponent {\r\n  @Input() label?: string = 'button label';\r\n  @Input() labelColor?: string = '#fff';\r\n  @Input() backgroundColor?: string;\r\n  @Input() border?: string = '2px';\r\n  @Input() isFocus: boolean = false;\r\n  @Input() icon?: string = 'none';\r\n  @Input() iconColor?: string = 'white'; // New input for icon color\r\n}\r\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".facebook-button {\r\n  border-radius: 33px;\r\n  border: 1px solid;\r\n  border-color: #fa830b;\r\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);\r\n  background-color: #fa830b;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  padding: 11px 20px;\r\n  font-size: 13px;\r\n  color: #fff;\r\n  font-weight: 700;\r\n}\r\n\r\n.button-text {\r\n  font-family: Montserrat, sans-serif;\r\n}\r\n\r\n.icon {\r\n  width: 9px;\r\n  height: 17px;\r\n  object-fit: contain;\r\n  margin-left: 10px;\r\n}\r\n",
-                    "styleUrl": "./buttons.component.css"
+                    "data": ".button-label {\r\n  border-radius: 100px;\r\n  border: 2px solid rgba(92, 74, 189, 1);\r\n  background-color: #fff;\r\n  color: #5c4abd;\r\n  padding: 16px 32px;\r\n  font: 400 16px Inter, sans-serif;\r\n  display: inline-flex;\r\n  align-items: center;\r\n  justify-content: center;\r\n  cursor: pointer;\r\n  width: 100%;\r\n  position: relative;\r\n  z-index: 1;\r\n}\r\n\r\n.button-container {\r\n  display: inline-block;\r\n  position: relative;\r\n  width: 100%;\r\n}\r\n\r\n.focus-button::before {\r\n  content: '';\r\n  position: absolute;\r\n  top: -4px;\r\n  left: -4px;\r\n  right: -4px;\r\n  bottom: -4px;\r\n  border-radius: 100px;\r\n  border: 2px solid rgba(92, 74, 189, 1); /* External border color */\r\n  z-index: -1;\r\n}\r\nsvg{\r\n\r\nmargin-right: 8px;\r\n}\r\n.focus-button::after {\r\n  content: '';\r\n  position: absolute;\r\n  top: 2px;\r\n  left: 2px;\r\n  right: 2px;\r\n  bottom: 2px;\r\n  border-radius: 100px;\r\n  border: 3px solid rgba(92, 74, 189, 1); /* External border color */\r\n\r\n  z-index: -1;\r\n}\r\n",
+                    "styleUrl": "./button.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<button class=\"facebook-button\"  [ngStyle]=\"{ 'background-color': backgroundColor ,'color':Color , 'border-color' : borderColor}\">\r\n  <span class=\"button-text\" [ngStyle]=\"{ 'color': LabelColor}\">Facebook</span>\r\n  <i class=\"fa-brands fa-facebook-f icon\"  [ngStyle]=\"{ 'color': IconColor}\"  ></i>\r\n</button>\r\n"
+            "isDuplicate": true,
+            "duplicateId": 1,
+            "duplicateName": "ButtonComponent-1",
+            "templateData": "\r\n<button class=\"button-label button\">button label</button>\r\n"
         },
         {
-            "name": "DateInputComponent",
-            "id": "component-DateInputComponent-16dda1151b3c7eb63e72fe6ad30dfcc3a9c34e271b0c0dde77f404f3183ccae6deb2378d75f1061e4e7f5e91d3484a866ab9966bf153a0128567cccb135a34af",
-            "file": "src/stories/date.input/date.input.component.ts",
+            "name": "CheckboxComponent",
+            "id": "component-CheckboxComponent-097abea051f2dcb4c86cf5ce466aa7910b0b4a9caca6a86337dfd324ec82cb29ba151b890d5174bf9a64850ea323c88e56f05a6085fd80c26cad379f2dbc22c0",
+            "file": "src/stories/checkbox/checkbox.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "storybook-date-input",
+            "selector": "app-checkbox",
             "styleUrls": [
-                "./date.input.component.css"
+                "./checkbox.component.css"
             ],
             "styles": [],
             "templateUrl": [
-                "./date.input.component.html"
+                "./checkbox.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [],
+            "inputsClass": [
+                {
+                    "name": "checkboxText",
+                    "defaultValue": "\"J'ai lu et j’accepte\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "privacyLink",
+                    "defaultValue": "\"/privacy\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "showError",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "boolean",
+                    "decorators": []
+                },
+                {
+                    "name": "termsLink",
+                    "defaultValue": "\"/terms\"",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
             "outputsClass": [],
             "propertiesClass": [
                 {
-                    "name": "date",
-                    "defaultValue": "''",
+                    "name": "form",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "any",
+                    "type": "FormGroup",
                     "optional": false,
                     "description": "",
-                    "line": 12
-                },
-                {
-                    "name": "myvar",
-                    "defaultValue": "'Invalid date'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 37
-                },
-                {
-                    "name": "othervar",
-                    "defaultValue": "'Valid date'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "string",
-                    "optional": false,
-                    "description": "",
-                    "line": 38
+                    "line": 15
                 }
             ],
             "methodsClass": [
                 {
-                    "name": "isValidDate",
-                    "args": [
-                        {
-                            "name": "dateStr",
-                            "type": "string",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
-                    "optional": false,
-                    "returnType": "boolean",
-                    "typeParameters": [],
-                    "line": 15,
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "dateStr",
-                            "type": "string",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "name": "updateDate",
-                    "args": [
-                        {
-                            "name": "event",
-                            "type": "Event",
-                            "deprecated": false,
-                            "deprecationMessage": ""
-                        }
-                    ],
+                    "name": "ngOnInit",
+                    "args": [],
                     "optional": false,
                     "returnType": "void",
                     "typeParameters": [],
-                    "line": 40,
+                    "line": 23,
                     "deprecated": false,
-                    "deprecationMessage": "",
-                    "jsdoctags": [
-                        {
-                            "name": "event",
-                            "type": "Event",
-                            "deprecated": false,
-                            "deprecationMessage": "",
-                            "tagName": {
-                                "text": "param"
-                            }
-                        }
-                    ]
+                    "deprecationMessage": ""
                 }
             ],
             "deprecated": false,
@@ -488,17 +483,46 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component } from '@angular/core';\r\n// import { ChangeDetectorRef } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-date-input',\r\n  templateUrl: './date.input.component.html',\r\n  styleUrls: ['./date.input.component.css'],\r\n  // standalone : true\r\n})\r\nexport class DateInputComponent {\r\n\r\ndate: any = '';\r\n\r\n// constructor(private cdr: ChangeDetectorRef) {}\r\nisValidDate(dateStr: string) { \r\n if(dateStr.trim().length > 0){\r\n  const dateFormat = /^\\d{4}-\\d{2}-\\d{2}$/;\r\n  if (dateFormat.test(dateStr)) {\r\n    const [year, month, day] = dateStr.split('-').map(Number);\r\n    if (year < 1930 || year > 2190) {\r\n     return false;\r\n    }\r\n    if (month < 1 || month > 12){\r\n      return false;\r\n    }\r\n   const daysInMonth = new Date(year, month, 0).getDate();\r\n   if (day < 1 || day > daysInMonth) {\r\n     return false;\r\n   }\r\n   return true;\r\n}\r\n  return false;  \r\n } \r\n return null;\r\n}\r\n\r\nmyvar = 'Invalid date';\r\nothervar = 'Valid date';\r\n\r\nupdateDate(event: Event) {\r\n const selectedDate = (event.target as HTMLInputElement).value;\r\n  if (selectedDate !== null) {\r\n   this.date = selectedDate;\r\n  //  this.cdr.detectChanges();\r\n  \r\n  }\r\n}\r\n}\r\n\r\n\r\n\r\n//   date: any = '';\r\n\r\n  \r\n//   isValidDate(dateStr: string) { \r\n//    if(dateStr.trim().length > 0){\r\n//     const dateFormat = /^\\d{4}-\\d{2}-\\d{2}$/;\r\n//     if (dateFormat.test(dateStr)) {\r\n//       const [year, month, day] = dateStr.split('-').map(Number);\r\n//       if (year < 1930 || year > 2190) {\r\n//        return false;\r\n//       }\r\n//       if (month < 1 || month > 12){\r\n//         return false;\r\n//       }\r\n//      const daysInMonth = new Date(year, month, 0).getDate();\r\n//      if (day < 1 || day > daysInMonth) {\r\n//        return false;\r\n//      }\r\n//      return true;\r\n//   }\r\n//     return false;  \r\n//    } \r\n//    return null;\r\n//   }\r\n  \r\n//   myvar = 'Invalid date';\r\n//  othervar = 'Valid date';\r\n\r\n//  updateDate(event: Event) {\r\n//   const selectedDate = (event.target as HTMLInputElement).value;\r\n//   if (selectedDate !== null) {\r\n//     this.date = selectedDate;\r\n//   }\r\n//  }",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\nimport { FormBuilder, FormGroup, Validators } from '@angular/forms';\n\n@Component({\n  selector: 'app-checkbox',\n  templateUrl: './checkbox.component.html',\n  styleUrls: ['./checkbox.component.css']\n})\nexport class CheckboxComponent implements OnInit {\n  @Input() checkboxText: string = \"J'ai lu et j’accepte\";\n  @Input() termsLink: string = \"/terms\";\n  @Input() privacyLink: string = \"/privacy\";\n  @Input() showError: boolean = false;\n\n  form: FormGroup;\n\n  constructor(private fb: FormBuilder) {\n    this.form = this.fb.group({\n      acceptTerms: [false, Validators.requiredTrue]\n    });\n  }\n\n  ngOnInit(): void {\n    if (this.showError) {\n      this.form.controls['acceptTerms'].markAsTouched();\n    }\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".date-picker {\r\n  border-radius: 37px;\r\n  border: 2px solid rgba(180, 180, 180, 1);\r\n  background-color: #fff;\r\n  display: flex;\r\n  /* max-width: 461px; */\r\n  width:100%;\r\n  align-items: center;\r\n  gap: 20px;\r\n  padding: 18px 27px;\r\n  position: relative;\r\n}\r\n\r\n.date-display {\r\n  font-family: Montserrat, sans-serif;\r\n  font-size: 18px;\r\n  color: #707070;\r\n  font-weight: 400;\r\n  flex-grow: 1;\r\n  border: none;\r\n  outline: none;\r\n  background: transparent;\r\n}\r\n\r\n.calendar-input {\r\n  width: 29px;\r\n  height: 29px;\r\n  opacity: 0;\r\n  cursor: pointer;\r\n}\r\n\r\n.calendar-input::-webkit-calendar-picker-indicator {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  width: auto;\r\n  height: auto;\r\n  color: transparent;\r\n  background: transparent;\r\n}\r\n\r\n.date-picker::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  right: 27px;\r\n  width: 29px;\r\n  height: 29px;\r\n  background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/8c040abc14104031ef4a559c9ff9638abc732a2ef176cb893a93b03252c1405d?apiKey=57cc64fc12b74717af3404d1085676ef&');\r\n  background-size: contain;\r\n  background-repeat: no-repeat;\r\n  pointer-events: none;\r\n}\r\n\r\n.date-picker.invalid {\r\nborder-color: red;\r\n}",
-                    "styleUrl": "./date.input.component.css"
+                    "data": ".checkbox-container {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  \r\n  .checkbox-label {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  \r\n  .checkbox-label input[type=\"checkbox\"] {\r\n    appearance: none;\r\n    width: 20px;\r\n    height: 20px;\r\n    border: 2px solid #5C4ABD;\r\n    border-radius: 4px;\r\n    background-color: #fff; /* default background color */\r\n    margin-right: 8px;\r\n    position: relative;\r\n  }\r\n  \r\n  .checkbox-label input[type=\"checkbox\"]:checked {\r\n    background-color: #5C4ABD;\r\n    border-color: #5C4ABD;\r\n  }\r\n  \r\n  .checkbox-label input[type=\"checkbox\"]:checked::after {\r\n    content: '';\r\n    position: absolute;\r\n    top: 2px;\r\n    left: 6px;\r\n    width: 6px;\r\n    height: 12px;\r\n    border: solid white;\r\n    border-width: 0 2px 2px 0;\r\n    transform: rotate(45deg);\r\n  }\r\n  \r\n  .checkbox-label input[type=\"checkbox\"].error-border {\r\n    border-color: red;\r\n  }\r\n  \r\n  .checkbox-text {\r\n    font-size: 14px;\r\n    color: #000;\r\n  }\r\n  ",
+                    "styleUrl": "./checkbox.component.css"
                 }
             ],
             "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 15,
+                "jsdoctags": [
+                    {
+                        "name": "fb",
+                        "type": "FormBuilder",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
             "extends": [],
-            "templateData": "<!-- <ng-template #validDate>\r\n    {{ othervar }}\r\n  </ng-template>\r\n  \r\n  <ng-template #invalidDate >\r\n    {{ myvar }}\r\n  </ng-template>\r\n  \r\n  <div class=\"date-picker\" [ngClass]=\"{ 'valid': isValidDate(date), 'invalid': isValidDate(date) == false }\">\r\n    <input type=\"text\" class=\"date-display\" placeholder=\"yyyy-mm-dd\" [(ngModel)]=\"date\" data-test=\"date-input\">\r\n    <input type=\"date\" class=\"calendar-input\" (input)=\"updateDate($event)\">\r\n  </div>\r\n  \r\n  <div *ngIf=\"isValidDate(date); then validDate else invalidDate\" data-test=\"date-input\"></div> -->\r\n\r\n  <!-- <ng-template #validDate>\r\n    {{ othervar }}\r\n  </ng-template>\r\n  \r\n  <ng-template #invalidDate >\r\n    {{ myvar }}\r\n  </ng-template> -->\r\n  \r\n  <div class=\"date-picker\" [ngClass]=\"{'invalid': isValidDate(date) == false }\">\r\n  <!-- <div class=\"date-picker\"> -->\r\n    <!-- <input type=\"text\" class=\"date-display\" placeholder=\"yyyy-mm-dd\"> -->\r\n    <input type=\"text\" class=\"date-display\" placeholder=\"yyyy-mm-dd\" [(ngModel)]=\"date\">\r\n    <input type=\"date\" class=\"calendar-input\" (input)=\"updateDate($event)\" >\r\n  </div>\r\n  \r\n  <!-- <div *ngIf=\"isValidDate(date); then validDate else invalidDate\"></div> -->"
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div [formGroup]=\"form\" class=\"checkbox-container\">\n    <label class=\"checkbox-label\">\n      <input \n        type=\"checkbox\" \n        formControlName=\"acceptTerms\" \n        [ngClass]=\"{'error-border': form.controls['acceptTerms'].invalid && form.controls['acceptTerms'].touched}\"\n      />\n      <span class=\"checkbox-text\">\n        {{ checkboxText }} \n        <a [href]=\"termsLink\" target=\"_blank\">les conditions d’utilisation</a> \n        et \n        <a [href]=\"privacyLink\" target=\"_blank\">la politique de confidentialité</a>.\n      </span>\n    </label>\n  </div>\n  "
         },
         {
             "name": "dealsComponent",
@@ -692,84 +716,6 @@
                 {
                     "data": ".storybook-header {\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\r\n  padding: 15px 20px;\r\n  display: flex;\r\n  align-items: center;\r\n  justify-content: space-between;\r\n}\r\n\r\n.storybook-header svg {\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-header h1 {\r\n  font-weight: 700;\r\n  font-size: 20px;\r\n  line-height: 1;\r\n  margin: 6px 0 6px 10px;\r\n  display: inline-block;\r\n  vertical-align: top;\r\n}\r\n\r\n.storybook-header button + button {\r\n  margin-left: 10px;\r\n}\r\n\r\n.storybook-header .welcome {\r\n  color: #333;\r\n  font-size: 14px;\r\n  margin-right: 10px;\r\n}\r\n",
                     "styleUrl": "./header.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": []
-        },
-        {
-            "name": "IconComponent",
-            "id": "component-IconComponent-d1bad1c643d4cf1b28148c080f922fbc2869bfdaa2c841e982f0dbbf63e885c5a58b3e04132df177a405e843d3581378a3ac12d024b4453e1cdef3cd6c472f75",
-            "file": "src/stories/icon/icon.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-icon",
-            "styleUrls": [
-                "./icon.component.css"
-            ],
-            "styles": [],
-            "template": "<a href=\"#\" class=\"icon-card\" >\n  <i [ngClass]=\"icon\" class=\"icon \" [ngStyle]=\"{ color: iconColor }\"></i>\n  <h2 class=\"icon-title\" [ngStyle]=\"{ color: labelColor }\">{{ label }}</h2>\n</a>\n",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "icon",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 15,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "iconColor",
-                    "defaultValue": "'#000'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 17,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "defaultValue": "'Facebook'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 14,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "labelColor",
-                    "defaultValue": "'#000'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 18,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n@Component({\r\n  selector: 'app-icon',\r\n  // templateUrl: './icon.component.html',\r\n  styleUrls: ['./icon.component.css'],\r\n  template: `\r\n    <a href=\"#\" class=\"icon-card\" >\r\n      <i [ngClass]=\"icon\" class=\"icon \" [ngStyle]=\"{ color: iconColor }\"></i>\r\n      <h2 class=\"icon-title\" [ngStyle]=\"{ color: labelColor }\">{{ label }}</h2>\r\n    </a>\r\n  `,\r\n})\r\nexport class IconComponent {\r\n  @Input() label: string = 'Facebook';\r\n  @Input() icon?: string ;\r\n  // @Input() iconActions?: string ;\r\n  @Input() iconColor: string = '#000';\r\n  @Input() labelColor: string = '#000';\r\n  // @Input() iconwidth: string = '100%';\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".icon-card {\r\n  border-radius: 33px;\r\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);\r\n  border: 1px solid #fff;\r\n  background-color: #f5f4f1;\r\n  display: flex;\r\n  max-width: 100%;\r\n  flex-direction: column;\r\n  font-size: 20px;\r\n  color: #000;\r\n  font-weight: 700;\r\n  padding: 62px 57px 29px;\r\n  text-decoration: none;\r\n}\r\n\r\n.icon {\r\n  font-size: 60px;\r\n  color: #000;\r\n  align-self: center;\r\n}\r\n\r\n.icon-title {\r\n  font-family: Montserrat, sans-serif;\r\n  margin-top: 37px;\r\n  text-align: center;\r\n}\r\n\r\n",
-                    "styleUrl": "./icon.component.css"
                 }
             ],
             "stylesData": "",
@@ -976,6 +922,186 @@
                 }
             },
             "templateData": "<!-- <input\r\n  [ngClass]=\"classes\"\r\n  [placeholder]=\"placeholder\"\r\n  [ngStyle]=\"{ 'border-radius': borferRadius + 'px' , 'background-color': backgroundColor, 'border-width': borderWidth}\"\r\n  /> -->\r\n\r\n  \r\n  <!-- [(ngModel)]=\"value\" -->\r\n\r\n  <input\r\n  [ngClass]=\"classes\"\r\n  [placeholder]=\"placeholder\"\r\n  [ngStyle]=\"{ 'border-radius': borferRadius + 'px' , 'background-color': backgroundColor, 'border-width': borderWidth}\"\r\n  [value]=\"value\"\r\n  (input)=\"onInput($event)\"\r\n/>"
+        },
+        {
+            "name": "InputsComponent",
+            "id": "component-InputsComponent-4509e62ce464ed2e43c92a505b80ca08e6e2ce1630f51003bdf85985163f341dcbe430dc47fbd2c8ea0f32d00e7a84dcfa0e94353065758ca53be511aa10cd86",
+            "file": "src/stories/inputs/inputs.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-inputs",
+            "styleUrls": [
+                "./inputs.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./inputs.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "label",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 11,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "literal type[]",
+                    "decorators": []
+                },
+                {
+                    "name": "placeholder",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'text'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "value",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-inputs',\r\n  templateUrl: './inputs.component.html',\r\n  styleUrls: ['./inputs.component.css']\r\n})\r\nexport class InputsComponent {\r\n  @Input() type: string = 'text';\r\n  @Input() options: {value: string ,label: string  }[] = [];\r\n  @Input() label: string = '';\r\n  @Input() placeholder: string = '';\r\nvalue: string = '';\r\n\r\n \r\n}\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".dropdown {\r\n    border-radius: 100px;\r\n    margin-top: 9px;\r\n    width: 100%;\r\n  }  \r\n  .dropbtn {\r\n    background-color: white;\r\n    color: #555;\r\n    padding: 16px;\r\n    font-size: 16px;\r\n    border: 1px solid #ccc;\r\n    cursor: pointer;\r\n    border-radius: 100px;\r\n    text-align: left;\r\n    width: 100%;\r\n  }\r\n  select{\r\n    appearance: none;\r\n\r\n  }\r\n  .dropdown-content {\r\n    position: absolute;\r\n    background-color: #fff;\r\n    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);\r\n    z-index: 1;\r\n    border-radius:15px;\r\n    margin-top: 5px;\r\n    max-width: 100%;\r\n   width: 97%;\r\n   padding: 20px;\r\n  }\r\n  .dropdown-content .option {\r\n    color: #5C4ABD;\r\n    padding: 12px 16px;\r\n    text-decoration: none;\r\n    display: block;\r\n    font-family: \"Montserrat\", sans-serif;\r\n    font-optical-sizing: auto;\r\n    font-weight: 100;\r\n    font-style: normal;\r\n  }\r\n  .dropdown-content .option:hover {\r\n    background-color: rgb(92, 74, 189);\r\n    color: white;\r\n  }\r\n  .dropdown-content.show {\r\n    display: block;\r\n  }\r\n  .dropdown:hover .dropbtn {\r\n    background-color: #f1f1f1;\r\n    border-color: #5C4ABD;\r\n    border-width: 2px;\r\n    \r\n  }\r\n label{\r\n    font-family: \"Montserrat\", sans-serif;\r\n    font-optical-sizing: auto;\r\n    font-weight: 300;\r\n    font-style: normal;\r\n }\r\n.label{\r\n  display: flex;\r\n  flex-direction: column;\r\n  width: 100%;\r\n }\r\n .text{\r\n    font-family: \"Montserrat\", sans-serif;\r\n    border-radius: 100px;\r\n    border: 1px solid #d2d2d2;\r\n    padding: 16px 20px;\r\n    font-size: 16px;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n    outline: none;\r\n    max-width: 100%;\r\n    width: 95%;\r\n    margin-top: 9px;\r\n } \r\n",
+                    "styleUrl": "./inputs.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"label\">\r\n    <label>{{ label }}</label>\r\n    <ng-container [ngSwitch]=\"type\">\r\n        <input *ngSwitchCase=\"'text'\" class=\"text\" type=\"text\" [placeholder]=\"placeholder\"/>\r\n        <div *ngSwitchCase=\"'select'\" class=\"dropdown\">\r\n        <!-- <button class=\"dropbtn\" (click)=\"toggleDropdown()\">Choose option</button>\r\n        <div class=\"dropdown-content\" [class.show]=\"isDropdownOpen\">\r\n          <a href=\"#\" *ngFor=\"let option of options\" (click)=\"selectOption(option)\">{{ option }}</a>\r\n        </div> -->\r\n        <select class=\"dropbtn\" [(ngModel)]=\"value\" >\r\n     <option class=\"dropdown-content\" selected disabled>{{placeholder}}</option>\r\n     <option class=\"dropdown-content option\" *ngFor=\"let option of options\" [value]=\"option.value\">{{ option.value }}</option>\r\n    \r\n    </select>\r\n      </div>\r\n      \r\n    </ng-container>\r\n  </div>  "
+        },
+        {
+            "name": "InputTextComponent",
+            "id": "component-InputTextComponent-cba0cc37c986d8ef7d61d62d3fe3240d48b933b832586e7b6789c51a18e0fcba5ba446ff6039efc124a75613f228b3ffaf6c04d6e11966d565bd09207a9e875e",
+            "file": "src/stories/input-text/input-text.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-input-text",
+            "styleUrls": [
+                "./input-text.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./input-text.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-input-text',\n  templateUrl: './input-text.component.html',\n  styleUrls: ['./input-text.component.css']\n})\nexport class InputTextComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".styled-input {\r\n    border-radius: 40px;\r\n    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);\r\n    border-color: rgba(156, 167, 178, 1);\r\n    border-style: solid;\r\n    border-width: 3px;\r\n    background-color: #fff;\r\n    max-width: 95%;\r\n    color: #9f9f9f;\r\n    padding: 12px 40px;\r\n    font: 400 18px Poppins, sans-serif;\r\n    width: 100%;\r\n  }",
+                    "styleUrl": "./input-text.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<input type=\"password\" class=\"styled-input\" placeholder=\"Type password\">\n"
+        },
+        {
+            "name": "NavigationComponent",
+            "id": "component-NavigationComponent-40bdbce81ba86fe014633e76a1e07ac305b8a2df3947b0cdb00271b9bdac1d90d35f332d9373aa3109c495a3f68b98efe18a57dfbdcd011eb9d78c3fdd81bef5",
+            "file": "src/stories/navigation/navigation.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-navigation",
+            "styleUrls": [
+                "./navigation.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./navigation.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-navigation',\n  templateUrl: './navigation.component.html',\n  styleUrls: ['./navigation.component.css']\n})\nexport class NavigationComponent {\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".sidebar {\r\n    width: 170px;\r\n    background-color: #f7f7ff;\r\n    height: 100vh;\r\n    display: flex;\r\n    flex-direction: column;\r\n    justify-content: space-between;\r\n    padding: 20px;\r\n  }\r\n  \r\n  .logo {\r\n    text-align: center;\r\n    margin-bottom: 20px;\r\n  }\r\n  \r\n  .logo img {\r\n    max-width: 100%;\r\n  }\r\n  \r\n  .dashboard-link {\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 10px;\r\n    background-color: #5c4abd;\r\n    border-radius: 8px;\r\n    color: #fff;\r\n    text-decoration: none;\r\n    margin-bottom: 20px;\r\n  }\r\n  \r\n  .dashboard-icon {\r\n    margin-right: 10px;\r\n  }\r\n  \r\n  .nav-container {\r\n    flex-grow: 1;\r\n  }\r\n  \r\n  .nav-item {\r\n    display: flex;\r\n    align-items: center;\r\n    padding: 10px;\r\n    margin-bottom: 10px;\r\n    cursor: pointer;\r\n  }\r\n  \r\n  .nav-icon {\r\n    margin-right: 10px;\r\n  }\r\n  \r\n  .nav-text {\r\n    color: #333;\r\n  }\r\n  \r\n  .divider {\r\n    border-top: 1px solid #e0e0e0;\r\n    margin: 20px 0;\r\n  }\r\n  \r\n  .notification-container {\r\n    margin-bottom: 20px;\r\n  }\r\n  \r\n  .notification-item {\r\n    display: flex;\r\n    align-items: center;\r\n    margin-bottom: 10px;\r\n  }\r\n  \r\n  .notification-icon {\r\n    margin-right: 10px;\r\n  }\r\n  \r\n  .notification-text {\r\n    flex-grow: 1;\r\n  }\r\n  \r\n  .notification-badge {\r\n    background-color: #5c4abd;\r\n    color: #fff;\r\n    padding: 2px 8px;\r\n    border-radius: 12px;\r\n    font-size: 12px;\r\n  }\r\n  \r\n  .profile {\r\n    display: flex;\r\n    align-items: center;\r\n  }\r\n  \r\n  .profile img {\r\n    border-radius: 50%;\r\n    margin-right: 10px;\r\n  }\r\n  \r\n  .profile-info {\r\n    display: flex;\r\n    flex-direction: column;\r\n  }\r\n  \r\n  .profile-name {\r\n    font-weight: bold;\r\n    color: #333;\r\n  }\r\n  \r\n  .profile-role {\r\n    color: #888;\r\n  }\r\n  ",
+                    "styleUrl": "./navigation.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<!-- src/app/sidebar/sidebar.component.html -->\n<div class=\"sidebar\">\n    <div class=\"logo\">\n      <img src=\"path-to-your-logo\" alt=\"e-voucher path\">\n    </div>\n    <div class=\"nav-container\">\n      <a href=\"#\" class=\"dashboard-link\">\n        <div class=\"dashboard-bg\"></div>\n        <svg class=\"dashboard-icon\" viewBox=\"0 0 23 23\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M11.5 0.5C5.69998 0.5 0.5 5.69998 0.5 11.5C0.5 17.3 5.69998 22.5 11.5 22.5C17.3 22.5 22.5 17.3 22.5 11.5C22.5 5.69998 17.3 0.5 11.5 0.5ZM11.5 20.5C6.80498 20.5 2.5 16.195 2.5 11.5C2.5 6.80498 6.80498 2.5 11.5 2.5C16.195 2.5 20.5 6.80498 20.5 11.5C20.5 16.195 16.195 20.5 11.5 20.5ZM10.5 6.5H12.5V12.5H10.5V6.5ZM10.5 14.5H12.5V16.5H10.5V14.5Z\" fill=\"white\" />\n        </svg>\n        <span class=\"dashboard-text\">Tableau de bord</span>\n      </a>\n      <nav>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for List Icon -->\n          </svg>\n          <span class=\"nav-text\">Liste demandes</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Identity Icon -->\n          </svg>\n          <span class=\"nav-text\">Identité patient</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Requests Icon -->\n          </svg>\n          <span class=\"nav-text\">Demandes en cours</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Archive Icon -->\n          </svg>\n          <span class=\"nav-text\">Demandes archivés</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Labs Icon -->\n          </svg>\n          <span class=\"nav-text\">Liste Laboratoires</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Couriers Icon -->\n          </svg>\n          <span class=\"nav-text\">Listes coursiers</span>\n        </div>\n        <div class=\"nav-item\">\n          <svg class=\"nav-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Doctors Icon -->\n          </svg>\n          <span class=\"nav-text\">Listes médecins</span>\n        </div>\n      </nav>\n      <div class=\"divider\"></div>\n      <div class=\"notification-container\">\n        <div class=\"notification-item\">\n          <svg class=\"notification-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Notification Icon -->\n          </svg>\n          <span class=\"notification-text\">Notification</span>\n          <span class=\"notification-badge\">6</span>\n        </div>\n        <div class=\"notification-item\">\n          <svg class=\"notification-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Messages Icon -->\n          </svg>\n          <span class=\"notification-text\">Messages</span>\n        </div>\n        <div class=\"notification-item\">\n          <svg class=\"notification-icon\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n            <!-- SVG Path for Settings Icon -->\n          </svg>\n          <span class=\"notification-text\">Paramètre</span>\n        </div>\n      </div>\n    </div>\n    <div class=\"profile\">\n      <img src=\"path-to-profile-picture\" alt=\"Dr Slimani Amlah\">\n      <div class=\"profile-info\">\n        <span class=\"profile-name\">Dr Slimani Amlah</span>\n        <span class=\"profile-role\">Administrateur</span>\n      </div>\n    </div>\n  </div>\n  "
         },
         {
             "name": "PageComponent",
@@ -1273,35 +1399,25 @@
             "templateData": "<div class=\"div\">\r\n    <div class=\"div-2\">\r\n      <div class=\"div-3\">Informations Patient</div>\r\n      <button class=\"div-4\">Choisir un patient existant</button>\r\n    </div>\r\n    <div class=\"div-5\"></div>\r\n    <div class=\"div-6\">\r\n      <div class=\"div-7\">\r\n        <div class=\"div-8\">\r\n          <div class=\"column\">\r\n            <div class=\"div-9\">\r\n              <div class=\"div-10\">Nom</div>\r\n              <input type=\"text\" class=\"div-11\" [placeholder]=\"familyNamePlaceholder\" />\r\n            </div>\r\n          </div>\r\n          <div class=\"column-2\">\r\n            <div class=\"div-13\">\r\n              <div class=\"div-14\">Prénom</div>\r\n              <input type=\"text\" class=\"div-15\"[placeholder]=\"namePlaceholder\" />\r\n            </div>\r\n          </div>\r\n          <div class=\"column-3\">\r\n            <div class=\"div-13\">\r\n              <div class=\"div-17\">Téléphone</div>\r\n              <input\r\n                type=\"text\"\r\n                class=\"div-15\"\r\n                [placeholder]=\"phonePlaceholder\"\r\n               \r\n              />\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"div-7\">\r\n        <div class=\"div-8\">\r\n          <div class=\"column-4\">\r\n            <div class=\"div-16\">\r\n              <div class=\"div-12\">Address</div>\r\n              <input\r\n                type=\"text\"\r\n                class=\"div-22\"\r\n                [placeholder]=\"addressPlaceholder\"\r\n              />\r\n            </div>\r\n          </div>\r\n  \r\n          <div class=\"column-5\">\r\n            <div class=\"div-16\">\r\n              <div class=\"div-12\">ville</div>\r\n              <input type=\"text\" class=\"div-23\" [placeholder]=\"cityPlaceholder\" />\r\n          </div>\r\n        </div>\r\n      </div>\r\n  \r\n      <div class=\"div-24\">Antécédants</div>\r\n      <input\r\n        type=\"text\"\r\n        class=\"div-25\"\r\n        [placeholder]=\"AntecedentPlaceholder\"\r\n      />\r\n      <div class=\"custom-check-container\">\r\n        <span>Mutuelle</span>\r\n        <label class=\"custom-check\">\r\n          Oui\r\n          <input type=\"radio\" name=\"customCheck\" value=\"yes\" />\r\n          <span class=\"checkmark\"></span>\r\n        </label>\r\n        <label class=\"custom-check\">\r\n          No\r\n          <input type=\"radio\" name=\"customCheck\" value=\"no\" />\r\n          <span class=\"checkmark\"></span>\r\n        </label>\r\n      </div>\r\n      <div class=\"div-27\">Remarque</div>\r\n      <input\r\n        type=\"text\"\r\n        class=\"div-28\"\r\n        [placeholder]=\"remarkPlaceholder\"\r\n      />\r\n      <!-- <button [ngStyle]=\"{ 'background-color': backgroundColor }\" class=\"button-suivant\">Suivant</button> -->\r\n    </div>\r\n  </div>"
         },
         {
-            "name": "SidebarComponent",
-            "id": "component-SidebarComponent-39486d755d512c0e62e7b32cab7ec9fc3ba4115d393232ddfcaa386d989ba0456608bd29a5b07f19fe9d518dc08b3cd87996e8bc3b86845fdf581a56646582a0",
-            "file": "src/stories/sidebar/sidebar.component.ts",
+            "name": "SideBarComponent",
+            "id": "component-SideBarComponent-1f9ae8dc0572b6952c43b354d6ef444185ae5f12fe1e879d1c1d9fadfa181fc6d6155e56e855013d0def3ac0d351a59f58d37c356a6e82514b196afd6785cf5d",
+            "file": "src/stories/side-bar/side-bar.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-sidebar",
+            "selector": "app-side-bar",
             "styleUrls": [
-                "./sidebar.component.css"
+                "./side-bar.component.css"
             ],
             "styles": [],
             "templateUrl": [
-                "./sidebar.component.html"
+                "./side-bar.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "width",
-                    "defaultValue": "'78px'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 9,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
+            "inputsClass": [],
             "outputsClass": [],
             "propertiesClass": [],
             "methodsClass": [],
@@ -1314,144 +1430,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-sidebar',\r\n  templateUrl: './sidebar.component.html',\r\n  styleUrls: ['./sidebar.component.css']\r\n})\r\nexport class SidebarComponent {\r\n  @Input() width: string = '78px';\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-side-bar',\n  templateUrl: './side-bar.component.html',\n  styleUrls: ['./side-bar.component.css']\n})\nexport class SideBarComponent {\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".sidebar {\r\n  border-radius: 54px;\r\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);\r\n  background-color: #000;\r\n  display: flex;\r\n  max-width: 100%;\r\n  flex-direction: column;\r\n  align-items: flex-start;\r\n  padding: 80px 21px;\r\n  margin: auto;\r\n}\r\n\r\n.sidebar-icon {\r\n  width: 100%;\r\n  margin-top: 31px;\r\n  color: #fff;\r\n  font-size: 24px;\r\n  text-decoration: none;\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n}\r\n\r\n.sidebar-icon:first-child {\r\n  margin-top: 17px;\r\n}\r\n\r\n.sidebar-icon-square {\r\n  margin-top: 32px;\r\n}\r\n\r\n.sidebar-icon-wide {\r\n  margin-top: 32px;\r\n}\r\n\r\n.sidebar-icon-wider {\r\n  margin-top: 32px;\r\n}\r\n",
-                    "styleUrl": "./sidebar.component.css"
+                    "data": "  .sidebar {\r\n  width: 180px;\r\n  height: 100vh;\r\n  background-color: #f0f0ff;\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  /* margin: auto; */\r\n\r\n}\r\n.logo img {\r\n  width: 40px;\r\n  height: 40px;\r\n  margin-bottom: 20px;\r\n}\r\n.menu1 {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  flex-grow: 1;\r\n  justify-content: space-between; \r\n}\r\n.menu {\r\n  display: flex;\r\n  flex-direction: column;\r\n  align-items: center;\r\n  justify-content: space-around;\r\n  flex-grow: 1;\r\n  width: 100%;\r\n}\r\n.items1{\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.items2{\r\n  display: flex;\r\n  width: 100%;\r\n  flex-direction: column;\r\n  margin-top: 20px;\r\n  margin-bottom: -15px;\r\n}\r\n.menu-item {\r\n  margin: 10px 0;\r\n  text-decoration: none;\r\n  color: black;\r\n}\r\n.menu-item i {\r\n  font-size: 24px;\r\n}\r\na {\r\nwidth: 100%;\r\ntext-align: center;}\r\n.divider {\r\n  width: 80%;\r\n  height: 1px;\r\n  background-color: #ccc;\r\n  margin: 9px 0;\r\n}\r\n.profile img {\r\n  width: 40px;\r\n  height: 40px;\r\n  border-radius: 50%;\r\n  margin-bottom: 20px;\r\n}\r\n.items1{\r\n  width: 100%;\r\nalign-items: center;\r\n}\r\n",
+                    "styleUrl": "./side-bar.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<aside class=\"sidebar\" [ngStyle]=\"{ width: width}\">\r\n  <a href=\"#\" class=\"sidebar-icon\">\r\n    <svg\r\n      width=\"28\"\r\n      height=\"26\"\r\n      viewBox=\"0 0 28 26\"\r\n      fill=\"none\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n    >\r\n      <path\r\n        d=\"M14.1591 25.9912C15.5755 25.9912 27.9989 25.8672 27.9989 21.576V4.41519C27.9989 0.12419 15.5755 0.000244141 14.1591 0.000244141C12.7427 0.000244141 0.319336 0.12419 0.319336 4.41519V21.576C0.319336 25.8672 12.7427 25.9912 14.1591 25.9912ZM14.1591 23.5368C7.53056 23.5368 3.36326 22.2377 2.77372 21.4729V15.7289C6.47002 17.3468 13.1435 17.4107 14.1591 17.4107C15.1747 17.4107 21.8482 17.3468 25.5445 15.7289V21.4729C24.955 22.2377 20.7877 23.5368 14.1591 23.5368ZM2.77372 7.14863C6.47002 8.76632 13.1435 8.83038 14.1591 8.83038C15.1747 8.83038 21.8482 8.76632 25.5445 7.14863V12.8894C24.9653 13.6537 20.798 14.9563 14.1591 14.9563C7.52025 14.9563 3.35295 13.6537 2.77372 12.8894V7.14863ZM14.1591 2.45463C20.4983 2.45463 24.5863 3.64255 25.4468 4.41519C24.5863 5.18783 20.4983 6.37599 14.1591 6.37599C7.81993 6.37599 3.73191 5.18783 2.8714 4.41519C3.73191 3.64255 7.81993 2.45463 14.1591 2.45463Z\"\r\n        fill=\"white\"\r\n      />\r\n    </svg>\r\n  </a>\r\n  <a href=\"#\" class=\"sidebar-icon\">\r\n    <svg\r\n      width=\"28\"\r\n      height=\"26\"\r\n      viewBox=\"0 0 28 26\"\r\n      fill=\"none\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n    >\r\n      <path\r\n        d=\"M4.50622 12.7123H23.8121C26.1208 12.7123 27.9988 10.834 27.9988 8.52564V4.64929C27.9988 2.34064 26.1208 0.462402 23.8121 0.462402H4.50622C2.19757 0.462402 0.319336 2.34064 0.319336 4.64929V8.52564C0.319336 10.834 2.19757 12.7123 4.50622 12.7123ZM3.00708 4.64929C3.00708 3.82275 3.67969 3.14991 4.50622 3.14991H23.8121C24.6387 3.14991 25.3113 3.82275 25.3113 4.64929V8.52564C25.3113 9.35193 24.6387 10.0248 23.8121 10.0248H4.50622C3.67969 10.0248 3.00708 9.35193 3.00708 8.52564V4.64929Z\"\r\n        fill=\"#777777\"\r\n      />\r\n      <path\r\n        d=\"M4.50622 25.7394H23.8121C26.1208 25.7394 27.9988 23.8611 27.9988 21.5525V17.6764C27.9988 15.3677 26.1208 13.4895 23.8121 13.4895H4.50622C2.19757 13.4895 0.319336 15.3677 0.319336 17.6764V21.5525C0.319336 23.8611 2.19757 25.7394 4.50622 25.7394ZM3.00708 17.6764C3.00708 16.8499 3.67969 16.177 4.50622 16.177H23.8121C24.6387 16.177 25.3113 16.8499 25.3113 17.6764V21.5525C25.3113 22.379 24.6387 23.0516 23.8121 23.0516H4.50622C3.67969 23.0516 3.00708 22.379 3.00708 21.5525V17.6764Z\"\r\n        fill=\"#777777\"\r\n      />\r\n      <path\r\n        d=\"M5.57003 8.39256C6.51911 8.39256 7.29142 7.5828 7.29142 6.58727C7.29142 5.59198 6.51911 4.78223 5.57003 4.78223C4.62094 4.78223 3.84863 5.59198 3.84863 6.58727C3.84863 7.5828 4.62094 8.39256 5.57003 8.39256Z\"\r\n        fill=\"#777777\"\r\n      />\r\n      <path\r\n        d=\"M5.57003 17.8091C4.62094 17.8091 3.84863 18.6188 3.84863 19.6144C3.84863 20.6096 4.62094 21.4194 5.57003 21.4194C6.51911 21.4194 7.29142 20.6096 7.29142 19.6144C7.29142 18.6188 6.51911 17.8091 5.57003 17.8091Z\"\r\n        fill=\"#777777\"\r\n      />\r\n    </svg>\r\n  </a>\r\n  <a href=\"#\" class=\"sidebar-icon\">\r\n    <svg\r\n      width=\"28\"\r\n      height=\"28\"\r\n      viewBox=\"0 0 28 28\"\r\n      fill=\"none\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n    >\r\n      <path\r\n        d=\"M5.44102 15.9082H8.44245V17.8691L6.35103 18.4111C5.77966 18.5593 5.38079 19.0748 5.38079 19.665V22.3706C4.63881 22.8354 4.13892 23.6837 4.13892 24.6545C4.13892 26.1215 5.27696 27.3151 6.67632 27.3151C8.07498 27.3151 9.21349 26.1215 9.21349 24.6545C9.21349 23.6837 8.7136 22.8354 7.97116 22.3706V20.6671L10.0628 20.125C10.6337 19.9769 11.0328 19.4613 11.0328 18.8712V15.9082H12.1884V22.3706C11.4462 22.8354 10.9461 23.6837 10.9461 24.6545C10.9461 26.1215 12.0844 27.3151 13.4835 27.3151C14.8824 27.3151 16.0207 26.1215 16.0207 24.6545C16.0207 23.6837 15.521 22.8354 14.7786 22.3706V15.9082H15.9342V18.8712C15.9342 19.4613 16.3333 19.9769 16.9044 20.125L18.9956 20.6671V22.4149C18.2919 22.8883 17.8231 23.7142 17.8231 24.6545C17.8231 26.1215 18.9612 27.3151 20.3603 27.3151C21.7592 27.3151 22.8975 26.1215 22.8975 24.6545C22.8975 23.6535 22.3669 22.7805 21.586 22.3266V19.665C21.586 19.0748 21.1874 18.5593 20.6158 18.4111L18.5243 17.8691V15.9082H22.587C25.411 15.9082 27.7086 13.6108 27.7086 10.7865C27.7086 7.96225 25.411 5.66459 22.587 5.66459C22.3624 5.66459 22.1398 5.67912 21.92 5.70818C20.8236 2.86916 18.0741 0.924683 14.9333 0.924683C11.5636 0.924683 8.70634 3.16117 7.76797 6.22776C7.05716 5.86403 6.26198 5.66459 5.44102 5.66459C2.61699 5.66459 0.319336 7.96225 0.319336 10.7865C0.319336 13.6108 2.61699 15.9082 5.44102 15.9082ZM5.44102 8.25496C6.34119 8.25496 7.1816 8.74243 7.63344 9.52683C7.9353 10.0499 8.55799 10.2953 9.13615 10.1179C9.71315 9.94071 10.0919 9.38762 10.0473 8.78532C10.037 8.64048 10.0321 8.5233 10.0321 8.41643C10.0321 5.71381 12.2309 3.51482 14.9333 3.51482C17.3005 3.51482 19.3273 5.20244 19.7528 7.52751C19.8246 7.91866 20.072 8.2552 20.4238 8.44057C20.7756 8.62595 21.1932 8.63908 21.556 8.47666C21.8848 8.32949 22.2314 8.25496 22.587 8.25496C23.9826 8.25496 25.1183 9.39067 25.1183 10.7865C25.1183 12.1823 23.9826 13.3181 22.587 13.3181H5.44102C4.04541 13.3181 2.90947 12.1823 2.90947 10.7865C2.90947 9.39067 4.04541 8.25496 5.44102 8.25496Z\"\r\n        fill=\"white\"\r\n      />\r\n    </svg>\r\n  </a>\r\n  <a href=\"#\" class=\"sidebar-icon sidebar-icon-square\">\r\n    <svg\r\n      width=\"26\"\r\n      height=\"26\"\r\n      viewBox=\"0 0 26 26\"\r\n      fill=\"none\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n    >\r\n      <path\r\n        d=\"M25.9823 19.9315V5.39361C25.9823 2.57676 23.6907 0.285156 20.8738 0.285156H8.49764C5.68992 0.285156 3.4053 2.56256 3.39062 5.36691C1.87187 5.67706 0.725586 7.02353 0.725586 8.63275V16.6923C0.725586 18.3015 1.87187 19.648 3.39062 19.9582C3.4053 22.7625 5.68992 25.0399 8.49764 25.0399H20.8738C23.6907 25.0399 25.9823 22.7483 25.9823 19.9315ZM2.91132 16.6923V8.63275C2.91132 8.00017 3.42575 7.48526 4.05856 7.48526H11.4098C12.0426 7.48526 12.557 8.00017 12.557 8.63275V16.6923C12.557 17.3249 12.0426 17.8398 11.4098 17.8398H4.05856C3.42575 17.8398 2.91132 17.3249 2.91132 16.6923ZM23.5795 19.9315C23.5795 21.4233 22.3656 22.6369 20.8738 22.6369H8.49764C7.0376 22.6369 5.84704 21.4735 5.79699 20.0255H11.4098C13.2478 20.0255 14.7428 18.5301 14.7428 16.6923V8.63275C14.7428 6.79494 13.2478 5.29953 11.4098 5.29953H5.79699C5.84704 3.85152 7.0376 2.68816 8.49764 2.68816H20.8738C22.3656 2.68816 23.5795 3.90181 23.5795 5.39361V19.9315Z\"\r\n        fill=\"white\"\r\n      />\r\n      <path\r\n        d=\"M4.44334 15.9523C4.67433 16.1833 4.97726 16.2991 5.2802 16.2991C5.58289 16.2991 5.88582 16.1833 6.11681 15.9523L7.73349 14.3357L9.35017 15.9523C9.58116 16.1833 9.88385 16.2991 10.1868 16.2991C10.4897 16.2991 10.7926 16.1833 11.0236 15.9523C11.4859 15.4904 11.4859 14.7409 11.0236 14.2789L9.40696 12.6622L11.0236 11.0455C11.4859 10.5835 11.4859 9.83427 11.0236 9.37206C10.5617 8.90984 9.81191 8.90984 9.35017 9.37206L7.73349 10.9887L6.11681 9.37206C5.65483 8.90984 4.90532 8.90984 4.44334 9.37206C3.98113 9.83427 3.98113 10.5835 4.44334 11.0455L6.06002 12.6622L4.44334 14.2789C3.98113 14.7409 3.98113 15.4904 4.44334 15.9523Z\"\r\n        fill=\"white\"\r\n      />\r\n    </svg>\r\n  </a>\r\n  <a href=\"#\" class=\"sidebar-icon sidebar-icon-square\">\r\n    <svg\r\n      width=\"28\"\r\n      height=\"28\"\r\n      viewBox=\"0 0 28 28\"\r\n      fill=\"none\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n    >\r\n      <path\r\n        d=\"M15.5371 27.2398H12.3473C11.7363 27.2398 11.2101 26.8084 11.09 26.2093L10.7335 24.4299C10.0744 24.2267 9.4378 23.962 8.82969 23.6373L7.66811 24.3334C7.16285 24.6358 6.51781 24.5558 6.10206 24.14L3.84685 21.8846C3.4311 21.4688 3.35134 20.8233 3.65373 20.3188L4.3498 19.1575C4.0251 18.5494 3.76016 17.9128 3.55703 17.2534L1.77734 16.8971C1.17821 16.7771 0.74707 16.2508 0.74707 15.6396V12.4498C0.74707 11.8389 1.17821 11.3126 1.77734 11.1926L3.55703 10.8361C3.7558 10.1902 4.01408 9.5665 4.3298 8.96993L3.32364 7.45979C2.98458 6.95146 3.05177 6.2741 3.48419 5.84194L5.73965 3.58648C6.1713 3.15457 6.8484 3.08712 7.35725 3.42618L8.86739 4.43208C9.46396 4.11661 10.088 3.85834 10.7335 3.65957L11.09 1.88013C11.2101 1.281 11.7363 0.849609 12.3473 0.849609H15.5371C16.1483 0.849609 16.6743 1.281 16.7943 1.88013L17.1508 3.65957C17.8102 3.8627 18.4468 4.12764 19.0549 4.45209L20.2162 3.75601C20.7213 3.45388 21.3665 3.53364 21.782 3.94939L24.0375 6.20459C24.4535 6.6206 24.5333 7.26615 24.2309 7.77064L23.5348 8.93223C23.8595 9.54034 24.1244 10.1767 24.3273 10.8361L26.107 11.1926C26.7061 11.3126 27.1373 11.8389 27.1373 12.4498V15.6396C27.1373 16.2508 26.7061 16.7771 26.107 16.8971L24.3273 17.2534C24.1285 17.8992 23.8703 18.5229 23.5551 19.1195L24.5607 20.6296C24.8998 21.1382 24.8326 21.8153 24.4002 22.2475L22.145 24.503C21.7133 24.9349 21.0359 25.0023 20.5274 24.6633L19.017 23.6574C18.4204 23.9728 17.7964 24.2311 17.1508 24.4299L16.7943 26.2093C16.6743 26.8087 16.1483 27.2398 15.5371 27.2398ZM13.3983 24.6751H14.486L14.7928 23.1447C14.892 22.6479 15.2747 22.256 15.7692 22.1452C16.6984 21.9366 17.5763 21.5732 18.3786 21.0651C18.8064 20.794 19.3545 20.8005 19.7756 21.081L21.0744 21.9461L21.8438 21.177L20.9788 19.8784C20.6977 19.4568 20.6915 18.9094 20.9626 18.4814C21.4709 17.6789 21.8344 16.8009 22.0426 15.8717C22.1537 15.3775 22.5453 14.9946 23.0421 14.8951L24.5725 14.5886V13.5009L23.0421 13.1944C22.5453 13.0949 22.1537 12.7122 22.0426 12.2177C21.8344 11.2887 21.4709 10.4108 20.9623 9.60805C20.7033 9.19871 20.6969 8.67832 20.9459 8.26282L21.5163 7.31078L20.6764 6.47056L19.7241 7.04122C19.3081 7.29001 18.7882 7.28359 18.3786 7.02455C17.5763 6.51621 16.6984 6.15279 15.7692 5.94427C15.2747 5.83347 14.892 5.44158 14.7928 4.94478L14.486 3.41438H13.3983L13.0918 4.94478C12.9923 5.44158 12.6096 5.83347 12.1152 5.94427C11.1862 6.15279 10.3083 6.51621 9.50576 7.02455C9.07796 7.29565 8.53038 7.28924 8.10848 7.00839L6.80993 6.1433L6.04076 6.91247L6.90611 8.21101C7.18695 8.63266 7.19337 9.18024 6.92201 9.6083C6.41368 10.4108 6.05025 11.2887 5.84173 12.2177C5.73068 12.7122 5.33904 13.0949 4.8425 13.1944L3.31184 13.5009V14.5886L4.8425 14.8951C5.33904 14.9946 5.73068 15.3775 5.84173 15.8717C6.05025 16.8009 6.41368 17.6789 6.92201 18.4811C7.18131 18.8905 7.18772 19.4111 6.93868 19.8266L6.36802 20.7789L7.20798 21.6189L8.16028 21.0482C8.57578 20.7994 9.09668 20.8056 9.50551 21.0649C10.3083 21.5732 11.1865 21.9366 12.1152 22.1452C12.6096 22.256 12.9923 22.6479 13.0918 23.1447L13.3983 24.6751Z\"\r\n        fill=\"white\"\r\n      />\r\n    </svg>\r\n  </a>\r\n  <a href=\"#\" class=\"sidebar-icon\">\r\n    <svg\r\n      width=\"28\"\r\n      height=\"27\"\r\n      viewBox=\"0 0 28 27\"\r\n      fill=\"none\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n    >\r\n      <path\r\n        d=\"M27.2112 6.37919L14.7528 0.445908C14.3772 0.266891 13.9407 0.266891 13.5651 0.445908L1.10662 6.37919C0.625877 6.60825 0.319336 7.09309 0.319336 7.6258C0.319336 8.15852 0.625877 8.6436 1.10662 8.87266L13.5651 14.8057C13.753 14.8952 13.9559 14.94 14.1589 14.94C14.362 14.94 14.5648 14.8952 14.7528 14.8057L27.2112 8.87266C27.692 8.6436 27.9985 8.15852 27.9985 7.6258C27.9985 7.09309 27.692 6.60825 27.2112 6.37919ZM14.1589 12.0295L4.91192 7.6258L14.1589 3.2221L23.4059 7.6258L14.1589 12.0295Z\"\r\n        fill=\"white\"\r\n      />\r\n      <path\r\n        d=\"M1.10687 14.3879L13.5651 20.3209C13.753 20.4105 13.9559 20.4552 14.1589 20.4552C14.362 20.4552 14.5651 20.4105 14.7528 20.3209L27.2113 14.3879C27.8999 14.0599 28.192 13.2361 27.8645 12.5475C27.5368 11.8588 26.7127 11.567 26.0238 11.8944L14.1589 17.5447L2.2943 11.8944C1.60542 11.567 0.781562 11.8588 0.453846 12.5475C0.12589 13.2361 0.418235 14.0599 1.10687 14.3879Z\"\r\n        fill=\"white\"\r\n      />\r\n      <path\r\n        d=\"M1.10687 20.3209L13.5651 26.2537C13.753 26.3432 13.9559 26.388 14.1589 26.388C14.362 26.388 14.5651 26.3432 14.7528 26.2537L27.2113 20.3209C27.8999 19.993 28.192 19.1691 27.8645 18.4805C27.5368 17.7916 26.7127 17.4997 26.0238 17.8274L14.1589 23.4775L2.2943 17.8274C1.60542 17.4997 0.781562 17.7916 0.453846 18.4805C0.12589 19.1691 0.418235 19.993 1.10687 20.3209Z\"\r\n        fill=\"white\"\r\n      />\r\n    </svg>\r\n  </a>\r\n  <a href=\"#\" class=\"sidebar-icon sidebar-icon-square\">\r\n    <svg\r\n      width=\"27\"\r\n      height=\"27\"\r\n      viewBox=\"0 0 27 27\"\r\n      fill=\"none\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n    >\r\n      <path\r\n        d=\"M0.831055 13.7103C0.831055 20.8996 6.68005 26.7483 13.8693 26.7483C21.0582 26.7483 26.9072 20.8996 26.9072 13.7103C26.9072 6.52088 21.0582 0.672119 13.8693 0.672119C6.68005 0.672119 0.831055 6.52088 0.831055 13.7103ZM24.4678 13.7103C24.4678 19.5545 19.7134 24.3089 13.8693 24.3089C8.02515 24.3089 3.27048 19.5545 3.27048 13.7103C3.27048 7.86622 8.02515 3.11154 13.8693 3.11154C19.7134 3.11154 24.4678 7.86622 24.4678 13.7103Z\"\r\n        fill=\"white\"\r\n      />\r\n      <path\r\n        d=\"M4.21582 13.7104C4.21582 19.0332 8.54628 23.3639 13.8698 23.3639C19.1929 23.3639 23.5234 19.0332 23.5234 13.7104C23.5234 8.38735 19.1929 4.05664 13.8698 4.05664C8.54628 4.05664 4.21582 8.38735 4.21582 13.7104ZM21.0839 13.7104C21.0839 17.6884 17.8478 20.9245 13.8698 20.9245C9.89138 20.9245 6.65548 17.6884 6.65548 13.7104C6.65548 9.7322 9.89138 6.49606 13.8698 6.49606C17.8478 6.49606 21.0839 9.7322 21.0839 13.7104Z\"\r\n        fill=\"white\"\r\n      />\r\n      <path\r\n        d=\"M7.67871 13.7103C7.67871 17.1233 10.4555 19.9001 13.8685 19.9001C17.2815 19.9001 20.0583 17.1233 20.0583 13.7103C20.0583 10.2973 17.2815 7.52051 13.8685 7.52051C10.4555 7.52051 7.67871 10.2973 7.67871 13.7103ZM17.6189 13.7103C17.6189 15.7784 15.9366 17.4607 13.8685 17.4607C11.8004 17.4607 10.1181 15.7784 10.1181 13.7103C10.1181 11.6422 11.8004 9.95993 13.8685 9.95993C15.9366 9.95993 17.6189 11.6422 17.6189 13.7103Z\"\r\n        fill=\"white\"\r\n      />\r\n    </svg>\r\n  </a>\r\n  <a href=\"#\" class=\"sidebar-icon\">\r\n    <svg\r\n      width=\"28\"\r\n      height=\"26\"\r\n      viewBox=\"0 0 28 26\"\r\n      fill=\"none\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n    >\r\n      <path\r\n        d=\"M27.8533 0.909892C27.6759 0.442862 27.2281 0.134155 26.7286 0.134155H1.624C1.12617 0.134155 0.679351 0.441178 0.500816 0.906042C0.322521 1.37067 0.448603 1.89761 0.818666 2.2311L10.6999 11.1347V24.4111C10.6999 25.0756 11.2384 25.6141 11.903 25.6141H16.4496C17.1142 25.6141 17.6527 25.0756 17.6527 24.4111V11.0108L27.5277 2.23663C27.9011 1.90483 28.0306 1.37668 27.8533 0.909892ZM15.6506 9.57124C15.3938 9.79934 15.2466 10.1268 15.2466 10.4704V23.208H13.1061V10.5994C13.1061 10.2587 12.9615 9.93385 12.7081 9.70574L4.75654 2.54029H23.5634L15.6506 9.57124Z\"\r\n        fill=\"white\"\r\n      />\r\n    </svg>\r\n  </a>\r\n  <a href=\"#\" class=\"sidebar-icon sidebar-icon-wide\">\r\n    <svg\r\n      width=\"28\"\r\n      height=\"27\"\r\n      viewBox=\"0 0 28 27\"\r\n      fill=\"none\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n    >\r\n      <path\r\n        d=\"M0.319336 19.8378C0.319336 20.6005 0.937472 21.2187 1.70022 21.2187H3.1131V25.0916C3.1131 25.8543 3.73147 26.4724 4.49422 26.4724C5.25696 26.4724 5.8751 25.8543 5.8751 25.0916V21.2187H7.28798C8.05072 21.2187 8.66886 20.6005 8.66886 19.8378V18.2071C8.66886 17.4444 8.05072 16.826 7.28798 16.826H5.8751V1.97731C5.8751 1.21481 5.25696 0.596436 4.49422 0.596436C3.73147 0.596436 3.1131 1.21481 3.1131 1.97731V16.826H1.70022C0.937472 16.826 0.319336 17.4444 0.319336 18.2071V19.8378Z\"\r\n        fill=\"white\"\r\n      />\r\n      <path\r\n        d=\"M14.1583 26.4724C14.921 26.4724 15.5392 25.8543 15.5392 25.0916V10.2426H16.952C17.7148 10.2426 18.3332 9.62448 18.3332 8.86174V7.2311C18.3332 6.46836 17.7148 5.85022 16.952 5.85022H15.5392V1.97731C15.5392 1.21457 14.921 0.596436 14.1583 0.596436C13.3955 0.596436 12.7774 1.21457 12.7774 1.97731V5.85022H11.3645C10.6018 5.85022 9.9834 6.46836 9.9834 7.2311V8.86174C9.9834 9.62448 10.6018 10.2426 11.3645 10.2426H12.7774V25.0916C12.7774 25.8543 13.3955 26.4724 14.1583 26.4724Z\"\r\n        fill=\"white\"\r\n      />\r\n      <path\r\n        d=\"M26.6181 13.2029H25.2052V1.97755C25.2052 1.21481 24.587 0.596436 23.8243 0.596436C23.0616 0.596436 22.4432 1.21481 22.4432 1.97755V13.2029H21.0303C20.2675 13.2029 19.6494 13.821 19.6494 14.5838V16.2146C19.6494 16.9774 20.2675 17.5955 21.0303 17.5955H22.4432V25.0916C22.4432 25.8543 23.0616 26.4724 23.8243 26.4724C24.587 26.4724 25.2052 25.8543 25.2052 25.0916V17.5955H26.6181C27.3808 17.5955 27.9989 16.9774 27.9989 16.2146V14.5838C27.9989 13.821 27.3808 13.2029 26.6181 13.2029Z\"\r\n        fill=\"white\"\r\n      />\r\n    </svg>\r\n  </a>\r\n  <a href=\"#\" class=\"sidebar-icon sidebar-icon-wider\">\r\n    <svg\r\n      width=\"29\"\r\n      height=\"23\"\r\n      viewBox=\"0 0 29 23\"\r\n      fill=\"none\"\r\n      xmlns=\"http://www.w3.org/2000/svg\"\r\n    >\r\n      <path\r\n        d=\"M27.1291 9.65961H18.8997C18.2943 9.65961 17.7596 10.054 17.5804 10.6322L16.1711 15.1858L13.1632 1.15033C13.0369 0.560104 12.5417 0.120263 11.9409 0.0644406C11.342 0.0105433 10.7725 0.349567 10.5393 0.906346L6.7795 9.88819H2.21193C1.44919 9.88819 0.831055 10.5066 0.831055 11.2691C0.831055 12.0318 1.44919 12.6502 2.21193 12.6502H7.6984C8.25518 12.6502 8.75734 12.316 8.97221 11.8023L11.3858 6.03622L14.5778 20.9309C14.7094 21.5449 15.239 21.9932 15.8663 22.0211C15.8872 22.0221 15.9076 22.0226 15.9283 22.0226C16.5311 22.0226 17.0676 21.6301 17.2471 21.05L19.9177 12.4216H27.1291C27.8919 12.4216 28.51 11.8032 28.51 11.0405C28.51 10.2777 27.8919 9.65961 27.1291 9.65961Z\"\r\n        fill=\"white\"\r\n      />\r\n    </svg>\r\n  </a>\r\n</aside>\r\n"
-        },
-        {
-            "name": "TestComponent",
-            "id": "component-TestComponent-2f132c506a44842fd5d27639375c500ef9cb10df06c175ab678a1e7827b7350e9c2bc1cf540110697cd2e2ee29efb04b2481f4a4c2d144f616b4474af8295652",
-            "file": "src/stories/test.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-test",
-            "styleUrls": [
-                "./test.component.css"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./test.component.html"
-            ],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "color",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "width",
-                    "defaultValue": "'500px'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-test',\r\n  templateUrl: './test.component.html',\r\n  styleUrls: ['./test.component.css']\r\n})\r\nexport class TestComponent {\r\n\r\n  @Input()  width:string = '500px';\r\n  \r\n  @Input()  \r\n  color?:string;\r\n\r\n\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".test{\r\n    height: 70px;\r\n    color: red;\r\n}",
-                    "styleUrl": "./test.component.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": [],
-            "templateData": "<p\r\n[ngStyle]=\"{'font-size': size, 'color': color}\"\r\n>test works!\r\n</p>"
-        },
-        {
-            "name": "TestComponent",
-            "id": "component-TestComponent-836465ca735e7b20d1065851a63f2db24d08a8ab2601e599d2568f4ed5c89fbb1216d572d88e5c2fa13c59d3af7f51f3f2718d4e87b58fe502289bfdcfdb02bd-1",
-            "file": "src/stories/test/test.component.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "app-test",
-            "styleUrls": [
-                "./test.component.css"
-            ],
-            "styles": [],
-            "templateUrl": [
-                "./test.component.html"
-            ],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [
-                {
-                    "name": "color",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "size",
-                    "defaultValue": "'500px'",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "string",
-                    "decorators": []
-                }
-            ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": false,
-            "imports": [],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-test',\r\n  templateUrl: './test.component.html',\r\n  styleUrls: ['./test.component.css']\r\n})\r\nexport class TestComponent {\r\n\r\n  @Input()  size:string = '500px';\r\n  \r\n  @Input()  \r\n  color?:string;\r\n\r\n}\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": [
-                {
-                    "data": ".test{\r\n    height: 70px;\r\n    color: red;\r\n}",
-                    "styleUrl": "./test.component.css"
-                }
-            ],
-            "stylesData": "",
-            "extends": [],
-            "isDuplicate": true,
-            "duplicateId": 1,
-            "duplicateName": "TestComponent-1",
-            "templateData": "<p\r\n[ngStyle]=\"{'font-size': size, 'color': color}\"\r\n>test works!\r\n</p>"
+            "templateData": "\n<div class=\"sidebar\">\n  <div class=\"logo\">\n      <img src=\"assets/img/Groupe 19120.png\" alt=\"e-voucher path\">\n  </div>\n  <div class=\"menu menu1\">\n      <a href=\"#\" class=\"menu-item\" > \n      <svg width=\"20\" height=\"18\" viewBox=\"0 0 21 21\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M17.153 20.7571C16.4026 20.7571 15.902 20.2576 15.902 19.5072V8.25721C15.902 7.50684 16.4026 7.00734 17.153 7.00734H19.6527C20.402 7.00734 20.9026 7.50684 20.9026 8.25721V19.5072C20.9026 20.2576 20.402 20.7571 19.6527 20.7571H17.153ZM9.65261 20.7571C8.90222 20.7571 8.40273 20.2576 8.40273 19.5072V2.00671C8.40273 1.25746 8.90222 0.756836 9.65261 0.756836H12.1523C12.9027 0.756836 13.4022 1.25746 13.4022 2.00671V19.5072C13.4022 20.2576 12.9027 20.7571 12.1523 20.7571H9.65261ZM2.15223 20.7571C1.40298 20.7571 0.902344 20.2576 0.902344 19.5072V14.5077C0.902344 13.7573 1.40298 13.2567 2.15223 13.2567H4.65196C5.40235 13.2567 5.90299 13.7573 5.90299 14.5077V19.5072C5.90299 20.2576 5.40235 20.7571 4.65196 20.7571H2.15223Z\" fill=\"black\"/>\n         </svg>\n         <span class=\"dashboard-text\">Tableau de bord</span>  \n         </a>\n         <div class=\"items1\">\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 23 18\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M11.2396 4.56763C11.2396 4.07883 11.6358 3.68262 12.1246 3.68262H18.2755C18.7642 3.68262 19.1605 4.07883 19.1605 4.56763C19.1605 5.05641 18.7642 5.45263 18.2755 5.45263H12.1246C11.6358 5.45263 11.2396 5.05641 11.2396 4.56763ZM12.1246 9.03693H18.2755C18.7642 9.03693 19.1605 8.64071 19.1605 8.15192C19.1605 7.66312 18.7642 7.26691 18.2755 7.26691H12.1246C11.6358 7.26691 11.2396 7.66312 11.2396 8.15192C11.2396 8.64071 11.6358 9.03693 12.1246 9.03693ZM18.2755 12.6655H13.8947C13.4059 12.6655 13.0096 13.0617 13.0096 13.5505C13.0096 14.0393 13.4059 14.4355 13.8947 14.4355H18.2755C18.7642 14.4355 19.1605 14.0393 19.1605 13.5505C19.1605 13.0617 18.7642 12.6655 18.2755 12.6655ZM4.35916 10.1432H8.03098C8.48335 10.1432 8.8501 9.77785 8.8501 9.3272V9.248C8.8501 8.03535 8.02633 7.01145 6.90719 6.70055C7.42939 6.43906 7.78808 5.89939 7.78808 5.27563C7.78808 4.39584 7.07486 3.68262 6.19507 3.68262C5.31528 3.68262 4.60205 4.39584 4.60205 5.27563C4.60205 5.89983 4.96123 6.43982 5.48405 6.70111C4.35779 7.01835 3.54004 8.06965 3.54004 9.29026V9.32717C3.54004 9.77785 3.90679 10.1432 4.35916 10.1432ZM4.42505 14.4355H10.3546C10.8434 14.4355 11.2396 14.0393 11.2396 13.5505C11.2396 13.0617 10.8434 12.6655 10.3546 12.6655H4.42505C3.93626 12.6655 3.54004 13.0617 3.54004 13.5505C3.54004 14.0393 3.93626 14.4355 4.42505 14.4355ZM22.6562 1.02759V17.0905C22.6562 17.5793 22.26 17.9755 21.7712 17.9755H0.88501C0.396219 17.9755 0 17.5793 0 17.0905V1.02759C0 0.538795 0.396219 0.142578 0.88501 0.142578H21.7712C22.26 0.142578 22.6562 0.538795 22.6562 1.02759ZM20.8862 1.9126H1.77002V16.2055H20.8862V1.9126Z\" fill=\"black\"/>\n        </svg>\n        <span class=\"nav-text\">Liste demandes</span>\n        </a>\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 22 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M2.50935 0.961914H5.68785C6.77838 0.961914 7.70864 1.66113 8.05387 2.63481H18.9037C20.2874 2.63481 21.4131 3.7605 21.4131 5.14416V18.5273C21.4131 19.911 20.2874 21.0367 18.9037 21.0367H2.50935C1.12569 21.0367 0 19.911 0 18.5273V3.47126C0 2.0876 1.12569 0.961914 2.50935 0.961914ZM18.9037 19.3638C19.365 19.3638 19.7402 18.9886 19.7402 18.5273V5.14416C19.7402 4.68294 19.365 4.30771 18.9037 4.30771H7.36075C6.89879 4.30771 6.5243 3.93322 6.5243 3.47126C6.5243 3.01004 6.14907 2.63481 5.68785 2.63481H2.50935C2.04813 2.63481 1.6729 3.01004 1.6729 3.47126V18.5273C1.6729 18.9886 2.04813 19.3638 2.50935 19.3638H18.9037Z\" fill=\"black\"/>\n          <path d=\"M5.68801 12.672C5.22606 12.672 4.85156 12.2976 4.85156 11.8356C4.85156 8.60707 7.47817 5.98047 10.7067 5.98047C12.3701 5.98047 13.9607 6.69176 15.0707 7.93196C15.3788 8.2762 15.3495 8.80499 15.0053 9.11308C14.6611 9.42116 14.1323 9.39188 13.8242 9.04765C13.0311 8.16156 11.8948 7.65337 10.7067 7.65337C8.40061 7.65337 6.52446 9.52953 6.52446 11.8356C6.52446 12.2976 6.14997 12.672 5.68801 12.672Z\" fill=\"black\"/>\n          <path d=\"M10.7061 17.6906C9.04275 17.6906 7.45211 16.9793 6.3421 15.7391C6.03401 15.3949 6.06331 14.8661 6.40751 14.558C6.75174 14.2499 7.28053 14.2792 7.58862 14.6234C8.3817 15.5095 9.51799 16.0177 10.7061 16.0177C13.0122 16.0177 14.8884 14.1416 14.8884 11.8355C14.8884 11.3735 15.2628 10.999 15.7248 10.999C16.1868 10.999 16.5613 11.3735 16.5613 11.8355C16.5613 15.064 13.9347 17.6906 10.7061 17.6906Z\" fill=\"black\"/>\n          <path d=\"M14.4467 9.32664C14.0676 9.32664 13.7243 9.06718 13.6334 8.68221L13.2384 7.00931C13.1322 6.55971 13.4107 6.10919 13.8603 6.00304C14.3099 5.89689 14.7604 6.17531 14.8665 6.6249L15.2615 8.2978C15.3676 8.7474 15.0892 9.19792 14.6396 9.30407C14.575 9.31933 14.5104 9.32664 14.4467 9.32664Z\" fill=\"black\"/>\n          <path d=\"M7.3598 17.6909C6.98071 17.6909 6.63734 17.4314 6.54645 17.0465L6.15148 15.3736C6.04533 14.924 6.32374 14.4734 6.77334 14.3673C7.22294 14.2611 7.67346 14.5396 7.77961 14.9892L8.17458 16.6621C8.28073 17.1117 8.00231 17.5622 7.55271 17.6683C7.48809 17.6836 7.42344 17.6909 7.3598 17.6909Z\" fill=\"black\"/>\n          </svg>\n          <span class=\"nav-text\">Identité patient</span>\n        </a>\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 22 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n          <path d=\"M13.1466 18.5906H11.4825C11.0229 18.5906 10.6504 18.2181 10.6504 17.7586C10.6504 17.299 11.0229 16.9265 11.4825 16.9265H13.1466C13.6055 16.9265 13.9787 16.5532 13.9787 16.0944C13.9787 15.9433 13.9381 15.7957 13.8612 15.6676C13.6247 15.2735 13.7525 14.7624 14.1465 14.5259C14.5406 14.2895 15.0517 14.4173 15.2881 14.8113C15.5202 15.198 15.6429 15.6417 15.6429 16.0944C15.6429 17.4708 14.5231 18.5906 13.1466 18.5906Z\" fill=\"black\"/>\n          <path d=\"M8.15445 18.5908C6.77802 18.5908 5.6582 17.4709 5.6582 16.0945C5.6582 15.6419 5.78088 15.1982 6.01295 14.8115L6.797 13.5047C7.03343 13.1107 7.54456 12.9828 7.9386 13.2193C8.33266 13.4557 8.46045 13.9668 8.22401 14.3609L7.43994 15.6677C7.36302 15.7959 7.32237 15.9435 7.32237 16.0945C7.32237 16.5533 7.69565 16.9266 8.15445 16.9266C8.614 16.9266 8.98654 17.2992 8.98654 17.7587C8.98654 18.2183 8.614 18.5908 8.15445 18.5908Z\" fill=\"black\"/>\n          <path d=\"M12.8637 13.2178C12.5811 13.2178 12.3055 13.0737 12.1494 12.8137L11.3654 11.5069C11.2131 11.2531 10.946 11.1017 10.6508 11.1017C10.3557 11.1017 10.0886 11.2531 9.93634 11.5069C9.69992 11.9009 9.18881 12.0287 8.79474 11.7923C8.40068 11.5559 8.27289 11.0447 8.50934 10.6507C8.95831 9.90237 9.7789 9.4375 10.6508 9.4375C11.5228 9.4375 12.3434 9.90237 12.7924 10.6507L13.5764 11.9575C13.8129 12.3515 13.6851 12.8626 13.291 13.0991C13.157 13.1795 13.0094 13.2178 12.8637 13.2178Z\" fill=\"black\"/>\n          <path d=\"M0.832082 4.44531H5.65816C5.87884 4.44531 6.09048 4.53298 6.24653 4.68903L7.66698 6.10948H20.4692C20.9288 6.10948 21.3013 6.48202 21.3013 6.94156V21.087C21.3013 21.5465 20.9288 21.919 20.4692 21.919H0.832082C0.372538 21.919 0 21.5465 0 21.087V5.2774C0 4.81786 0.372538 4.44531 0.832082 4.44531ZM5.3135 6.10948H1.66416V20.2549H19.6371V7.77365H7.32232C7.10164 7.77365 6.88999 7.68597 6.73395 7.52994L5.3135 6.10948Z\" fill=\"black\"/>\n          <path d=\"M17.3075 7.7735C16.848 7.7735 16.4754 7.40096 16.4754 6.94141V2.11534H4.82628V5.27725C4.82628 5.7368 4.45374 6.10933 3.99419 6.10933C3.53465 6.10933 3.16211 5.7368 3.16211 5.27725V1.28325C3.16211 0.823706 3.53465 0.451172 3.99419 0.451172H17.3075C17.7671 0.451172 18.1396 0.823706 18.1396 1.28325V6.94141C18.1396 7.40096 17.7671 7.7735 17.3075 7.7735Z\" fill=\"black\"/>\n          </svg>\n          <span class=\"nav-text\">Demandes en cours</span>\n\n        </a>\n      </div>\n<div class=\"items2\">\n\n  <a href=\"#\" class=\"menu-item \">\n    <svg width=\"20\" height=\"18\" viewBox=\"0 0 22 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M16.5062 17.615H12.5871C12.1286 17.615 11.7568 17.2432 11.7568 16.7847V12.8655C11.7568 12.4069 12.1286 12.0352 12.5871 12.0352H16.5062C16.9647 12.0352 17.3364 12.4069 17.3364 12.8655V16.7847C17.3364 17.2432 16.9647 17.615 16.5062 17.615ZM13.4174 15.9544H15.6758V13.6958H13.4174V15.9544Z\" fill=\"black\"/>\n      <path d=\"M20.4251 17.615H16.506C16.0475 17.615 15.6758 17.2432 15.6758 16.7847V12.8655C15.6758 12.4069 16.0475 12.0352 16.506 12.0352H20.4251C20.8837 12.0352 21.2554 12.4069 21.2554 12.8655V16.7847C21.2554 17.2432 20.8837 17.615 20.4251 17.615ZM17.3363 15.9544H19.5948V13.6958H17.3363V15.9544Z\" fill=\"black\"/>\n      <path d=\"M12.5872 15.9541H16.5062C16.9647 15.9541 17.3364 16.3258 17.3364 16.7844V20.7036C17.3364 21.1621 16.9647 21.5338 16.5062 21.5338H12.5872C12.1286 21.5338 11.7568 21.1621 11.7568 20.7036V16.7844C11.7568 16.3258 12.1286 15.9541 12.5872 15.9541ZM15.6758 17.6147H13.4175V19.8732H15.6758V17.6147Z\" fill=\"black\"/>\n      <path d=\"M16.5061 15.9541H20.4251C20.8837 15.9541 21.2554 16.3258 21.2554 16.7844V20.7036C21.2554 21.1621 20.8837 21.5338 20.4251 21.5338H16.5061C16.0475 21.5338 15.6758 21.1621 15.6758 20.7036V16.7844C15.6758 16.3258 16.0475 15.9541 16.5061 15.9541ZM19.5948 17.6147H17.3364V19.8732H19.5948V17.6147Z\" fill=\"black\"/>\n      <path d=\"M10.0299 13.6959C6.33075 13.6959 3.32129 10.6863 3.32129 6.98711C3.32129 3.28786 6.33075 0.27832 10.0299 0.27832C13.729 0.27832 16.7385 3.28786 16.7385 6.98711C16.7385 10.6863 13.729 13.6959 10.0299 13.6959ZM10.0299 1.93895C7.24642 1.93895 4.9819 4.20354 4.9819 6.98711C4.9819 9.77066 7.24642 12.0352 10.0299 12.0352C12.8133 12.0352 15.0779 9.77066 15.0779 6.98711C15.0779 4.20354 12.8133 1.93895 10.0299 1.93895Z\" fill=\"black\"/>\n      <path d=\"M12.5875 21.5341H0.830292C0.371735 21.5341 0 21.1624 0 20.7038C0 15.9239 3.88864 12.0352 8.66843 12.0352H12.5875C13.0461 12.0352 13.4178 12.4069 13.4178 12.8655C13.4178 13.324 13.0461 13.6958 12.5875 13.6958H8.66843C5.08517 13.6958 2.12146 16.3992 1.70953 19.8735H12.5875C13.0461 19.8735 13.4178 20.2452 13.4178 20.7038C13.4178 21.1624 13.0461 21.5341 12.5875 21.5341Z\" fill=\"black\"/>\n    </svg>\n    <span class=\"nav-text\">Demandes archivés</span>    \n  </a>\n  <a href=\"#\" class=\"menu-item \">  \n    <svg width=\"20\" height=\"18\" viewBox=\"0 0 22 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n      <path d=\"M20.2304 21.4323H0.822372C0.36819 21.4323 0 21.0641 0 20.6099V17.4849C0 15.2176 1.84457 13.373 4.11186 13.373H8.88162C9.3358 13.373 9.70399 13.7412 9.70399 14.1954C9.70399 14.6496 9.3358 15.0178 8.88162 15.0178H4.11186C2.75149 15.0178 1.64474 16.1245 1.64474 17.4849V19.7876H19.408V17.4849C19.408 16.1245 18.3012 15.0178 16.9409 15.0178H12.1711C11.7169 15.0178 11.3487 14.6496 11.3487 14.1954C11.3487 13.7412 11.7169 13.373 12.1711 13.373H16.9409C19.2082 13.373 21.0527 15.2176 21.0527 17.4849V20.6099C21.0527 21.0641 20.6845 21.4323 20.2304 21.4323Z\" fill=\"black\"/>\n      <path d=\"M15.4604 8.43913C15.0062 8.43913 14.638 8.07094 14.638 7.61676V4.49175C14.638 3.13137 13.5312 2.02463 12.1709 2.02463H8.88139C7.52102 2.02463 6.41427 3.13137 6.41427 4.49175V7.61676C6.41427 8.07094 6.04608 8.43913 5.5919 8.43913C5.13773 8.43913 4.76953 8.07094 4.76953 7.61676V4.49175C4.76953 2.22446 6.6141 0.379883 8.88139 0.379883H12.1709C14.4382 0.379883 16.2827 2.22446 16.2827 4.49175V7.61676C16.2827 8.07094 15.9146 8.43913 15.4604 8.43913Z\" fill=\"black\"/>\n      <path d=\"M7.40092 21.4323C6.94674 21.4323 6.57855 21.0641 6.57855 20.61V18.9652C6.57855 18.5117 6.20964 18.1428 5.75618 18.1428C5.30273 18.1428 4.93381 18.5117 4.93381 18.9652V20.61C4.93381 21.0641 4.56562 21.4323 4.11143 21.4323C3.65725 21.4323 3.28906 21.0641 3.28906 20.61V18.9652C3.28906 17.6048 4.39581 16.498 5.75618 16.498C7.11655 16.498 8.2233 17.6048 8.2233 18.9652V20.61C8.2233 21.0641 7.85511 21.4323 7.40092 21.4323Z\" fill=\"black\"/>\n      <path d=\"M10.5261 16.6628C9.16576 16.6628 8.05902 15.5561 8.05902 14.1957V12.551C7.22151 11.921 6.65451 10.9909 6.47514 9.96363C5.48627 9.64201 4.76953 8.7115 4.76953 7.61674C4.76953 6.25637 5.87627 5.14962 7.23664 5.14962H9.1955L9.79058 3.95947C9.92988 3.68089 10.2147 3.50488 10.5261 3.50488C10.5261 3.50488 10.5262 3.50488 10.5261 3.50488C10.8376 3.50488 11.1224 3.68088 11.2617 3.95949C11.6287 4.6936 12.3666 5.14962 13.1874 5.14962H13.8156C15.176 5.14962 16.2827 6.25637 16.2827 7.61674C16.2827 8.7115 15.566 9.64201 14.5771 9.96363C14.3978 10.9909 13.8308 11.921 12.9933 12.551V14.1957C12.9933 15.5561 11.8865 16.6628 10.5261 16.6628ZM7.23664 6.79437C6.78319 6.79437 6.41427 7.16329 6.41427 7.61674C6.41427 8.07021 6.78319 8.43912 7.23664 8.43912C7.69083 8.43912 8.05902 8.8073 8.05902 9.26149C8.05902 10.1396 8.53191 10.9587 9.29317 11.399C9.54727 11.546 9.70377 11.8173 9.70377 12.1109V14.1957C9.70377 14.6492 10.0727 15.0181 10.5261 15.0181C10.9796 15.0181 11.3485 14.6492 11.3485 14.1957V12.1109C11.3485 11.8173 11.505 11.546 11.7591 11.399C12.5204 10.9587 12.9933 10.1396 12.9933 9.26149C12.9933 8.8073 13.3614 8.43912 13.8156 8.43912C14.2691 8.43912 14.638 8.07021 14.638 7.61674C14.638 7.16329 14.2691 6.79437 13.8156 6.79437H13.1874C12.243 6.79437 11.3608 6.4521 10.6818 5.8547L10.4393 6.33977C10.3 6.61838 10.0153 6.79437 9.70377 6.79437H7.23664Z\" fill=\"black\"/>\n      <path d=\"M5.75694 18.1428C5.30276 18.1428 4.93457 17.7746 4.93457 17.3204V14.1954C4.93457 13.7412 5.30276 13.373 5.75694 13.373C6.21113 13.373 6.57931 13.7412 6.57931 14.1954V17.3204C6.57931 17.7746 6.21113 18.1428 5.75694 18.1428Z\" fill=\"black\"/>\n      <path d=\"M15.296 18.1428C14.8418 18.1428 14.4736 17.7746 14.4736 17.3204V14.1954C14.4736 13.7412 14.8418 13.373 15.296 13.373C15.7502 13.373 16.1184 13.7412 16.1184 14.1954V17.3204C16.1184 17.7746 15.7502 18.1428 15.296 18.1428Z\" fill=\"black\"/>\n    </svg>\n    <span class=\"nav-text\">Liste Laboratoires</span>\n  </a>\n  </div>\n</div>\n  <div class=\"divider\"></div>\n  <div class=\"menu\" style=\"    justify-content: space-evenly;\">\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 21 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M17.4082 13.8255V9.67185C17.4082 6.58659 15.4336 3.89626 12.715 2.89136C12.7468 2.73267 12.7644 2.5705 12.7644 2.40828C12.7644 1.07898 11.6855 0 10.3562 0C9.02686 0 7.94788 1.07898 7.94788 2.40828C7.94788 2.56697 7.96548 2.7256 7.99369 2.87723C7.05933 3.20868 6.19545 3.73404 5.45852 4.44629C4.06928 5.78619 3.30415 7.58797 3.30415 9.52023V13.8255C3.30415 13.9771 3.18073 14.1041 3.02557 14.1041C1.72448 14.1041 0.613758 15.0843 0.493873 16.3325C0.426863 17.0272 0.656097 17.7182 1.12505 18.233C1.59046 18.7443 2.2569 19.0405 2.95149 19.0405H7.20389C7.38018 20.6237 8.72714 21.8613 10.3562 21.8613C11.9852 21.8613 13.3321 20.6237 13.5084 19.0405H17.7608C18.4555 19.0405 19.1219 18.7443 19.5873 18.233C20.0527 17.7182 20.2819 17.0272 20.2184 16.3325C20.0986 15.0843 18.9844 14.1041 17.6867 14.1041C17.5316 14.104 17.4082 13.9806 17.4082 13.8255ZM10.3562 1.41038C10.9062 1.41038 11.354 1.85819 11.354 2.40822C11.354 2.45403 11.3469 2.49637 11.3399 2.54218C11.1001 2.50691 10.8568 2.48224 10.6135 2.47517C10.1939 2.46104 9.78133 2.4893 9.37233 2.54571C9.36526 2.4999 9.3582 2.45756 9.3582 2.41175C9.35831 1.85819 9.80612 1.41038 10.3562 1.41038ZM10.3562 20.4508C9.5064 20.4508 8.79415 19.8443 8.6284 19.0405H12.0839C11.9182 19.8444 11.206 20.4508 10.3562 20.4508ZM18.8151 16.4665C18.8433 16.7697 18.7481 17.0624 18.5471 17.2845C18.3391 17.5067 18.064 17.63 17.7608 17.63H2.95155C2.6483 17.63 2.37332 17.5066 2.16875 17.2845C1.96425 17.0624 1.86904 16.7697 1.89724 16.4665C1.94659 15.9341 2.4438 15.5145 3.02557 15.5145C3.95646 15.5145 4.71453 14.7564 4.71453 13.8255V9.52023C4.71453 7.97583 5.32803 6.53371 6.43875 5.4618C7.50007 4.43575 8.8823 3.8786 10.3562 3.8786C10.4267 3.8786 10.4937 3.8786 10.5642 3.88213C13.5578 3.98789 15.9978 6.58659 15.9978 9.67185V13.8255C15.9978 14.7564 16.7559 15.5145 17.6867 15.5145C18.2685 15.5145 18.7622 15.9341 18.8151 16.4665Z\" fill=\"black\"/>\n        </svg>\n        <span class=\"notification-text\">Notification</span>\n        <span class=\"notification-badge\">6</span>\n        </a>\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 23 19\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M1.84876 18.3545C1.09581 18.3505 0.486416 17.7411 0.482422 16.9881L0.482422 5.75052C0.486437 4.19051 1.75008 2.92687 3.31009 2.92285H16.6447C18.2076 2.92285 19.4757 4.18767 19.4797 5.75053L19.4797 13.2398C19.4797 14.8027 18.2149 16.0708 16.652 16.0748H5.53131C5.40501 16.0758 5.28225 16.1167 5.18059 16.1917L2.67442 18.0841C2.43545 18.2607 2.1459 18.3555 1.84876 18.3545ZM3.31009 4.38418C2.55714 4.38817 1.94774 4.99757 1.94375 5.75052V16.8055L4.3038 15.0226C4.6589 14.7589 5.08899 14.6156 5.53131 14.6135H16.6447C17.4034 14.6135 18.0184 13.9985 18.0184 13.2398V5.75052C18.0144 4.99757 17.405 4.38817 16.652 4.38418H3.31009Z\" fill=\"black\"/>\n        <circle cx=\"12.8596\" cy=\"9.56465\" r=\"0.730664\" fill=\"black\"/>\n        <circle cx=\"10.0246\" cy=\"9.56465\" r=\"0.730664\" fill=\"black\"/>\n        <circle cx=\"7.10176\" cy=\"9.56465\" r=\"0.730664\" fill=\"black\"/>\n        <path d=\"M21.6717 10.96C21.2681 10.96 20.941 10.6328 20.941 10.2293V2.82767C20.937 2.07472 20.3276 1.46532 19.5747 1.46133L4.86641 1.46133C4.46287 1.46133 4.13574 1.1342 4.13574 0.730664C4.13574 0.327129 4.46287 0 4.86641 0H19.5747C21.1347 0.00401545 22.3983 1.26766 22.4023 2.82767V10.2293C22.4023 10.6328 22.0752 10.96 21.6717 10.96Z\" fill=\"black\"/>\n        </svg>\n        <span class=\"notification-text\">Messages</span>\n\n        </a>\n      <a href=\"#\" class=\"menu-item\">\n        <svg width=\"20\" height=\"18\" viewBox=\"0 0 23 22\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n        <path d=\"M22.0205 12.4306L20.6214 11.6234C20.6829 11.0511 20.6829 10.4738 20.6214 9.90142L22.0205 9.09424C22.1971 8.99151 22.3256 8.82271 22.3775 8.6251C22.4294 8.42749 22.4005 8.21734 22.2972 8.04106L19.2223 2.72135C19.0112 2.35533 18.5442 2.22829 18.1768 2.43692L16.7777 3.20566C16.3068 2.88634 15.8076 2.61099 15.2863 2.38311L15.2863 0.768744C15.2863 0.344178 14.9421 0 14.5176 0H8.3676C7.94304 0 7.59886 0.344178 7.59886 0.768744V2.38311C7.07613 2.62325 6.57685 2.91149 6.1075 3.2441L4.70838 2.47536C4.34094 2.26673 3.87399 2.39376 3.66289 2.75979L0.587913 8.0795C0.484614 8.25578 0.455739 8.46593 0.507665 8.66354C0.559591 8.86114 0.688047 9.02995 0.864661 9.13268L2.26378 9.93986C2.20226 10.5122 2.20226 11.0895 2.26378 11.6618L0.864661 12.4306C0.688047 12.5333 0.559591 12.7021 0.507665 12.8997C0.455739 13.0973 0.484614 13.3075 0.587913 13.4838L3.66289 18.8035C3.87399 19.1695 4.34094 19.2965 4.70838 19.0879L6.10749 18.3192C6.57835 18.6385 7.07757 18.9138 7.59886 19.1417L7.59886 20.7561C7.59886 21.1807 7.94304 21.5248 8.3676 21.5248H14.5176C14.9421 21.5248 15.2863 21.1807 15.2863 20.7561V19.1417C15.809 18.9016 16.3083 18.6133 16.7777 18.2807L18.1768 19.0495C18.5442 19.2581 19.0112 19.1311 19.2223 18.765L22.2972 13.4453C22.487 13.087 22.3659 12.6429 22.0205 12.4306ZM19.13 10.7624C19.1276 11.1488 19.0941 11.5344 19.0301 11.9155C18.9881 12.2245 19.1369 12.5281 19.4068 12.6843L20.5829 13.3608L18.2767 17.3582L17.1082 16.6817C16.8339 16.5204 16.4884 16.5449 16.2395 16.7432C15.6361 17.2294 14.9621 17.6208 14.2408 17.904C13.9451 18.0181 13.7497 18.302 13.7488 18.619L13.7488 19.9873H9.13635V18.6344C9.13541 18.3174 8.94005 18.0335 8.64435 17.9194C7.92305 17.6362 7.24908 17.2448 6.64562 16.7586C6.39671 16.5603 6.05131 16.5358 5.77694 16.6971L4.60845 17.3736L2.30221 13.3761L3.47839 12.6996C3.74822 12.5435 3.89701 12.2398 3.85508 11.9309C3.72185 11.1679 3.72185 10.3876 3.85508 9.62467C3.89701 9.31575 3.74822 9.01209 3.47839 8.85593L2.30221 8.14868L4.60845 4.15122L5.77694 4.82771C6.05131 4.98901 6.39671 4.96456 6.64562 4.76621C7.24908 4.28007 7.92305 3.88865 8.64435 3.60541C8.94005 3.49131 9.13541 3.20742 9.13635 2.89048V1.53749H13.7488V2.89048C13.7497 3.20742 13.9451 3.49131 14.2408 3.60541C14.9621 3.88865 15.6361 4.28007 16.2395 4.76621C16.4884 4.96456 16.8339 4.98901 17.1082 4.82771L18.2767 4.15122L20.5829 8.14868L19.4068 8.82518C19.1369 8.98134 18.9881 9.285 19.0301 9.59392C19.095 9.98007 19.1284 10.3709 19.13 10.7624Z\" fill=\"black\"/>\n        <path d=\"M11.4424 6.91895C9.31952 6.91895 7.59863 8.63984 7.59863 10.7627C7.59863 12.8855 9.31952 14.6064 11.4424 14.6064C13.5652 14.6064 15.2861 12.8855 15.2861 10.7627C15.2861 8.63984 13.5652 6.91895 11.4424 6.91895ZM11.4424 13.0689C10.1687 13.0689 9.13612 12.0364 9.13612 10.7627C9.13612 9.48897 10.1687 8.45643 11.4424 8.45643C12.716 8.45643 13.7486 9.48897 13.7486 10.7627C13.7486 12.0364 12.716 13.0689 11.4424 13.0689Z\" fill=\"black\"/>\n        </svg>\n        <span class=\"notification-text\">Paramètre</span>\n\n        </a>\n  </div>\n  <div class=\"profile\">\n      <img src=\"assets/img/User Menu.png\" alt=\"Profile Picture\">\n  </div>\n</div>\n\n\n\n"
         },
         {
             "name": "TextAreaComponent",
@@ -1516,13 +1505,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-f3074bb93d051e68a7647281001c61b6c7751defba73c67c9fcb898050ed72e8dcae7b6389f2a9791c115fb1de58eaceb81a595087cdf4a82aa76c504eab9f53",
+            "id": "module-AppModule-19588bc7db013210e5da2c2f306a53a904e0f6574d3bd1cf9ba9daad187b97229f4c80dfb1fdb09652b37790de0d9b557a3fb59bc2367979149ce0e145fa5d72",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { ButtonComponent } from './../stories/button.component';\r\nimport { InputComponent } from './../stories/input.component';\r\nimport { TextAreaComponent } from './../stories/textArea.component';\r\nimport { IconComponent } from './../stories/icon/icon.component'\r\n// import {DateInputComponent} from './../stories/date.input/date.input.component'\r\nimport { DateInputComponent } from '../stories/date.input/date.input.component';\r\n\r\n// import { TestComponent } from './test/test.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    DateInputComponent,\r\n    IconComponent,\r\n    // TestComponent,\r\n  ],\r\n  imports: [\r\n    FormsModule,\r\n    // IconComponent,\r\n    ButtonComponent,\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    InputComponent,\r\n    TextAreaComponent,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { InputComponent } from './../stories/input.component';\r\nimport { TextAreaComponent } from './../stories/textArea.component';\r\nimport { SideBarComponent } from '../stories/side-bar/side-bar.component';\r\nimport { InputTextComponent } from '../stories/input-text/input-text.component';\r\nimport { ButtonComponent } from '../stories/buttonstory/button.component';\r\nimport { InputsComponent } from 'src/stories/inputs/inputs.component';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { NavigationComponent } from '../stories/navigation/navigation.component';\r\nimport { CheckboxComponent } from '../stories/checkbox/checkbox.component';\r\nimport { ReactiveFormsModule } from '@angular/forms';\r\n\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    ButtonComponent,\r\n    SideBarComponent,\r\n   InputTextComponent,\r\n   InputsComponent,\r\n   NavigationComponent,\r\n   CheckboxComponent,\r\n   \r\n                  \r\n  ],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    FormsModule,\r\n    InputComponent,\r\n    TextAreaComponent,\r\n    ReactiveFormsModule,\r\n\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent]\r\n})\r\nexport class AppModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1535,10 +1524,19 @@
                             "name": "AppComponent"
                         },
                         {
-                            "name": "DateInputComponent"
+                            "name": "CheckboxComponent"
                         },
                         {
-                            "name": "IconComponent"
+                            "name": "InputTextComponent"
+                        },
+                        {
+                            "name": "InputsComponent"
+                        },
+                        {
+                            "name": "NavigationComponent"
+                        },
+                        {
+                            "name": "SideBarComponent"
                         }
                     ]
                 },
@@ -1547,9 +1545,6 @@
                     "elements": [
                         {
                             "name": "AppRoutingModule"
-                        },
-                        {
-                            "name": "ButtonComponent"
                         },
                         {
                             "name": "InputComponent"
@@ -1579,13 +1574,13 @@
         },
         {
             "name": "AppRoutingModule",
-            "id": "module-AppRoutingModule-83532d3ad5ee93327f4538f7aeba5905f09ea6c079d0fa564f369a844b217bbda4d6b9aa2cc5c5ea94210ac0ea15c888aa0c2fc39c5bf09cacf2448c2b1130f9",
+            "id": "module-AppRoutingModule-4518c33195180c88b148f5ad346bbd509e37db201ff0191c9bd5d00989bc674a7e8476b2298b5f61b74b4fa3379b6d71a3615e2cc472074cf6e416b23941131b",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app-routing.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [\r\n  { path: '', redirectTo: 'home', pathMatch: 'full' },\r\n];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { RouterModule, Routes } from '@angular/router';\r\n\r\nconst routes: Routes = [];\r\n\r\n@NgModule({\r\n  imports: [RouterModule.forRoot(routes)],\r\n  exports: [RouterModule]\r\n})\r\nexport class AppRoutingModule { }\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1624,13 +1619,7 @@
                 "name": "routes",
                 "filename": "src/app/app-routing.module.ts",
                 "module": "AppRoutingModule",
-                "children": [
-                    {
-                        "path": "",
-                        "redirectTo": "home",
-                        "pathMatch": "full"
-                    }
-                ],
+                "children": [],
                 "kind": "module"
             }
         ]
@@ -1658,21 +1647,21 @@
                 "status": "medium"
             },
             {
-                "filePath": "src/stories/buttons/buttons.component.ts",
+                "filePath": "src/stories/buttonstory/button.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "ButtonsComponent",
+                "name": "ButtonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/date.input/date.input.component.ts",
+                "filePath": "src/stories/checkbox/checkbox.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "DateInputComponent",
+                "name": "CheckboxComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/8",
                 "status": "low"
             },
             {
@@ -1694,12 +1683,12 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/icon/icon.component.ts",
+                "filePath": "src/stories/input-text/input-text.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "IconComponent",
+                "name": "InputTextComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -1710,6 +1699,24 @@
                 "coveragePercent": 54,
                 "coverageCount": "6/11",
                 "status": "good"
+            },
+            {
+                "filePath": "src/stories/inputs/inputs.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "InputsComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/navigation/navigation.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NavigationComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
             },
             {
                 "filePath": "src/stories/page.component.ts",
@@ -1730,28 +1737,32 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/sidebar/sidebar.component.ts",
+                "filePath": "src/stories/side-bar/side-bar.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "SidebarComponent",
+                "name": "SideBarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/textArea.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "TextAreaComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/test.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "TestComponent",
+                "filePath": "src/stories/user.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
                 "coveragePercent": 0,
-                "coverageCount": "0/3",
+                "coverageCount": "0/2",
                 "status": "low"
-            },
-            {
-                "filePath": "src/stories/test/test.component.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "TestComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/3",
-8",
+            }
+        ]
+    }
+}

@@ -1,0 +1,109 @@
+.sidebar {
+    width: 170px;
+    background-color: #f7f7ff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .logo img {
+    max-width: 100%;
+  }
+  
+  .dashboard-link {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #5c4abd;
+    border-radius: 8px;
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 20px;
+  }
+  
+  .dashboard-icon {
+    margin-right: 10px;
+  }
+  
+  .nav-container {
+    flex-grow: 1;
+  }
+  
+  .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  .nav-icon {
+    margin-right: 10px;
+  }
+  
+  .nav-text {
+    color: #333;
+  }
+  
+  .divider {
+    border-top: 1px solid #e0e0e0;
+    margin: 20px 0;
+  }
+  
+  .notification-container {
+    margin-bottom: 20px;
+  }
+  
+  .notification-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .notification-icon {
+    margin-right: 10px;
+  }
+  
+  .notification-text {
+    flex-grow: 1;
+  }
+  
+  .notification-badge {
+    background-color: #5c4abd;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile img {
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profile-name {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .profile-role {
+    color: #888;
+  }
+  
