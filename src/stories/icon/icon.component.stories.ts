@@ -14,6 +14,14 @@ const iconOptions = {
   'Get Facebook Page': 'fa-solid fa-comment',
   'Get Facebook Posts': 'fa-solid fa-flag',
 };
+const labelOptions = {
+  Facebook: 'Facebook',
+  'X-Twitter': 'X-Twitter',
+  YouTube: 'YouTube',
+  'Get Facebook comments': 'Get Facebook comments',
+  'Get Facebook Page': 'Get Facebook Page',
+  'Get Facebook Posts': 'Get Facebook Posts',
+};
 
 const meta: Meta<IconComponent> = {
   component: IconComponent,
@@ -21,8 +29,8 @@ const meta: Meta<IconComponent> = {
   argTypes: {
     label: {
       control: 'select',
-      options: Object.keys(iconOptions),
-      mapping: iconOptions,
+      options: Object.keys(labelOptions),
+      mapping: labelOptions,
     },
     iconColor: {
       control: 'select',

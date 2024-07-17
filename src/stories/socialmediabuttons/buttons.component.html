@@ -1,0 +1,15 @@
+<div class="button-container">
+  <button
+    class="facebook-button"
+    [ngStyle]="{
+      'background-color': backgroundColor,
+      'color': Color,
+      'border-color': borderColor
+    }"
+  >
+    <span class="button-text" [ngStyle]="{ 'color': LabelColor }">
+     {{label}}
+    </span>
+    <i [ngClass]="Icon" class="icon" [ngStyle]="{ color: IconColor }"></i>
+  </button>
+</div>

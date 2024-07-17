@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-icon',
-  // templateUrl: './icon.component.html',
+  templateUrl: './icon.component.html',
   styleUrls: ['./icon.component.css'],
   template: `
     <a href="#" class="icon-card" >
@@ -15,6 +15,6 @@ export class IconComponent {
   @Input() icon?: string ;
   // @Input() iconActions?: string ;
   @Input() iconColor: string = '#000';
-  @Input() labelColor: string = '#000';
+  // @Input() labelColor: string = '#000';
   // @Input() iconwidth: string = '100%';
 }
