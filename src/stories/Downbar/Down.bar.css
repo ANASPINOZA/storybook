@@ -1,0 +1,127 @@
+.youtube-section {
+  border-radius: 54px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+  color: #030303;
+  justify-content: space-between;
+  padding: 21px 80px 21px 31px;
+}
+
+.youtube-logo-container {
+  display: flex;
+  gap: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  justify-content: space-between;
+}
+
+.youtube-logo {
+  aspect-ratio: 1.67;
+  object-fit: auto;
+  object-position: center;
+  width: 57px;
+  border-radius: 14px;
+}
+
+.youtube-title {
+  font-family: Montserrat, sans-serif;
+  font-size: 20px;
+  margin: auto 0;
+}
+
+.youtube-actions {
+  display: flex;
+  gap: 30px;
+  font-weight: 400;
+  margin: auto 0;
+}
+
+.action-button {
+  font-family: Inter, sans-serif;
+  flex-grow: 3;
+  flex-basis: auto;
+  background-color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto;
+  margin-right: 20px;
+  /* width: 350px; */
+  /* max-width: 100%; */
+  /* width: 100%; 
+  max-width: none; 
+  margin-bottom: 10px; */
+}
+
+@media (max-width: 991px) {
+  .youtube-section {
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+
+  .youtube-logo-container {
+    white-space: initial;
+  }
+
+  .youtube-actions {
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 1250px) {
+  .youtube-actions {
+    gap : 20px;
+  }
+  .action-button {
+  margin-right: 7px;
+  }
+}
+@media (max-width: 1150px) {
+  .youtube-actions {
+    gap : 0px;
+  }
+  .action-button {
+  margin-right: 7px;
+  }
+}
+@media (max-width: 1050px) {
+  .youtube-actions {
+    gap : 0px;
+  }
+  .action-button {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 915px) {
+  /* .youtube-logo-container {
+    margin-left: 38%;
+  } */
+  .youtube-section {
+    justify-content: center;
+  }
+}
+@media (max-width: 880px) {
+  .action-button {
+    margin-left: 0px;
+  }
+}
+@media (max-width: 735px) {
+  .action-button {
+    margin-right: 27%;
+    margin-left: 27%;
+    flex : center;
+  }
+}
+/* @media (max-width: 915px) {
+  .youtube-logo-container {
+    margin-left: 45%;
+  }
+  .action-button {
+    margin-right: 0px;
+  }
+} */

@@ -56,3 +56,27 @@
 .date-picker.invalid {
 border-color: red;
 }
+.separator-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(90%); /* Adjust position of the line */
+  width: 1px; /* Adjust thickness of the line */
+  background-color: rgba(180, 180, 180, 1); /* Color of the line */
+}
+
+@media (max-width: 700px){
+  .separator-line {
+    left: calc(85%);
+  }
+}
+@media (max-width: 500px){
+  .separator-line {
+    left: calc(80%);
+  }
+}
+@media (max-width: 400px){
+  .separator-line {
+    left: calc(75%);
+  }
+}
