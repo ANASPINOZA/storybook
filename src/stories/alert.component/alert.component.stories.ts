@@ -1,10 +1,10 @@
 import { moduleMetadata, type Meta, type StoryObj } from '@storybook/angular';
-import { DownbarComponent } from './downbar';
+import { AlertComponent } from './alert.component';
 import { FormsModule } from '@angular/forms';
 
-const meta: Meta<DownbarComponent> = {
-title: 'Example/Downbar',
-component: DownbarComponent,
+const meta: Meta<AlertComponent> = {
+title: 'Example/Date',
+component: AlertComponent,
 tags: ['autodocs'],
 decorators: [
   moduleMetadata({
@@ -18,7 +18,7 @@ argTypes: {
 },
 };
 export default meta;
-type Story = StoryObj<DownbarComponent>;
+type Story = StoryObj<AlertComponent>;
 
 export const Secondary: Story = {
     args: {

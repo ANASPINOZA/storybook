@@ -406,7 +406,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".date-picker {\r\n  border-radius: 37px;\r\n  border: 2px solid rgba(180, 180, 180, 1);\r\n  background-color: #fff;\r\n  display: flex;\r\n  /* max-width: 461px; */\r\n  width:100%;\r\n  align-items: center;\r\n  gap: 20px;\r\n  padding: 18px 27px;\r\n  position: relative;\r\n}\r\n\r\n.date-display {\r\n  font-family: Montserrat, sans-serif;\r\n  font-size: 18px;\r\n  color: #707070;\r\n  font-weight: 400;\r\n  flex-grow: 1;\r\n  border: none;\r\n  outline: none;\r\n  background: transparent;\r\n}\r\n\r\n.calendar-input {\r\n  width: 29px;\r\n  height: 29px;\r\n  opacity: 0;\r\n  cursor: pointer;\r\n}\r\n\r\n.calendar-input::-webkit-calendar-picker-indicator {\r\n  position: absolute;\r\n  top: 0;\r\n  left: 0;\r\n  right: 0;\r\n  bottom: 0;\r\n  width: auto;\r\n  height: auto;\r\n  color: transparent;\r\n  background: transparent;\r\n}\r\n\r\n.date-picker::after {\r\n  content: \"\";\r\n  position: absolute;\r\n  right: 27px;\r\n  width: 29px;\r\n  height: 29px;\r\n  background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/8c040abc14104031ef4a559c9ff9638abc732a2ef176cb893a93b03252c1405d?apiKey=57cc64fc12b74717af3404d1085676ef&');\r\n  background-size: contain;\r\n  background-repeat: no-repeat;\r\n  pointer-events: none;\r\n}\r\n\r\n.date-picker.invalid {\r\nborder-color: red;\r\n}\r\n.separator-line {\r\n  position: absolute;\r\n  top: 0;\r\n  bottom: 0;\r\n  left: calc(90%); /* Adjust position of the line */\r\n  width: 1px; /* Adjust thickness of the line */\r\n  background-color: rgba(180, 180, 180, 1); /* Color of the line */\r\n}\r\n@media (max-width: 700px){\r\n  .separator-line {\r\n    left: calc(75%);\r\n  }\r\n}\r\n@media (max-width: 500px){\r\n  .separator-line {\r\n    left: calc(60%);\r\n  }\r\n}",
+                    "data": ".date-picker {\n  border-radius: 37px;\n  border: 2px solid rgba(180, 180, 180, 1);\n  background-color: #fff;\n  display: flex;\n  /* max-width: 461px; */\n  width:100%;\n  align-items: center;\n  gap: 20px;\n  padding: 18px 27px;\n  position: relative;\n}\n\n.date-display {\n  font-family: Montserrat, sans-serif;\n  font-size: 18px;\n  color: #707070;\n  font-weight: 400;\n  flex-grow: 1;\n  border: none;\n  outline: none;\n  background: transparent;\n}\n\n.calendar-input {\n  width: 29px;\n  height: 29px;\n  opacity: 0;\n  cursor: pointer;\n}\n\n.calendar-input::-webkit-calendar-picker-indicator {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  width: auto;\n  height: auto;\n  color: transparent;\n  background: transparent;\n}\n\n.date-picker::after {\n  content: \"\";\n  position: absolute;\n  right: 27px;\n  width: 29px;\n  height: 29px;\n  background-image: url('https://cdn.builder.io/api/v1/image/assets/TEMP/8c040abc14104031ef4a559c9ff9638abc732a2ef176cb893a93b03252c1405d?apiKey=57cc64fc12b74717af3404d1085676ef&');\n  background-size: contain;\n  background-repeat: no-repeat;\n  pointer-events: none;\n}\n\n.date-picker.invalid {\nborder-color: red;\n}\n.separator-line {\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: calc(90%); /* Adjust position of the line */\n  width: 1px; /* Adjust thickness of the line */\n  background-color: rgba(180, 180, 180, 1); /* Color of the line */\n}\n\n@media (max-width: 700px){\n  .separator-line {\n    left: calc(85%);\n  }\n}\n@media (max-width: 500px){\n  .separator-line {\n    left: calc(80%);\n  }\n}\n@media (max-width: 400px){\n  .separator-line {\n    left: calc(75%);\n  }\n}",
                     "styleUrl": "./date.input.component.css"
                 }
             ],
@@ -524,6 +524,61 @@
             "stylesData": "",
             "extends": [],
             "templateData": "    <div class=\"package-card\">\n      <div class=\"image-container\">\n        <img loading=\"lazy\" src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/f76a29704f019baee0a279e9f63b8965ee55f384a041eca272da9e243df8e849?apiKey=f644630b81d540c5aba02169a7be7c6a&\" class=\"main-image\" alt=\"Travel destination image\" />\n        <div\n        [ngStyle]=\"{ 'background-color': priceBackgroundColor }\"\n        class=\"price-tag\">\n          <span class=\"price-label\">From</span>\n          <!-- <span class=\"price-amount\">15000 MAD</span> -->\n          <span class=\"price-amount\">{{price}} MAD</span>\n        </div>\n      </div>\n      <div class=\"package-content\">\n        <!-- <h1 class=\"package-title\">Marin Skyline</h1> -->\n        <h1 class=\"package-title\"> {{title}} </h1>\n        <img loading=\"lazy\" src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/13667f0bec3264bc95506bcd7beb8f68cfaf06ccbd053478ed737d46bdd796b6?apiKey=f644630b81d540c5aba02169a7be7c6a&\" class=\"secondary-image\" alt=\"Marin Skyline view\" />\n        <p class=\"package-description\"> Lorem Ipsum est un texte d’espace réservé couramment utilisé dans les industries graphique, imprimée et éditoriale pour prévisualiser les ….. </p>\n        <div class=\"location-info\">\n          <img loading=\"lazy\" src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/c210cfb35e01ad7ed0db2fc878b1bd465777e2ef7dec655387908abe9fcca5e0?apiKey=f644630b81d540c5aba02169a7be7c6a&\" class=\"location-icon\" alt=\"Location icon\" />\n          <!-- <span class=\"location-text\">Dubai</span> -->\n          <span class=\"location-text\">{{location}} </span>\n        </div>\n        <div class=\"duration-info\">\n          <img loading=\"lazy\" src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/ed77c43ca719e0294e8630ecfbf6ef54ba0e58e094b39eec19a5dd7715c3aede?apiKey=f644630b81d540c5aba02169a7be7c6a&\" class=\"duration-icon\" alt=\"Clock icon\" />\n          <!-- <span class=\"duration-text\">7 Day 6 Night</span> -->\n          <span class=\"duration-text\">{{duration}} </span>\n        </div>\n        <!-- <a href=\"#\" class=\"book-button\">BOOK NOW</a> -->\n        <button\n        [ngStyle]=\"{ 'background-color': backgroundColor }\"\n        href=\"#\" class=\"book-button\">{{label}}</button>\n        \n      </div>\n    </div>\n "
+        },
+        {
+            "name": "DownbarComponent",
+            "id": "component-DownbarComponent-96abcbb1a4fa661984ae386e1919a490848f71ccb537979fd420c4e811efd8dccb6dc826bb3f6d703e50fca3d626b3f34e6b6077e750eca5d20da5dc192f8a2b",
+            "file": "src/stories/downbar/downbar.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "storybook-downbar",
+            "styleUrls": [
+                "./downbar.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./downbar.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "down",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "any",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'storybook-downbar',\n  templateUrl: './downbar.html',\n  styleUrls: ['./downbar.css']\n})\nexport class DownbarComponent {\n  down: any = '';\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".youtube-section {\n  border-radius: 54px;\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);\n  background-color: #fff;\n  display: flex;\n  gap: 20px;\n  font-size: 20px;\n  color: #030303;\n  justify-content: space-between;\n  padding: 21px 80px 21px 31px;\n}\n\n.youtube-logo-container {\n  display: flex;\n  gap: 20px;\n  font-weight: 700;\n  white-space: nowrap;\n  justify-content: space-between;\n}\n\n.youtube-logo {\n  aspect-ratio: 1.67;\n  object-fit: auto;\n  object-position: center;\n  width: 57px;\n  border-radius: 14px;\n}\n\n.youtube-title {\n  font-family: Montserrat, sans-serif;\n  font-size: 20px;\n  margin: auto 0;\n}\n\n.youtube-actions {\n  display: flex;\n  gap: 30px;\n  font-weight: 400;\n  margin: auto 0;\n}\n\n.action-button {\n  font-family: Inter, sans-serif;\n  flex-grow: 3;\n  flex-basis: auto;\n  background-color: #fff;\n  border: none;\n  padding: 10px 20px;\n  font-size: 20px;\n  cursor: pointer;\n  transition: background-color 0.3s ease;\n  width: auto;\n  margin-right: 20px;\n  /* width: 350px; */\n  /* max-width: 100%; */\n  /* width: 100%; \n  max-width: none; \n  margin-bottom: 10px; */\n}\n\n@media (max-width: 991px) {\n  .youtube-section {\n    flex-wrap: wrap;\n    padding: 0 20px;\n  }\n\n  .youtube-logo-container {\n    white-space: initial;\n  }\n\n  .youtube-actions {\n    max-width: 100%;\n    flex-wrap: wrap;\n  }\n}\n@media (max-width: 1250px) {\n  .youtube-actions {\n    gap : 20px;\n  }\n  .action-button {\n  margin-right: 7px;\n  }\n}\n@media (max-width: 1150px) {\n  .youtube-actions {\n    gap : 0px;\n  }\n  .action-button {\n  margin-right: 7px;\n  }\n}\n@media (max-width: 1050px) {\n  .youtube-actions {\n    gap : 0px;\n  }\n  .action-button {\n    margin-right: 0px;\n  }\n}\n@media (max-width: 915px) {\n  /* .youtube-logo-container {\n    margin-left: 38%;\n  } */\n  .youtube-section {\n    justify-content: center;\n  }\n}\n@media (max-width: 880px) {\n  .action-button {\n    margin-left: 0px;\n  }\n}\n@media (max-width: 735px) {\n  .action-button {\n    margin-right: 27%;\n    margin-left: 27%;\n    flex : center;\n  }\n}\n/* @media (max-width: 915px) {\n  .youtube-logo-container {\n    margin-left: 45%;\n  }\n  .action-button {\n    margin-right: 0px;\n  }\n} */",
+                    "styleUrl": "./downbar.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<section class=\"youtube-section\" [(ngModel)]=\"down\">\n    <div class=\"youtube-logo-container \">\n      <img loading=\"lazy\" src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/0bd28b418c35b3832f119c495f78940bba44b4c4af9d1177c9d7a1e1e5fdff20?apiKey=57cc64fc12b74717af3404d1085676ef&\" class=\"youtube-logo\" alt=\"YouTube logo\" />\n      <h2 class=\"youtube-title\">YouTube</h2>\n    </div>\n    <div class=\"youtube-actions\">\n      <button class=\"action-button\">Get Video Comment</button>\n      <button class=\"action-button\">Get Video Metadata</button>\n      <button class=\"action-button\">Get Channel Metadata</button>\n    </div>\n  </section>"
         },
         {
             "name": "HeaderComponent",
@@ -1282,7 +1337,7 @@
         ]
     },
     "coverage": {
-        "count": 10,
+        "count": 9,
         "status": "low",
         "files": [
             {
@@ -1319,6 +1374,15 @@
                 "name": "dealsComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/downbar/downbar.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DownbarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
                 "status": "low"
             },
             {
