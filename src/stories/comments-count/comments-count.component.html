@@ -1,9 +1,0 @@
-<div class="component">
-  <div class="header" (click)="toggleContent()">
-    <h3>Comments count</h3>
-  </div>
-  <div *ngIf="isOpen" class="content">
-    <input type="range" min="0" max="10000" [(ngModel)]="commentsCount" class="slider" >
-    <div class="count-display">{{ commentsCount }}</div>
-  </div>
-</div>
