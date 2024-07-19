@@ -1,0 +1,33 @@
+.input-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 10px 0;
+  font-size: small;
+  font-family: "Montserrat", sans-serif;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}
+input {
+  width: 100%;
+  padding: 10px 20px;
+  border-radius: 37px;
+  border: 1px solid #707070;
+  font-size: small;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

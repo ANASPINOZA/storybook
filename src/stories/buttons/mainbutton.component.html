@@ -1,0 +1,19 @@
+<button
+  [ngStyle]="{
+    'width': width,
+    'background-color': backgroundColor,
+    'color': labelColor,
+    'display':flex,
+    'justify-content': justifyContent,
+    'align-items': alignItems,
+  }"
+  class="search-button"
+>
+  <ng-container *ngIf="icon && iconPosition === 'left'" >
+    <i [ngClass]="icon" class="icon" [ngStyle]="{ color: iconColor }"></i>
+  </ng-container>
+  <span>{{ label }}</span>
+  <ng-container *ngIf="icon && iconPosition === 'right'">
+    <i [ngClass]="icon" class="icon" [ngStyle]="{ color: iconColor }"></i>
+  </ng-container>
+</button>

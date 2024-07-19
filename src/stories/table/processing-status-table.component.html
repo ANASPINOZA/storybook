@@ -1,0 +1,77 @@
+<ng-container *ngIf="type === 'table 1'">
+  <div class="processing-container">
+    <table class="table1">
+      <thead class="thead1">
+        <tr class="tr1">
+          <th class="th1">PROCESSING</th>
+          <th class="th1">ELEMENT</th>
+          <th class="th1">STATUS</th>
+          <th class="th1">DETAILS</th>
+          <th class="th1">URL</th>
+        </tr>
+      </thead>
+      <tbody class="tbody1">
+        <tr  class="tr1" *ngFor="let item of table1Data">
+          <td class="td1">{{ item.processing }}</td>
+          <td class="td1">{{ item.element }}</td>
+          <td class="td1">{{ item.status }}</td>
+          <td class="td1">
+            <app-mainbutton
+              label="Details"
+              width="100%"
+              labelColor="#FFFFFF"
+              backgroundColor="#FA830B"
+            ></app-mainbutton>
+          </td>
+          <td class="td1">
+            <app-mainbutton
+              label="Copy URL"
+              width="100%"
+              labelColor="#FFFFFF"
+              backgroundColor="#FA830B"
+            ></app-mainbutton>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="type === 'table 2'">
+  <section class="info-section">
+    <header class="info-header">
+      <h1 class="header-title">ALL INFORMATIONS</h1>
+    </header>
+    <div style="height: 200px; overflow-y: scroll;">
+    <table class="table2">
+      <thead class="thead2">
+        <tr class="tr2">
+          <th class="th2">FIELD</th>
+          <th>VALUE</th>
+          <th>ACTION</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let info of informations">
+          <td class="td2">{{ info.field }}</td>
+          <td class="td2">{{ info.value }}</td>
+          <td class="td2">
+            <app-mainbutton
+              label="copy value"
+              width="40%"
+              labelColor="#FFFFFF"
+              backgroundColor="#D80C5C"
+              icon="fa-solid fa-copy"
+              iconColor="#fff"
+              iconPosition="left"
+              flex="flex"
+              justifyContent="space-between"
+              alignItems="center"
+            ></app-mainbutton>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  </section>
+</ng-container>

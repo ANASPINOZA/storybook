@@ -1,0 +1,168 @@
+
+.processing-container {
+  border-radius: 54px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  padding: 59px 79px;
+  margin: auto;
+  max-width: 100%;
+}
+.table1 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 34px;
+  font-size: 27px;
+}
+.thead1 {
+  color: #000;
+  font-weight: 700;
+}
+.th1, .td1 {
+  padding: 34px 20px;
+  text-align: left;
+}
+.tbody1 .tr1 {
+  background-color: #f5f4f1;
+  border-radius: 74px;
+  color: #7e7f7c;
+  font-weight: 500;
+}
+.tbody1 .td1:first-child {
+  border-top-left-radius: 74px;
+  border-bottom-left-radius: 74px;
+}
+.tbody1 .td1:last-child {
+  border-top-right-radius: 74px;
+  border-bottom-right-radius: 74px;
+}
+@media (max-width: 991px) {
+  .processing-container {
+      padding: 20px;
+      margin: 10px;
+      border-radius: 20px;
+  }
+  .table1 {
+      font-size: 18px;
+  }
+  .th1, .td1 {
+      padding: 15px 10px;
+  }
+}
+
+ /* table 2 */
+.info-section {
+  border-radius: 54px;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);
+  background-color: #fff;
+  padding: 46px 34px 80px;
+  margin: 20px auto;
+  max-width: 1400px;
+}
+.info-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #2e2a2a;
+  margin-bottom: 20px;
+}
+.header-title {
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+}
+.table2 {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 13px;
+}
+.th2 {
+  font-weight: 500;
+  font-size: 19px;
+  text-align: left;
+  padding: 0 18px;
+}
+.tr2 {
+  background-color: #fff;
+  border-radius: 40px;
+}
+.td2 {
+  padding: 18px;
+  border: 2px solid rgba(180, 180, 180, 1);
+}
+.td2:first-child {
+  border-radius: 40px 0 0 40px;
+  padding-left: 73px;
+}
+.td2:last-child {
+  border-radius: 0 40px 40px 0;
+}
+.copy-button {
+  background-color: #d80c5c;
+  color: #fff;
+  border: none;
+  border-radius: 23px;
+  padding: 13px 17px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.copy-icon {
+  width: 18px;
+  height: 18px;
+}
+.scroll-indicator {
+  display: block;
+  width: 32px;
+  margin: 20px auto 0;
+}
+@media (max-width: 991px) {
+  .info-section {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .info-header {
+    flex-wrap: wrap;
+  }
+  .td2:first-child {
+    padding-left: 18px;
+  }
+  .scroll-indicator {
+    display: none;
+  }
+}
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ffa500; /* Orange color */
+  border-radius: 10px;
+  border: 4px solid #f1f1f1; /* Adjust as needed */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8c00; /* Darker orange */
+}
+
+/* For Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #ffa500 #f1f1f1;
+}
+
+/* Optional: to style the scrollbar in Internet Explorer */
+body {
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ffa500;
+  border-radius: 10px;
+  border: 4px solid #f1f1f1;
+}

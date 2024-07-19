@@ -114,7 +114,7 @@
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<app-mainbutton></app-mainbutton>\r\n"
+            "templateData": "<app-processing-status-table></app-processing-status-table>\r\n"
         },
         {
             "name": "ButtonComponent",
@@ -283,86 +283,60 @@
             }
         },
         {
-            "name": "ButtonsComponent",
-            "id": "component-ButtonsComponent-c0624c3c6399491d78efb258096540b67681649abc16366577267ecdaf9901030e5869bd1d03e7c667ad8d89ba0eaa3e3758203f1a45c2af60605148a0b1f6ce",
-            "file": "src/stories/socialmediabuttons/buttons.component.ts",
+            "name": "CommentsCountComponent",
+            "id": "component-CommentsCountComponent-46c4ef293df3c628164059cfd4a5fa0212c0df6a05f2501b96ad984c34f82b9207be803b67ca074d9f60d9e455c04111dc9edb16f5a7126f3f5fac98cd7dfecb",
+            "file": "src/stories/comments-count/comments-count.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
             "outputs": [],
             "providers": [],
-            "selector": "app-buttons",
+            "selector": "app-comments-count",
             "styleUrls": [
-                "./buttons.component.css"
+                "./comments-count.component.css"
             ],
             "styles": [],
             "templateUrl": [
-                "./buttons.component.html"
+                "./comments-count.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
-            "inputsClass": [
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
                 {
-                    "name": "backgroundColor",
-                    "defaultValue": "'#fa830b'",
+                    "name": "commentsCount",
+                    "defaultValue": "879",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 9,
-                    "type": "string",
-                    "decorators": []
+                    "type": "number",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
                 },
                 {
-                    "name": "borderColor",
+                    "name": "isOpen",
+                    "defaultValue": "true",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "Color",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "Icon",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 14,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "IconColor",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 13,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "label",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 15,
-                    "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "LabelColor",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 12,
-                    "type": "string",
-                    "decorators": []
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
                 }
             ],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "methodsClass": [
+                {
+                    "name": "toggleContent",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -372,17 +346,17 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-buttons',\r\n  templateUrl: './buttons.component.html',\r\n  styleUrls: ['./buttons.component.css']\r\n})\r\nexport class ButtonsComponent {\r\n  @Input() backgroundColor: string = '#fa830b';\r\n  @Input() Color?: string;\r\n  @Input() borderColor?: string;\r\n  @Input() LabelColor?: string;\r\n  @Input() IconColor?: string;\r\n  @Input() Icon?: string;\r\n  @Input() label?: string;\r\n}\r\n",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-comments-count',\n  templateUrl: './comments-count.component.html',\n  styleUrls: ['./comments-count.component.css']\n})\nexport class CommentsCountComponent {\n  commentsCount: number = 879; \n  isOpen: boolean = true;\n\n  toggleContent() {\n    this.isOpen = !this.isOpen;\n  }\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".facebook-button {\r\n  border-radius: 33px;\r\n  border: 1px solid;\r\n  border-color: var(--border-color, #fa830b);\r\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);\r\n  background-color: var(--background-color, #fa830b);\r\n  display: flex;\r\n  justify-content: center;\r\n  padding: 11px 20px;\r\n  font-size: 13px;\r\n  color: var(--color, #fff);\r\n  font-weight: 700;\r\n  align-items: baseline;\r\n}\r\n\r\n.button-text {\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: 700;\r\n  font-style: normal;\r\n  color: var(--label-color, #fff);\r\n}\r\n\r\n.icon {\r\n  width: 9px;\r\n  height: 17px;\r\n  object-fit: contain;\r\n  margin-left: 10px;\r\n  fill: var(--icon-color, #fff);\r\n}\r\n",
-                    "styleUrl": "./buttons.component.css"
+                    "data": ".component {\r\n  border: 1px solid #ccc;\r\n  border-radius: 10px;\r\n  padding: 10px;\r\n  width: 300px;\r\n  margin: auto;\r\n}\r\n\r\n.header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  cursor: pointer;\r\n}\r\n\r\n.content {\r\n  margin-top: 20px;\r\n}\r\n\r\n.slider {\r\n  width: 100%;\r\n  /* background: linear-gradient(\r\n    to right,\r\n    #d70270 0%,\r\n    #d70270 {{commentsCount/100}}%,\r\n    #eee {{commentsCount/100}}%\r\n  ); */\r\n  border-radius: 5px;\r\n}\r\n\r\n.count-display {\r\n  position: absolute;\r\n  margin-top: -25px;\r\n\r\n  transform: translateX(-50%);\r\n  background-color: #ff9800;\r\n  border-radius: 50%;\r\n  color: white;\r\n  padding: 5px 10px;\r\n  font-size: 12px;\r\n  font-weight: bold;\r\n}\r\n",
+                    "styleUrl": "./comments-count.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"button-container\">\r\n  <button\r\n    class=\"facebook-button\"\r\n    [ngStyle]=\"{\r\n      'background-color': backgroundColor,\r\n      'color': Color,\r\n      'border-color': borderColor\r\n    }\"\r\n  >\r\n    <span class=\"button-text\" [ngStyle]=\"{ 'color': LabelColor }\">\r\n     {{label}}\r\n    </span>\r\n    <i [ngClass]=\"Icon\" class=\"icon\" [ngStyle]=\"{ color: IconColor }\"></i>\r\n  </button>\r\n</div>\r\n"
+            "templateData": "<div class=\"component\">\n  <div class=\"header\" (click)=\"toggleContent()\">\n    <h3>Comments count</h3>\n  </div>\n  <div *ngIf=\"isOpen\" class=\"content\">\n    <input type=\"range\" min=\"0\" max=\"10000\" [(ngModel)]=\"commentsCount\" class=\"slider\" >\n    <div class=\"count-display\">{{ commentsCount }}</div>\n  </div>\n</div>\n"
         },
         {
             "name": "dealsComponent",
@@ -494,6 +468,50 @@
             "stylesData": "",
             "extends": [],
             "templateData": "    <div class=\"package-card\">\r\n      <div class=\"image-container\">\r\n        <img loading=\"lazy\" src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/f76a29704f019baee0a279e9f63b8965ee55f384a041eca272da9e243df8e849?apiKey=f644630b81d540c5aba02169a7be7c6a&\" class=\"main-image\" alt=\"Travel destination image\" />\r\n        <div\r\n        [ngStyle]=\"{ 'background-color': priceBackgroundColor }\"\r\n        class=\"price-tag\">\r\n          <span class=\"price-label\">From</span>\r\n          <!-- <span class=\"price-amount\">15000 MAD</span> -->\r\n          <span class=\"price-amount\">{{price}} MAD</span>\r\n        </div>\r\n      </div>\r\n      <div class=\"package-content\">\r\n        <!-- <h1 class=\"package-title\">Marin Skyline</h1> -->\r\n        <h1 class=\"package-title\"> {{title}} </h1>\r\n        <img loading=\"lazy\" src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/13667f0bec3264bc95506bcd7beb8f68cfaf06ccbd053478ed737d46bdd796b6?apiKey=f644630b81d540c5aba02169a7be7c6a&\" class=\"secondary-image\" alt=\"Marin Skyline view\" />\r\n        <p class=\"package-description\"> Lorem Ipsum est un texte d’espace réservé couramment utilisé dans les industries graphique, imprimée et éditoriale pour prévisualiser les ….. </p>\r\n        <div class=\"location-info\">\r\n          <img loading=\"lazy\" src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/c210cfb35e01ad7ed0db2fc878b1bd465777e2ef7dec655387908abe9fcca5e0?apiKey=f644630b81d540c5aba02169a7be7c6a&\" class=\"location-icon\" alt=\"Location icon\" />\r\n          <!-- <span class=\"location-text\">Dubai</span> -->\r\n          <span class=\"location-text\">{{location}} </span>\r\n        </div>\r\n        <div class=\"duration-info\">\r\n          <img loading=\"lazy\" src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/ed77c43ca719e0294e8630ecfbf6ef54ba0e58e094b39eec19a5dd7715c3aede?apiKey=f644630b81d540c5aba02169a7be7c6a&\" class=\"duration-icon\" alt=\"Clock icon\" />\r\n          <!-- <span class=\"duration-text\">7 Day 6 Night</span> -->\r\n          <span class=\"duration-text\">{{duration}} </span>\r\n        </div>\r\n        <!-- <a href=\"#\" class=\"book-button\">BOOK NOW</a> -->\r\n        <button\r\n        [ngStyle]=\"{ 'background-color': backgroundColor }\"\r\n        href=\"#\" class=\"book-button\">{{label}}</button>\r\n        \r\n      </div>\r\n    </div>\r\n "
+        },
+        {
+            "name": "DropdownComponent",
+            "id": "component-DropdownComponent-b70ba4a958d96517d91e3746a45bc2ba7747ab37056f0c44c6708d280ab1b35e270f45caeb0e3a27fb8cd162e4c4d6f7ad8d793d2454da188fd69bc79ec0a19c",
+            "file": "src/stories/dropdown/dropdown.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-dropdown",
+            "styleUrls": [
+                "./dropdown.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./dropdown.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-dropdown',\n  templateUrl: './dropdown.component.html',\n  styleUrls: ['./dropdown.component.css']\n})\nexport class DropdownComponent {\n  // @Input() type?: 'dropdown' |  'languagedropdown'  ;\n  // @Input() width?: string;\n  // selectedLanguage: string = 'English';\n  // url: string = 'https://cdn.builder.io/api/v1/image/assets/TEMP/28a0ee491afdee2f5e6ca3e60173f2acb2e6cfc4ca3f820edf2a79f7980217c8?apiKey=0fddfdc2e7cd4aa3846da2047f18e0da&';\n  // dropdownOpen: boolean = false;\n  // languages = [\n  //   { code: 'en', label: 'English', url: 'https://cdn.builder.io/api/v1/image/assets/TEMP/28a0ee491afdee2f5e6ca3e60173f2acb2e6cfc4ca3f820edf2a79f7980217c8?apiKey=0fddfdc2e7cd4aa3846da2047f18e0da&' },\n  //   { code: 'es', label: 'Español', url: 'https://www.larousse.fr/encyclopedie/data/images/1009665-Drapeau_de_lEspagne.jpg' },\n  //   { code: 'fr', label: 'Français', url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/2560px-Flag_of_France.svg.png' },\n  //   { code: 'de', label: 'Deutsch', url: 'https://www.kindernetz.de/wissen/1712567994859%2Ceuropa-deutschland-102~_v-16x9@2dL_-6c42aff4e68b43c7868c3240d3ebfa29867457da.jpg' }\n  // ];\n\n  // toggleDropdown() {\n  //   this.dropdownOpen = !this.dropdownOpen;\n  // }\n\n  // changeLanguage(code: string) {\n  //   const selectedLang = this.languages.find(lang => lang.code === code);\n  //   if (selectedLang) {\n  //     this.selectedLanguage = selectedLang.label;\n  //     this.url = selectedLang.url;\n  //     this.dropdownOpen = false; // Close the dropdown after selecting a language\n  //   }\n  // }\n\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "/* .channel-selection {\r\n  max-width: 464px;\r\n  width: 100%;\r\n}\r\nselect {\r\n  width: 100%;\r\n  padding: 24px 35px;\r\n  border-radius: 37px;\r\n  border: 2px solid #b4b4b4;\r\n  background-color: #fff;\r\n  font-size: 18px;\r\n  color: #707070;\r\n  appearance: none;\r\n  -webkit-appearance: none;\r\n  -moz-appearance: none;\r\n  background-image: url('data:image/svg+xml;utf8,<svg fill=\"%23707070\" height=\"24\" viewBox=\"0 0 24 24\" width=\"24\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M7 10l5 5 5-5z\"/><path d=\"M0 0h24v24H0z\" fill=\"none\"/></svg>');\r\n  background-repeat: no-repeat;\r\n  background-position: right 35px top 50%;\r\n  cursor: pointer;\r\n}        .channel-selection {\r\n  max-width: 464px;\r\n  width: 100%;\r\n}\r\n\r\nselect::-ms-expand {\r\n  display: none;\r\n}\r\nselect:focus {\r\n  outline: none;\r\n  border-color: #d80c5c;\r\n}\r\noption {\r\n  padding: 19px 25px;\r\n  background-color: #fff;\r\n}\r\noption:checked {\r\n  background-color: #f5f4f1;\r\n  color: #d80c5c;\r\n}\r\n.language-selector {\r\n  position: relative;\r\n  border-radius: 54px;\r\n  border: 1px solid #fff;\r\n  background-color: #000;\r\n  display: flex;\r\n  gap: 10px;\r\n  font-size: 9px;\r\n  color: #fff;\r\n  font-weight: 400;\r\n  white-space: nowrap;\r\n  padding: 11px 18px;\r\n  cursor: pointer;\r\n}\r\n@media (max-width: 991px) {\r\n  .language-selector {\r\n    white-space: initial;\r\n  }\r\n}\r\n.language-icon {\r\n  aspect-ratio: 1;\r\n  object-fit: auto;\r\n  object-position: center;\r\n  width: 22px;\r\n}\r\n.language-text {\r\n  font-family: Montserrat, sans-serif;\r\n  margin: auto 0;\r\n}\r\n.language-dropdown {\r\n  display: none;\r\n  position: absolute;\r\n  top: 100%;\r\n  left: 0;\r\n  right: 0;\r\n  background-color: #000;\r\n  border: 1px solid #fff;\r\n  border-radius: 15px;\r\n  z-index: 1000;\r\n}\r\n.language-dropdown.show {\r\n  display: block;\r\n}\r\n.language-dropdown button {\r\n  background: none;\r\n  border: none;\r\n  color: #fff;\r\n  padding: 10px 15px;\r\n  width: 100%;\r\n  text-align: left;\r\n  cursor: pointer;\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n}\r\n.language-dropdown button:hover {\r\n  background-color: #333;\r\n  border-radius: 20px;\r\n}\r\n.language-dropdown .options {\r\n  display: flex;\r\n  flex-direction: row;\r\n  align-items: center;\r\n}\r\nimg {\r\n  border-radius: 15px;\r\n} */\r\n/*\r\n\r\n.channel-selection {\r\n  max-width: 464px;\r\n  width: 100%;\r\n}\r\n.select-wrapper {\r\n  position: relative;\r\n}\r\n.custom-select {\r\n  margin-top: 5px;\r\n  appearance: none;\r\n  padding: 16px 20px;\r\n  font-size: 18px;\r\n  color: #707070;\r\n  background-color: #fff;\r\n  border: 2px solid #b4b4b4;\r\n  border-radius: 37px;\r\n  cursor: pointer;\r\n  max-width: 100%;\r\n  width: 100%;\r\n}\r\n\r\n.select-icon {\r\n  position: absolute;\r\n  right: 35px;\r\n  top: 50%;\r\n  transform: translateY(-50%);\r\n  width: 20px;\r\n  height: 20px;\r\n  pointer-events: none;\r\n}\r\n.custom-select:focus {\r\n  outline: none;\r\n  border-color: #d80c5c;\r\n}\r\n.custom-select option {\r\n  padding: 15px 25px;\r\n  background-color: #f5f4f1;\r\n  color: #707070;\r\n}\r\n.custom-select option:checked {\r\n  background-color: #fff;\r\n  color: #d80c5c;\r\n} */\r\n\r\n.categories-container {\r\n  border-radius: 37px;\r\n  background-color: #f5f4f1;\r\n  display: flex;\r\n  width: 100%;\r\n  flex-direction: column;\r\n  align-items: start;\r\n  padding: 2px 12px;\r\n  border: 2px solid gray;\r\n}\r\n.category-select {\r\n  font-family: Montserrat, sans-serif;\r\n  font-size: 20px;\r\n  color: #030303;\r\n  width: 100%;\r\n  padding: 15px 10px;\r\n  border-radius: 26px;\r\n  border: none;\r\n  background-color: #fff;\r\n  appearance: none;\r\n  -webkit-appearance: none;\r\n  -moz-appearance: none;\r\n}\r\n.visually-hidden {\r\n  position: absolute;\r\n  width: 1px;\r\n  height: 1px;\r\n  padding: 0;\r\n  margin: -1px;\r\n  overflow: hidden;\r\n  clip: rect(0, 0, 0, 0);\r\n  white-space: nowrap;\r\n  border: 0;\r\n}\r\n",
+                    "styleUrl": "./dropdown.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<!-- <ng-container *ngIf=\"type === 'dropdown'\">\n  <div class=\"channel-selection\">\n    <select name=\"channel-options\">\n      <option value=\"channel\">Channel</option>\n      <option value=\"video\">Video</option>\n      <option value=\"playlist\">Playlist</option>\n      <option value=\"film\">Film</option>\n    </select>\n  </div>\n</ng-container>\n\n<ng-container *ngIf=\"type === 'languagedropdown'\">\n  <div class=\"language-selector\" (click)=\"toggleDropdown()\" [ngStyle]=\"{'width': width}\">\n    <img [src]=\"url\" alt=\"\" class=\"language-icon\" />\n    <span class=\"language-text\">{{ selectedLanguage }}</span>\n    <div class=\"language-dropdown\" [ngClass]=\"{ show: dropdownOpen }\">\n      <button\n        *ngFor=\"let lang of languages\"\n        (click)=\"changeLanguage(lang.code)\"\n      >\n        <div class=\"options\">\n          <img [src]=\"lang.url\" alt=\"\" class=\"language-icon\" />\n          {{ lang.label }}\n        </div>\n      </button>\n    </div>\n  </div>\n</ng-container> -->\n\n\n<!-- <div class=\"channel-selection\">\n  <div class=\"select-wrapper\">\n      <select class=\"custom-select\" id=\"channelSelect\">\n          <option value=\"\" disabled selected>Channel</option>\n          <option value=\"video\">Video</option>\n          <option value=\"channel\">Channel</option>\n          <option value=\"playlist\">Playlist</option>\n          <option value=\"film\">Film</option>\n      </select>\n      <svg class=\"select-icon\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#707070\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\">\n          <polyline points=\"6 9 12 15 18 9\"></polyline>\n      </svg>\n  </div>\n</div> -->\n\n<div class=\"categories-container\">\n  <label for=\"categorySelect\" class=\"visually-hidden\">Select a category</label>\n  <select id=\"categorySelect\" class=\"category-select\" aria-label=\"Select a category\">\n      <option value=\"\">Catégoire Lait par nom</option>\n      <option value=\"\">Banques Commerciales par nom</option>\n      <option value=\"\" selected>Écoles supérieures</option>\n      <option value=\"\">Touch points</option>\n      <option value=\"\">Orange</option>\n      <option value=\"\">Ecoles supérieures Maroc</option>\n      <option value=\"\">FRMF</option>\n  </select>\n</div>\n"
         },
         {
             "name": "HeaderComponent",
@@ -857,8 +875,8 @@
         },
         {
             "name": "InputsComponent",
-            "id": "component-InputsComponent-5596256d6d3d6e58a2db234f441769d8b8625cc751086cec7ed85fe0f0b970a3675deaf286e6d13320f5cf573f553e4998a23d7f69c1493375fc69e18c34bad0",
-            "file": "src/stories/inputs/inputs.component.ts",
+            "id": "component-InputsComponent-0902a6aa68d6793af7a0dbee47b9d74a2665c7ac78e8be96fa01dda645d38a59ad5b6db0abfd1fcbc0da551dfe5bfa41d62b689894f26778d5b12cfd58194b34",
+            "file": "src/stories/input/input.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -866,31 +884,22 @@
             "providers": [],
             "selector": "app-inputs",
             "styleUrls": [
-                "./inputs.component.css"
+                "./input.component.css"
             ],
             "styles": [],
             "templateUrl": [
-                "./inputs.component.html"
+                "./input.component.html"
             ],
             "viewProviders": [],
             "hostDirectives": [],
             "inputsClass": [
                 {
                     "name": "label",
-                    "defaultValue": "'Destination'",
+                    "defaultValue": "'Key Words'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 11,
+                    "line": 9,
                     "type": "string",
-                    "decorators": []
-                },
-                {
-                    "name": "options",
-                    "defaultValue": "[]",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "line": 10,
-                    "type": "literal type[]",
                     "decorators": []
                 },
                 {
@@ -898,17 +907,16 @@
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 12,
+                    "line": 11,
                     "type": "string",
                     "decorators": []
                 },
                 {
                     "name": "type",
-                    "defaultValue": "'text'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 9,
-                    "type": "\"select\" | \"text\"",
+                    "line": 10,
+                    "type": "\"normal\" | \"disabled\" | \"number\"",
                     "decorators": []
                 },
                 {
@@ -916,7 +924,7 @@
                     "defaultValue": "'50%'",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 12,
                     "type": "string",
                     "decorators": []
                 }
@@ -925,13 +933,12 @@
             "propertiesClass": [
                 {
                     "name": "value",
-                    "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "string",
+                    "type": "any",
                     "optional": false,
                     "description": "",
-                    "line": 14
+                    "line": 13
                 }
             ],
             "methodsClass": [],
@@ -944,22 +951,155 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-inputs',\n  templateUrl: './inputs.component.html',\n  styleUrls: ['./inputs.component.css']\n})\nexport class InputsComponent {\n  @Input() type: 'select' | 'text' = 'text';\n  @Input() options: { value: string, label: string }[] = [];\n  @Input() label: string = 'Destination';\n  @Input() placeholder: string = '';\n  @Input() width: string = '50%';\n  value: string = '';\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-inputs',\n  templateUrl: './input.component.html',\n  styleUrls: ['./input.component.css']\n})\nexport class InputsComponent {\n  @Input() label: string = 'Key Words';\n  @Input() type?: 'normal' |  'disabled' | 'number' ;\n  @Input() placeholder: string = '';\n  @Input() width: string = '50%';\n  value: any;\n\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".input-container {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  margin: 10px 0;\r\n  font-size: small;\r\n  font-family: \"Montserrat\", sans-serif;\r\n}\r\n\r\nlabel {\r\n  display: block;\r\n  margin-bottom: 5px;\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: bold;\r\n  font-style: normal;\r\n}\r\n\r\n.custom-select {\r\n  position: relative;\r\n  width: 100%;\r\n}\r\n\r\n.custom-select select {\r\n  width: 100%;\r\n  padding: 10px;\r\n  padding-left: 20px;\r\n  border-radius: 25px;\r\n  border: 1px solid #707070;\r\n  appearance: none;\r\n  -webkit-appearance: none;\r\n  -moz-appearance: none;\r\n  padding-right: 30px;\r\n  background: url('data:image/svg+xml;utf8,<svg width=\"19\" height=\"9\" viewBox=\"0 0 19 9\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M17.298 1.25L9.5 8.32488L1.70196 1.25H17.298Z\" fill=\"black\" stroke=\"#707070\"/></svg>')\r\n    no-repeat;\r\n  background-position: right 10px top 50%;\r\n  background-size: 10px;\r\n  font-size: 14px;\r\n  cursor: pointer;\r\n}\r\n\r\n.custom-select select option {\r\n\r\n  background-color: #d5d5d5e8;\r\n  border-bottom: 1px solid #ccc;\r\n  font-size: 14px;\r\n  color: #707070;\r\n\r\n}\r\n\r\n.custom-select select option:hover {\r\n  background-color: white;\r\n}\r\n\r\n.custom-select select option:checked {\r\n  background-color: #e0e0e0;\r\n  color: #707070;\r\n  font-weight: 600;\r\n\r\n}\r\n\r\n.custom-select select option::before {\r\n  content: \"\";\r\n  display: inline-block;\r\n  width: 16px;\r\n  height: 16px;\r\n  margin-right: 10px;\r\n  border-radius: 50%;\r\n  border: 2px solid #ccc;\r\n  vertical-align: middle;\r\n}\r\n\r\n.custom-select select option:checked::before {\r\n  background-color: #ff007f; /* Change this color to match your design */\r\n  border-color: #ff007f;\r\n}\r\n\r\ninput[type=\"text\"] {\r\n  width: 100%;\r\n  padding: 10px;\r\n  border-radius: 37px;\r\n  border: 1px solid #707070;\r\n  font-size: small;\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: 400;\r\n  font-style: normal;\r\n}\r\n",
-                    "styleUrl": "./inputs.component.css"
+                    "data": ".input-container {\r\n  width: 100%;\r\n  max-width: 100%;\r\n  margin: 10px 0;\r\n  font-size: small;\r\n  font-family: \"Montserrat\", sans-serif;\r\n}\r\n\r\nlabel {\r\n  display: block;\r\n  margin-bottom: 10px;\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: bold;\r\n  font-style: normal;\r\n}\r\ninput {\r\n  width: 100%;\r\n  padding: 10px 20px;\r\n  border-radius: 37px;\r\n  border: 1px solid #707070;\r\n  font-size: small;\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: 400;\r\n  font-style: normal;\r\n}\r\n\r\ninput::-webkit-outer-spin-button,\r\ninput::-webkit-inner-spin-button {\r\n  -webkit-appearance: none;\r\n  margin: 0;\r\n}\r\n",
+                    "styleUrl": "./input.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<div class=\"input-container\" [ngStyle]=\"{'width': width}\">\n  <label *ngIf=\"label\">{{ label }}</label>\n  <div class=\"custom-select\" *ngIf=\"type === 'select'\">\n    <select [(ngModel)]=\"value\">\n      <option value=\"\" disabled hidden>Select an option</option>\n      <option *ngFor=\"let option of options\" [value]=\"option.value\">{{ option.label }}</option>\n    </select>\n  </div>\n  <div *ngIf=\"type === 'text'\">\n    <input type=\"text\" [(ngModel)]=\"value\" [placeholder]=\"placeholder\" />\n  </div>\n</div>\n"
+            "templateData": "<div class=\"input-container\" [ngStyle]=\"{'width': width}\">\n  <label *ngIf=\"label\">{{ label }}</label>\n  <div *ngIf=\"type === 'normal'\">\n    <input type=\"text\" [(ngModel)]=\"value\" required [placeholder]=\"placeholder\" />\n  </div>\n  <div *ngIf=\"type === 'disabled'\">\n    <input type=\"text\" [(ngModel)]=\"value\" disabled style=\"border-color: #B4B4B4;\n    background-color: #f5f4f1d8;\" [placeholder]=\"placeholder\" />\n  </div>\n  <div *ngIf=\"type === 'number' \">\n    <input\n      type=\"number\"\n      [(ngModel)]=\"value\"\n      [placeholder]=\"placeholder\"\n      required\n    />\n   \n  </div>\n</div>\n"
+        },
+        {
+            "name": "LangbuttonComponent",
+            "id": "component-LangbuttonComponent-5960604920633ac96185c00e1cd779adb20c2ec0d3e83dde57dfb73f793c2b275df0a044fd696f4d4f88ff60a9e4f46fec2189266fc873285992e0db8a2451c0",
+            "file": "src/stories/langbutton/langbutton.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-langbutton",
+            "styleUrls": [
+                "./langbutton.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./langbutton.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "width",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 10,
+                    "type": "string",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "dropdownOpen",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "languages",
+                    "defaultValue": "[\n    { code: 'en', label: 'English' , url:\"https://cdn.builder.io/api/v1/image/assets/TEMP/28a0ee491afdee2f5e6ca3e60173f2acb2e6cfc4ca3f820edf2a79f7980217c8?apiKey=0fddfdc2e7cd4aa3846da2047f18e0da&\"},\n    { code: 'es', label: 'Español' ,url:'https://www.larousse.fr/encyclopedie/data/images/1009665-Drapeau_de_lEspagne.jpg'},\n    { code: 'fr', label: 'Français' ,url:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/2560px-Flag_of_France.svg.png' },\n    { code: 'de', label: 'Deutsch' , url:'https://www.kindernetz.de/wissen/1712567994859%2Ceuropa-deutschland-102~_v-16x9@2dL_-6c42aff4e68b43c7868c3240d3ebfa29867457da.jpg'}\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "selectedLanguage",
+                    "defaultValue": "'English'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "url",
+                    "defaultValue": "'https://cdn.builder.io/api/v1/image/assets/TEMP/28a0ee491afdee2f5e6ca3e60173f2acb2e6cfc4ca3f820edf2a79f7980217c8?apiKey=0fddfdc2e7cd4aa3846da2047f18e0da&'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 12
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "changeLanguage",
+                    "args": [
+                        {
+                            "name": "code",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 25,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "code",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "toggleDropdown",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-langbutton',\n  templateUrl: './langbutton.component.html',\n  styleUrls: ['./langbutton.component.css']\n})\nexport class LangbuttonComponent {\n\n  @Input() width?: string;\n  selectedLanguage: string = 'English';\n   url: string ='https://cdn.builder.io/api/v1/image/assets/TEMP/28a0ee491afdee2f5e6ca3e60173f2acb2e6cfc4ca3f820edf2a79f7980217c8?apiKey=0fddfdc2e7cd4aa3846da2047f18e0da&' ;\n  dropdownOpen: boolean = false;\n  languages = [\n    { code: 'en', label: 'English' , url:\"https://cdn.builder.io/api/v1/image/assets/TEMP/28a0ee491afdee2f5e6ca3e60173f2acb2e6cfc4ca3f820edf2a79f7980217c8?apiKey=0fddfdc2e7cd4aa3846da2047f18e0da&\"},\n    { code: 'es', label: 'Español' ,url:'https://www.larousse.fr/encyclopedie/data/images/1009665-Drapeau_de_lEspagne.jpg'},\n    { code: 'fr', label: 'Français' ,url:'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/2560px-Flag_of_France.svg.png' },\n    { code: 'de', label: 'Deutsch' , url:'https://www.kindernetz.de/wissen/1712567994859%2Ceuropa-deutschland-102~_v-16x9@2dL_-6c42aff4e68b43c7868c3240d3ebfa29867457da.jpg'}\n  ];\n\n  toggleDropdown() {\n    this.dropdownOpen = !this.dropdownOpen;\n  }\n\n  changeLanguage(code: string) {\n    const selectedLang = this.languages.find(lang => lang.code === code);\n    if (selectedLang) {\n      this.selectedLanguage = selectedLang.label;\n      this.url = selectedLang.url;\n      this.dropdownOpen = true;\n    }\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n.language-selector {\r\n  position: relative;\r\n  border-radius: 54px;\r\n  border: 1px solid #fff;\r\n  background-color: #000;\r\n  display: flex;\r\n  gap: 10px;\r\n  font-size: 9px;\r\n  color: #fff;\r\n  font-weight: 400;\r\n  white-space: nowrap;\r\n  padding: 11px 18px;\r\n  cursor: pointer;\r\n}\r\n@media (max-width: 991px) {\r\n  .language-selector {\r\n    white-space: initial;\r\n  }\r\n}\r\n.language-icon {\r\n  aspect-ratio: 1;\r\n  object-fit: auto;\r\n  object-position: center;\r\n  width: 22px;\r\n}\r\n.language-text {\r\n  font-family: Montserrat, sans-serif;\r\n  margin: auto 0;\r\n}\r\n.language-dropdown {\r\n  display: none;\r\n  position: absolute;\r\n  top: 100%;\r\n  left: 0;\r\n  right: 0;\r\n  background-color: #000;\r\n  border: 1px solid #fff;\r\n  border-radius: 15px;\r\n  z-index: 1000;\r\n}\r\n.language-dropdown.show {\r\n  display: block;\r\n}\r\n.language-dropdown button {\r\n  background: none;\r\n  border: none;\r\n  color: #fff;\r\n  padding: 10px 15px;\r\n  width: 100%;\r\n  text-align: left;\r\n  cursor: pointer;\r\n  display: flex;\r\n  flex-direction: column;\r\n}\r\n.language-dropdown button:hover {\r\n  background-color: #333;\r\n  border-radius: 20px;\r\n\r\n}\r\nimg{\r\n  border-radius: 15px;\r\n}\r\n",
+                    "styleUrl": "./langbutton.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "\n<button class=\"language-selector\" (click)=\"toggleDropdown()\" [ngStyle]=\"{'width': width}\" >\n  <img [src]=\"url\" alt=\"\" class=\"language-icon\" />\n  <span class=\"language-text\">{{ selectedLanguage }}</span>\n  <div class=\"language-dropdown\" [ngClass]=\"{ show: dropdownOpen }\">\n    <button\n      *ngFor=\"let lang of languages\"\n      (click)=\"changeLanguage(lang.code)\"\n    >\n      <div\n        class=\"options\"\n        style=\"display: flex; flex-direction: row; align-items: center\"\n      >\n        <img src=\"{{ lang.url }}\" alt=\"\" style=\"margin-right: 20%;\" class=\"language-icon\" />\n        {{ lang.label }}\n      </div>\n    </button>\n  </div>\n</button>\n"
         },
         {
             "name": "MainbuttonComponent",
-            "id": "component-MainbuttonComponent-2a213c2fa803361c08f386b2b0f1438cc9b33a44fef532a1b1e5a5ce02383b6916fc2c23ee5376b60d6c9578cd3f7d50c9336b97ac0a2f29e338f67b390fa12c",
-            "file": "src/stories/mainbutton/mainbutton.component.ts",
+            "id": "component-MainbuttonComponent-0415de0e3bfa08a1c0ca95774b80cc657d2cc17f89e587f781cc0590f307d77f21a552801537a41cdfe6d370bf51a1faf24c7a530d40ed639e8385f2def2b812",
+            "file": "src/stories/buttons/mainbutton.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -977,11 +1117,62 @@
             "hostDirectives": [],
             "inputsClass": [
                 {
+                    "name": "alignItems",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 18,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
                     "name": "backgroundColor",
                     "defaultValue": "''",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "line": 12,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "flex",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 16,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "icon",
+                    "defaultValue": "null",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "string | null",
+                    "decorators": []
+                },
+                {
+                    "name": "iconColor",
+                    "defaultValue": "'#fff'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 14,
+                    "type": "string",
+                    "decorators": []
+                },
+                {
+                    "name": "iconPosition",
+                    "defaultValue": "'left'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 15,
+                    "type": "\"left\" | \"right\"",
+                    "decorators": []
+                },
+                {
+                    "name": "justifyContent",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 17,
                     "type": "string",
                     "decorators": []
                 },
@@ -1025,17 +1216,93 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-mainbutton',\n  templateUrl: './mainbutton.component.html',\n  styleUrls: ['./mainbutton.component.css'],\n})\nexport class MainbuttonComponent {\n  @Input() label: string = '';\n  @Input() width: string = '';\n  @Input() labelColor: string = '';\n  @Input() backgroundColor: string = '';\n}\n",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-mainbutton',\n  templateUrl: './mainbutton.component.html',\n  styleUrls: ['./mainbutton.component.css'],\n})\nexport class MainbuttonComponent {\n  @Input() label: string = '';\n  @Input() width: string = '';\n  @Input() labelColor: string = '';\n  @Input() backgroundColor: string = '';\n  @Input() icon: string | null = null;\n  @Input() iconColor: string = '#fff';\n  @Input() iconPosition: 'left' | 'right' = 'left';\n  @Input() flex ?:string\n  @Input() justifyContent ?:string\n  @Input() alignItems ?:string\n}\n",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".search-button {\r\n  background-color: #d00255;\r\n  color: white;\r\n  border: none;\r\n  border-radius: 20px;\r\n  padding: 10px 20px;\r\n  font-size: 16px;\r\n  cursor: pointer;\r\n  width: 100%;\r\n  outline: none;\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: bold;\r\n  font-style: normal;\r\n}\r\n\r\n\r\n",
+                    "data": ".search-button {\r\n  background-color: #d00255;\r\n  color: white;\r\n  border: none;\r\n  border-radius: 30px;\r\n  padding: 10px 20px;\r\n  font-size: 16px;\r\n  cursor: pointer;\r\n  width: 100%;\r\n  outline: none;\r\n  font-family: \"Montserrat\", sans-serif;\r\n  font-optical-sizing: auto;\r\n  font-weight: bold;\r\n  font-style: normal;\r\n/* display: flex;\r\njustify-content: space-between;\r\nalign-items: center; */\r\n}\r\n\r\n\r\n.icon {\r\n  width: 9px;\r\n  height: 17px;\r\n  object-fit: contain;\r\n  /* margin-left: 10px;\r\n  margin-right: 11px; */\r\n  fill: var(--icon-color, #fff);\r\n}\r\n",
                     "styleUrl": "./mainbutton.component.css"
                 }
             ],
             "stylesData": "",
             "extends": [],
-            "templateData": "<button [ngStyle]=\"{'width': width , 'background-color' : backgroundColor ,'color' : labelColor }\" class=\"search-button\">{{label}}</button>\n"
+            "templateData": "<button\n  [ngStyle]=\"{\n    'width': width,\n    'background-color': backgroundColor,\n    'color': labelColor,\n    'display':flex,\n    'justify-content': justifyContent,\n    'align-items': alignItems,\n  }\"\n  class=\"search-button\"\n>\n  <ng-container *ngIf=\"icon && iconPosition === 'left'\" >\n    <i [ngClass]=\"icon\" class=\"icon\" [ngStyle]=\"{ color: iconColor }\"></i>\n  </ng-container>\n  <span>{{ label }}</span>\n  <ng-container *ngIf=\"icon && iconPosition === 'right'\">\n    <i [ngClass]=\"icon\" class=\"icon\" [ngStyle]=\"{ color: iconColor }\"></i>\n  </ng-container>\n</button>\n"
+        },
+        {
+            "name": "NotificationbuttonComponent",
+            "id": "component-NotificationbuttonComponent-740bbd2a887a3377a535236fd84708cf3f5a58c1c1510701ba7de60df5bc860b2cd13730f524f3783e6b09dbb36677bd62cb183ba0307beeffa060a49dab8801",
+            "file": "src/stories/notificationbutton/notificationbutton.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-notificationbutton",
+            "styleUrls": [
+                "./notificationbutton.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./notificationbutton.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "menuOpen",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "notifications",
+                    "defaultValue": "['notification 1', 'notification 2', 'notification 3']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "toggleMenu",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-notificationbutton',\n  templateUrl: './notificationbutton.component.html',\n  styleUrls: ['./notificationbutton.component.css']\n})\nexport class NotificationbuttonComponent {\n  menuOpen: boolean = false;\n  notifications: string[] = ['notification 1', 'notification 2', 'notification 3'];\n\n  toggleMenu() {\n    this.menuOpen = !this.menuOpen;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".menu-wrapper {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 100%;\r\n}\r\n\r\n.menu-container {\r\n  position: relative;\r\n  display: inline-block;\r\n}\r\n.user-avatar {\r\n  aspect-ratio: 0.98;\r\n  object-fit: auto;\r\n  object-position: center;\r\n  width: 43px;\r\n  border-radius: 54px;\r\n  border: 1px solid #fff;\r\n  background-color: black;\r\n}\r\nsvg {\r\n  margin: auto;\r\n}\r\n\r\n.menu-options {\r\n  position: absolute;\r\n  top: 100%;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  background-color: #fff;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n  border: 1px solid #ccc;\r\n  z-index: 10;\r\n  width: max-content;\r\n}\r\n\r\n.menu-option {\r\n  padding: 10px;\r\n  cursor: pointer;\r\n}\r\n",
+                    "styleUrl": "./notificationbutton.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"menu-wrapper\">\n  <div class=\"menu-container\">\n    <button class=\"user-avatar\" (click)=\"toggleMenu()\">\n      <svg\n        width=\"23\"\n        height=\"27\"\n        viewBox=\"0 0 23 27\"\n        fill=\"none\"\n        xmlns=\"http://www.w3.org/2000/svg\"\n      >\n        <path\n          d=\"M11.527 26.7558C12.9541 26.7558 14.1214 25.583 14.1214 24.1495H8.93251C8.93251 25.583 10.0999 26.7558 11.527 26.7558ZM19.9591 18.937V11.7697C19.9591 7.79519 17.1701 4.40717 13.4729 3.55994V2.64781C13.4729 1.54003 12.6298 0.693115 11.527 0.693115C10.4242 0.693115 9.58113 1.54003 9.58113 2.64781V3.55994C5.88381 4.40717 3.09491 7.79519 3.09491 11.7697V18.937L0.500488 21.5432V22.8464H22.5535V21.5432L19.9591 18.937Z\"\n          fill=\"white\"\n        />\n      </svg>\n    </button>\n    <div class=\"menu-options\" *ngIf=\"menuOpen\">\n      <div class=\"menu-option\" *ngFor=\"let notification of notifications\">{{ notification }}</div>\n    </div>\n  </div>\n</div>\n"
         },
         {
             "name": "PageComponent",
@@ -1333,6 +1600,157 @@
             "templateData": "<div class=\"div\">\r\n    <div class=\"div-2\">\r\n      <div class=\"div-3\">Informations Patient</div>\r\n      <button class=\"div-4\">Choisir un patient existant</button>\r\n    </div>\r\n    <div class=\"div-5\"></div>\r\n    <div class=\"div-6\">\r\n      <div class=\"div-7\">\r\n        <div class=\"div-8\">\r\n          <div class=\"column\">\r\n            <div class=\"div-9\">\r\n              <div class=\"div-10\">Nom</div>\r\n              <input type=\"text\" class=\"div-11\" [placeholder]=\"familyNamePlaceholder\" />\r\n            </div>\r\n          </div>\r\n          <div class=\"column-2\">\r\n            <div class=\"div-13\">\r\n              <div class=\"div-14\">Prénom</div>\r\n              <input type=\"text\" class=\"div-15\"[placeholder]=\"namePlaceholder\" />\r\n            </div>\r\n          </div>\r\n          <div class=\"column-3\">\r\n            <div class=\"div-13\">\r\n              <div class=\"div-17\">Téléphone</div>\r\n              <input\r\n                type=\"text\"\r\n                class=\"div-15\"\r\n                [placeholder]=\"phonePlaceholder\"\r\n               \r\n              />\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n      <div class=\"div-7\">\r\n        <div class=\"div-8\">\r\n          <div class=\"column-4\">\r\n            <div class=\"div-16\">\r\n              <div class=\"div-12\">Address</div>\r\n              <input\r\n                type=\"text\"\r\n                class=\"div-22\"\r\n                [placeholder]=\"addressPlaceholder\"\r\n              />\r\n            </div>\r\n          </div>\r\n  \r\n          <div class=\"column-5\">\r\n            <div class=\"div-16\">\r\n              <div class=\"div-12\">ville</div>\r\n              <input type=\"text\" class=\"div-23\" [placeholder]=\"cityPlaceholder\" />\r\n          </div>\r\n        </div>\r\n      </div>\r\n  \r\n      <div class=\"div-24\">Antécédants</div>\r\n      <input\r\n        type=\"text\"\r\n        class=\"div-25\"\r\n        [placeholder]=\"AntecedentPlaceholder\"\r\n      />\r\n      <div class=\"custom-check-container\">\r\n        <span>Mutuelle</span>\r\n        <label class=\"custom-check\">\r\n          Oui\r\n          <input type=\"radio\" name=\"customCheck\" value=\"yes\" />\r\n          <span class=\"checkmark\"></span>\r\n        </label>\r\n        <label class=\"custom-check\">\r\n          No\r\n          <input type=\"radio\" name=\"customCheck\" value=\"no\" />\r\n          <span class=\"checkmark\"></span>\r\n        </label>\r\n      </div>\r\n      <div class=\"div-27\">Remarque</div>\r\n      <input\r\n        type=\"text\"\r\n        class=\"div-28\"\r\n        [placeholder]=\"remarkPlaceholder\"\r\n      />\r\n      <!-- <button [ngStyle]=\"{ 'background-color': backgroundColor }\" class=\"button-suivant\">Suivant</button> -->\r\n    </div>\r\n  </div>"
         },
         {
+            "name": "ProcessingStatusTableComponent",
+            "id": "component-ProcessingStatusTableComponent-a044d0469d58450e86f800e7a750f63690c6ec3d06ed30d47a0d46be0f12e2dafb48725d3a177b2e82acb4b8954bdc087a04a10f86025e0939308909dc65f607",
+            "file": "src/stories/table/table.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-processing-status-table",
+            "styleUrls": [
+                "./processing-status-table.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./processing-status-table.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "informations",
+                    "defaultValue": "[\n    { field: 'id', value: '1186661731713487' },\n    { field: 'id', value: '1186661731713487' },\n    { field: 'id', value: '1186661731713487' },\n\n\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "table1Data",
+                    "defaultValue": "[\n    { processing: 'Cleaning', element: 'Imane_2', status: 'Completed' }\n  ]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 11
+                },
+                {
+                    "name": "type",
+                    "defaultValue": "'table 1'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\n\n@Component({\n  selector: 'app-processing-status-table',\n  templateUrl: './processing-status-table.component.html',\n  styleUrls: ['./processing-status-table.component.css']\n})\nexport class ProcessingStatusTableComponent {\n  type: string = 'table 1';\n\n  table1Data = [\n    { processing: 'Cleaning', element: 'Imane_2', status: 'Completed' }\n  ];\n\n  informations = [\n    { field: 'id', value: '1186661731713487' },\n    { field: 'id', value: '1186661731713487' },\n    { field: 'id', value: '1186661731713487' },\n\n\n  ];\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "\r\n.processing-container {\r\n  border-radius: 54px;\r\n  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.16);\r\n  background-color: #fff;\r\n  padding: 59px 79px;\r\n  margin: auto;\r\n  max-width: 100%;\r\n}\r\n.table1 {\r\n  width: 100%;\r\n  border-collapse: separate;\r\n  border-spacing: 0 34px;\r\n  font-size: 27px;\r\n}\r\n.thead1 {\r\n  color: #000;\r\n  font-weight: 700;\r\n}\r\n.th1, .td1 {\r\n  padding: 34px 20px;\r\n  text-align: left;\r\n}\r\n.tbody1 .tr1 {\r\n  background-color: #f5f4f1;\r\n  border-radius: 74px;\r\n  color: #7e7f7c;\r\n  font-weight: 500;\r\n}\r\n.tbody1 .td1:first-child {\r\n  border-top-left-radius: 74px;\r\n  border-bottom-left-radius: 74px;\r\n}\r\n.tbody1 .td1:last-child {\r\n  border-top-right-radius: 74px;\r\n  border-bottom-right-radius: 74px;\r\n}\r\n@media (max-width: 991px) {\r\n  .processing-container {\r\n      padding: 20px;\r\n      margin: 10px;\r\n      border-radius: 20px;\r\n  }\r\n  .table1 {\r\n      font-size: 18px;\r\n  }\r\n  .th1, .td1 {\r\n      padding: 15px 10px;\r\n  }\r\n}\r\n\r\n /* table 2 */\r\n.info-section {\r\n  border-radius: 54px;\r\n  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.16);\r\n  background-color: #fff;\r\n  padding: 46px 34px 80px;\r\n  margin: 20px auto;\r\n  max-width: 1400px;\r\n}\r\n.info-header {\r\n  display: flex;\r\n  justify-content: space-between;\r\n  align-items: flex-end;\r\n  color: #2e2a2a;\r\n  margin-bottom: 20px;\r\n}\r\n.header-title {\r\n  font-weight: bold;\r\n  font-size: 24px;\r\n  margin: 0;\r\n}\r\n.table2 {\r\n  width: 100%;\r\n  border-collapse: separate;\r\n  border-spacing: 0 13px;\r\n}\r\n.th2 {\r\n  font-weight: 500;\r\n  font-size: 19px;\r\n  text-align: left;\r\n  padding: 0 18px;\r\n}\r\n.tr2 {\r\n  background-color: #fff;\r\n  border-radius: 40px;\r\n}\r\n.td2 {\r\n  padding: 18px;\r\n  border: 2px solid rgba(180, 180, 180, 1);\r\n}\r\n.td2:first-child {\r\n  border-radius: 40px 0 0 40px;\r\n  padding-left: 73px;\r\n}\r\n.td2:last-child {\r\n  border-radius: 0 40px 40px 0;\r\n}\r\n.copy-button {\r\n  background-color: #d80c5c;\r\n  color: #fff;\r\n  border: none;\r\n  border-radius: 23px;\r\n  padding: 13px 17px;\r\n  font-weight: 700;\r\n  cursor: pointer;\r\n  display: flex;\r\n  align-items: center;\r\n  gap: 10px;\r\n}\r\n.copy-icon {\r\n  width: 18px;\r\n  height: 18px;\r\n}\r\n.scroll-indicator {\r\n  display: block;\r\n  width: 32px;\r\n  margin: 20px auto 0;\r\n}\r\n@media (max-width: 991px) {\r\n  .info-section {\r\n    padding: 20px;\r\n    border-radius: 20px;\r\n  }\r\n  .info-header {\r\n    flex-wrap: wrap;\r\n  }\r\n  .td2:first-child {\r\n    padding-left: 18px;\r\n  }\r\n  .scroll-indicator {\r\n    display: none;\r\n  }\r\n}\r\n::-webkit-scrollbar {\r\n  width: 16px;\r\n}\r\n\r\n::-webkit-scrollbar-track {\r\n  background: #f1f1f1;\r\n}\r\n\r\n::-webkit-scrollbar-thumb {\r\n  background-color: #ffa500; /* Orange color */\r\n  border-radius: 10px;\r\n  border: 4px solid #f1f1f1; /* Adjust as needed */\r\n}\r\n\r\n::-webkit-scrollbar-thumb:hover {\r\n  background: #ff8c00; /* Darker orange */\r\n}\r\n\r\n/* For Firefox */\r\nhtml {\r\n  scrollbar-width: thin;\r\n  scrollbar-color: #ffa500 #f1f1f1;\r\n}\r\n\r\n/* Optional: to style the scrollbar in Internet Explorer */\r\nbody {\r\n  -ms-overflow-style: -ms-autohiding-scrollbar;\r\n}\r\n\r\nbody::-webkit-scrollbar-thumb {\r\n  background-color: #ffa500;\r\n  border-radius: 10px;\r\n  border: 4px solid #f1f1f1;\r\n}\r\n",
+                    "styleUrl": "./processing-status-table.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<ng-container *ngIf=\"type === 'table 1'\">\n  <div class=\"processing-container\">\n    <table class=\"table1\">\n      <thead class=\"thead1\">\n        <tr class=\"tr1\">\n          <th class=\"th1\">PROCESSING</th>\n          <th class=\"th1\">ELEMENT</th>\n          <th class=\"th1\">STATUS</th>\n          <th class=\"th1\">DETAILS</th>\n          <th class=\"th1\">URL</th>\n        </tr>\n      </thead>\n      <tbody class=\"tbody1\">\n        <tr  class=\"tr1\" *ngFor=\"let item of table1Data\">\n          <td class=\"td1\">{{ item.processing }}</td>\n          <td class=\"td1\">{{ item.element }}</td>\n          <td class=\"td1\">{{ item.status }}</td>\n          <td class=\"td1\">\n            <app-mainbutton\n              label=\"Details\"\n              width=\"100%\"\n              labelColor=\"#FFFFFF\"\n              backgroundColor=\"#FA830B\"\n            ></app-mainbutton>\n          </td>\n          <td class=\"td1\">\n            <app-mainbutton\n              label=\"Copy URL\"\n              width=\"100%\"\n              labelColor=\"#FFFFFF\"\n              backgroundColor=\"#FA830B\"\n            ></app-mainbutton>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n</ng-container>\n\n<ng-container *ngIf=\"type === 'table 2'\">\n  <section class=\"info-section\">\n    <header class=\"info-header\">\n      <h1 class=\"header-title\">ALL INFORMATIONS</h1>\n    </header>\n    <div style=\"height: 200px; overflow-y: scroll;\">\n    <table class=\"table2\">\n      <thead class=\"thead2\">\n        <tr class=\"tr2\">\n          <th class=\"th2\">FIELD</th>\n          <th>VALUE</th>\n          <th>ACTION</th>\n        </tr>\n      </thead>\n      <tbody>\n        <tr *ngFor=\"let info of informations\">\n          <td class=\"td2\">{{ info.field }}</td>\n          <td class=\"td2\">{{ info.value }}</td>\n          <td class=\"td2\">\n            <app-mainbutton\n              label=\"copy value\"\n              width=\"40%\"\n              labelColor=\"#FFFFFF\"\n              backgroundColor=\"#D80C5C\"\n              icon=\"fa-solid fa-copy\"\n              iconColor=\"#fff\"\n              iconPosition=\"left\"\n              flex=\"flex\"\n              justifyContent=\"space-between\"\n              alignItems=\"center\"\n            ></app-mainbutton>\n          </td>\n        </tr>\n      </tbody>\n    </table>\n  </div>\n  </section>\n</ng-container>\n"
+        },
+        {
+            "name": "ProfilbuttonComponent",
+            "id": "component-ProfilbuttonComponent-1a173c3ef174c030edafb00e121993a6b9b7b47cb0d4028eb001959db4b8f9aa0261b7d80ef4e66059273924f0f0bb0bfe9d96cec8bd346456d28c8da72fe73b",
+            "file": "src/stories/profilbutton/profilbutton.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-profilbutton",
+            "styleUrls": [
+                "./profilbutton.component.css"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./profilbutton.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "menuOpen",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "options",
+                    "defaultValue": "['Option 1', 'Option 2', 'Option 3']",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "toggleMenu",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\n\n@Component({\n  selector: 'app-profilbutton',\n  templateUrl: './profilbutton.component.html',\n  styleUrls: ['./profilbutton.component.css']\n})\nexport class ProfilbuttonComponent {\n  menuOpen: boolean = false;\n  options: string[] = ['Option 1', 'Option 2', 'Option 3'];\n\n  toggleMenu() {\n    this.menuOpen = !this.menuOpen;\n  }\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".menu-wrapper {\r\n  display: flex;\r\n  justify-content: center;\r\n  align-items: center;\r\n  width: 100%;\r\n}\r\n\r\n.menu-container {\r\n  position: relative;\r\n  display: inline-block;\r\n}\r\n\r\n.menu-button {\r\n  background: none;\r\n  border: none;\r\n  cursor: pointer;\r\n  padding: 0;\r\n}\r\n\r\n.menu-icon {\r\n  width: 24px;\r\n  height: 24px;\r\n}\r\n\r\n.menu-options {\r\n  position: absolute;\r\n  top: 100%;\r\n  left: 50%;\r\n  transform: translateX(-50%);\r\n  background-color: #fff;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n  border: 1px solid #ccc;\r\n  z-index: 10;\r\n  width: max-content;\r\n}\r\n\r\n.menu-option {\r\n  padding: 10px;\r\n  cursor: pointer;\r\n}\r\n\r\n.menu-option:hover {\r\n  background-color: #f0f0f0;\r\n}\r\n",
+                    "styleUrl": "./profilbutton.component.css"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"menu-wrapper\">\n  <div class=\"menu-container\">\n    <button class=\"menu-button\" aria-label=\"Open menu\" (click)=\"toggleMenu()\">\n      <img\n        src=\"https://cdn.builder.io/api/v1/image/assets/TEMP/4725985e6ffe43e70e4e8fd5c43f05f1c5cd1273494f1d57e593e6e219c9cbef?apiKey=0fddfdc2e7cd4aa3846da2047f18e0da&\"\n        alt=\"\"\n        class=\"menu-icon\"\n      />\n    </button>\n    <div class=\"menu-options\" *ngIf=\"menuOpen\">\n      <div class=\"menu-option\" *ngFor=\"let option of options\">{{ option }}</div>\n    </div>\n  </div>\n</div>\n"
+        },
+        {
             "name": "SidebarComponent",
             "id": "component-SidebarComponent-b0aa239585685754ea936baeaa632a1af8baeae7029fad89cf5f346c6c07cf009e0e1fdef88968d5811d511d00acf35a1789d8cb4170851cfdec2511c9d0500d",
             "file": "src/stories/sidebar/sidebar.component.ts",
@@ -1449,13 +1867,13 @@
     "modules": [
         {
             "name": "AppModule",
-            "id": "module-AppModule-d9c040a8d9a0bc17c5309a42f8cbfa8a68a5db473679a775d3019e4939c607980970e89d801f4b48d664146fae4d5b393b011e1ba0723c3885065200c2362eed",
+            "id": "module-AppModule-59031867c73f8a52cf5e1fa30b980a0c1c1913b7bc32eefb582e9b828acf8159101cbf9e46f57b09f12036e455713e1d0a04941fed2faced61c0d3ccbc909407",
             "description": "",
             "deprecationMessage": "",
             "deprecated": false,
             "file": "src/app/app.module.ts",
             "methods": [],
-            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\n\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { TextAreaComponent } from './../stories/textArea.component';\r\nimport { IconComponent } from '../stories/icon/icon.component';\r\nimport { SidebarComponent } from '../stories/sidebar/sidebar.component';\r\nimport { ButtonsComponent } from '../stories/socialmediabuttons/buttons.component';\r\nimport { InputsComponent } from '../stories/inputs/inputs.component';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { MainbuttonComponent } from '../stories/mainbutton/mainbutton.component';\r\n\r\n@NgModule({\r\n  declarations: [AppComponent, IconComponent, SidebarComponent, ButtonsComponent, InputsComponent, MainbuttonComponent],\r\n  imports: [\r\n    BrowserModule,\r\n    AppRoutingModule,\r\n    FormsModule,\r\n    TextAreaComponent,\r\n  ],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
+            "sourceCode": "import { NgModule } from '@angular/core';\r\nimport { BrowserModule } from '@angular/platform-browser';\r\nimport { AppRoutingModule } from './app-routing.module';\r\nimport { AppComponent } from './app.component';\r\nimport { TextAreaComponent } from './../stories/textArea.component';\r\nimport { IconComponent } from '../stories/icon/icon.component';\r\nimport { SidebarComponent } from '../stories/sidebar/sidebar.component';\r\nimport { InputsComponent } from '../stories/input/input.component';\r\nimport { FormsModule } from '@angular/forms';\r\nimport { MainbuttonComponent } from '../stories/buttons/mainbutton.component';\r\nimport { LangbuttonComponent } from '../stories/langbutton/langbutton.component';\r\nimport { ProfilbuttonComponent } from '../stories/profilbutton/profilbutton.component';\r\nimport { NotificationbuttonComponent } from '../stories/notificationbutton/notificationbutton.component';\r\nimport { CommentsCountComponent } from '../stories/comments-count/comments-count.component';\r\nimport { ProcessingStatusTableComponent } from '../stories/table/table';\r\nimport { DropdownComponent } from '../stories/dropdown/dropdown.component';\r\n\r\n@NgModule({\r\n  declarations: [\r\n    AppComponent,\r\n    IconComponent,\r\n    SidebarComponent,\r\n    InputsComponent,\r\n    MainbuttonComponent,\r\n    LangbuttonComponent,\r\n    ProfilbuttonComponent,\r\n    NotificationbuttonComponent,\r\n    CommentsCountComponent,\r\n    ProcessingStatusTableComponent,\r\n    DropdownComponent,\r\n  ],\r\n  imports: [BrowserModule, AppRoutingModule, FormsModule, TextAreaComponent],\r\n  providers: [],\r\n  bootstrap: [AppComponent],\r\n})\r\nexport class AppModule {}\r\n",
             "children": [
                 {
                     "type": "providers",
@@ -1468,7 +1886,10 @@
                             "name": "AppComponent"
                         },
                         {
-                            "name": "ButtonsComponent"
+                            "name": "CommentsCountComponent"
+                        },
+                        {
+                            "name": "DropdownComponent"
                         },
                         {
                             "name": "IconComponent"
@@ -1477,7 +1898,19 @@
                             "name": "InputsComponent"
                         },
                         {
+                            "name": "LangbuttonComponent"
+                        },
+                        {
                             "name": "MainbuttonComponent"
+                        },
+                        {
+                            "name": "NotificationbuttonComponent"
+                        },
+                        {
+                            "name": "ProcessingStatusTableComponent"
+                        },
+                        {
+                            "name": "ProfilbuttonComponent"
                         },
                         {
                             "name": "SidebarComponent"
@@ -1572,7 +2005,7 @@
         ]
     },
     "coverage": {
-        "count": 7,
+        "count": 5,
         "status": "low",
         "files": [
             {
@@ -1594,12 +2027,39 @@
                 "status": "medium"
             },
             {
+                "filePath": "src/stories/buttons/mainbutton.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "MainbuttonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/11",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/comments-count/comments-count.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CommentsCountComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/deals_maqam.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "dealsComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/dropdown/dropdown.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "DropdownComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
                 "status": "low"
             },
             {
@@ -1630,21 +2090,30 @@
                 "status": "good"
             },
             {
-                "filePath": "src/stories/inputs/inputs.component.ts",
+                "filePath": "src/stories/input/input.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "InputsComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/7",
+                "coverageCount": "0/6",
                 "status": "low"
             },
             {
-                "filePath": "src/stories/mainbutton/mainbutton.component.ts",
+                "filePath": "src/stories/langbutton/langbutton.component.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "MainbuttonComponent",
+                "name": "LangbuttonComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/5",
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/stories/notificationbutton/notificationbutton.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "NotificationbuttonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {
@@ -1666,6 +2135,15 @@
                 "status": "low"
             },
             {
+                "filePath": "src/stories/profilbutton/profilbutton.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ProfilbuttonComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
                 "filePath": "src/stories/sidebar/sidebar.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -1675,12 +2153,12 @@
                 "status": "low"
             },
             {
-                "filePath": "src/stories/socialmediabuttons/buttons.component.ts",
+                "filePath": "src/stories/table/table.ts",
                 "type": "component",
                 "linktype": "component",
-                "name": "ButtonsComponent",
+                "name": "ProcessingStatusTableComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/8",
+                "coverageCount": "0/4",
                 "status": "low"
             },
             {

@@ -1,0 +1,40 @@
+.menu-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.menu-container {
+  position: relative;
+  display: inline-block;
+}
+.user-avatar {
+  aspect-ratio: 0.98;
+  object-fit: auto;
+  object-position: center;
+  width: 43px;
+  border-radius: 54px;
+  border: 1px solid #fff;
+  background-color: black;
+}
+svg {
+  margin: auto;
+}
+
+.menu-options {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  z-index: 10;
+  width: max-content;
+}
+
+.menu-option {
+  padding: 10px;
+  cursor: pointer;
+}

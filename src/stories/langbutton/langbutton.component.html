@@ -1,0 +1,19 @@
+
+<button class="language-selector" (click)="toggleDropdown()" [ngStyle]="{'width': width}" >
+  <img [src]="url" alt="" class="language-icon" />
+  <span class="language-text">{{ selectedLanguage }}</span>
+  <div class="language-dropdown" [ngClass]="{ show: dropdownOpen }">
+    <button
+      *ngFor="let lang of languages"
+      (click)="changeLanguage(lang.code)"
+    >
+      <div
+        class="options"
+        style="display: flex; flex-direction: row; align-items: center"
+      >
+        <img src="{{ lang.url }}" alt="" style="margin-right: 20%;" class="language-icon" />
+        {{ lang.label }}
+      </div>
+    </button>
+  </div>
+</button>

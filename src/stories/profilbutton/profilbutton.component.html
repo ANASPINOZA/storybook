@@ -1,0 +1,14 @@
+<div class="menu-wrapper">
+  <div class="menu-container">
+    <button class="menu-button" aria-label="Open menu" (click)="toggleMenu()">
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/4725985e6ffe43e70e4e8fd5c43f05f1c5cd1273494f1d57e593e6e219c9cbef?apiKey=0fddfdc2e7cd4aa3846da2047f18e0da&"
+        alt=""
+        class="menu-icon"
+      />
+    </button>
+    <div class="menu-options" *ngIf="menuOpen">
+      <div class="menu-option" *ngFor="let option of options">{{ option }}</div>
+    </div>
+  </div>
+</div>

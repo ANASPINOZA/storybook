@@ -1,0 +1,21 @@
+<div class="menu-wrapper">
+  <div class="menu-container">
+    <button class="user-avatar" (click)="toggleMenu()">
+      <svg
+        width="23"
+        height="27"
+        viewBox="0 0 23 27"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M11.527 26.7558C12.9541 26.7558 14.1214 25.583 14.1214 24.1495H8.93251C8.93251 25.583 10.0999 26.7558 11.527 26.7558ZM19.9591 18.937V11.7697C19.9591 7.79519 17.1701 4.40717 13.4729 3.55994V2.64781C13.4729 1.54003 12.6298 0.693115 11.527 0.693115C10.4242 0.693115 9.58113 1.54003 9.58113 2.64781V3.55994C5.88381 4.40717 3.09491 7.79519 3.09491 11.7697V18.937L0.500488 21.5432V22.8464H22.5535V21.5432L19.9591 18.937Z"
+          fill="white"
+        />
+      </svg>
+    </button>
+    <div class="menu-options" *ngIf="menuOpen">
+      <div class="menu-option" *ngFor="let notification of notifications">{{ notification }}</div>
+    </div>
+  </div>
+</div>

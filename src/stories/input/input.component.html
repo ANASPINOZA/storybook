@@ -1,0 +1,19 @@
+<div class="input-container" [ngStyle]="{'width': width}">
+  <label *ngIf="label">{{ label }}</label>
+  <div *ngIf="type === 'normal'">
+    <input type="text" [(ngModel)]="value" required [placeholder]="placeholder" />
+  </div>
+  <div *ngIf="type === 'disabled'">
+    <input type="text" [(ngModel)]="value" disabled style="border-color: #B4B4B4;
+    background-color: #f5f4f1d8;" [placeholder]="placeholder" />
+  </div>
+  <div *ngIf="type === 'number' ">
+    <input
+      type="number"
+      [(ngModel)]="value"
+      [placeholder]="placeholder"
+      required
+    />
+   
+  </div>
+</div>
