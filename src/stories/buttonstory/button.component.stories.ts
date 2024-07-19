@@ -1,9 +1,23 @@
 import type { Meta, StoryObj } from '@storybook/angular';
 import { ButtonComponent } from './button.component';
-
 const standartbgOptions = {
-  blue: '#5C4ABD',
-  white: '#FFFFFF',
+  LightPurple: '#5C4ABD',
+  Purple:'#4F3279',
+  DarkPurple:'#472351',
+  White: '#FFFFFF',
+  Green:'#2DCE98',
+  GreenForest:'#22B100',
+  Gray:'#C9C9C9',
+  Orange:'#F89610',
+  Marron:'#7B383C',
+  Black:'#1D1D1D',
+  Navy:'#004C94',
+  Red:'#F4270C',
+  Blue:'#2ECCC2',  
+  LightBlue:'#3BBEDD', 
+ 
+
+
 };
 const borderOptions = {
   border: '2px solid',
@@ -12,22 +26,38 @@ const borderOptions = {
 const labelOptions = {
   white: '#FFFFFF',
   blue: '#5C4ABD',
+  green:'#2DCE98',
+  gray:'#C9C9C9',
 };
 const shadowOptions = {
   shadow: '0 3px 3px rgba(0, 0, 0, 0.16)',
   none: ' ',
 };
 const iconOptions = {
-  none: 'none',
-  star: 'star',
+  None: 'none',
+  Star: 'star',
+  Affecter: 'Affecter',
+  Upload: 'Upload',
+  Télécharger: 'télécharger',
+  AffecterCoursier: 'Affectercoursier',
+  Démarrage: 'Démarrage',
+  Fin: 'Fin',
+  Validation: 'Validation',
+  Supprimer: 'Supprimer',
+  Afficher: 'Afficher',
+  Doctor: 'doctor',
+  Trendingup: 'trending-up',
+  Trendingdown: 'trending-down',
+  DriverLicense: 'driver-license',
+
 };
 const iconColorOptions = {
   white: 'white',
   blue: '#5C4ABD',
 };
-
 const meta: Meta<ButtonComponent> = {
   component: ButtonComponent,
+  title: 'Button/button',
   tags: ['autodocs'],
   argTypes: {
     backgroundColor: {
@@ -58,11 +88,8 @@ const meta: Meta<ButtonComponent> = {
     },
   },
 };
-
 export default meta;
-
 type Story = StoryObj<ButtonComponent>;
-
 export const Primary: Story = {
   name: 'standard button',
   args: {
@@ -85,7 +112,19 @@ export const button_icon: Story = {
     iconColor: 'white', // Set icon color
   },
 };
-
+export const icon: Story = {
+  name: 'button icon',
+  args: {
+    labelColor: '#fff',
+    backgroundColor: '#5C4ABD',
+    border: '0px solid',
+    icon: 'star',
+    text: 'none',
+    iconColor: 'white', 
+    // width: '20px', 
+    
+  },
+};
 export const Secondary: Story = {
   name: 'hover button',
   args: {
@@ -97,7 +136,6 @@ export const Secondary: Story = {
     iconColor: 'white',
   },
 };
-
 export const Focus: Story = {
   name: 'focus button',
   args: {

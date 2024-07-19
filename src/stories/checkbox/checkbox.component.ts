@@ -1,28 +1,35 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-checkbox',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.css']
 })
-export class CheckboxComponent implements OnInit {
-  @Input() checkboxText: string = "J'ai lu et j’accepte";
-  @Input() termsLink: string = "/terms";
-  @Input() privacyLink: string = "/privacy";
-  @Input() showError: boolean = false;
+export class CheckboxComponent {
+  borderColor?: string;
+  state: number = 0; // 0: unchecked, 1: checked, 2: indeterminate
 
-  form: FormGroup;
-
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      acceptTerms: [false, Validators.requiredTrue]
-    });
+  toggleState() {
+    switch (this.state) {
+      case 0:
+        this.state = 1;
+        break;
+      case 1:
+        this.state = 2;
+        break;
+      case 2:
+        this.state = 0;
+        break;
+    }
   }
 
-  ngOnInit(): void {
-    if (this.showError) {
-      this.form.controls['acceptTerms'].markAsTouched();
+  submit() {
+    if (this.state === 0) {
+      this.borderColor = 'red';
+      console.log('Unchecked');
+    } else {
+      this.borderColor = 'green';
+      console.log('Checked');
     }
   }
 }

@@ -1,0 +1,12 @@
+<div class="label">
+    <label>{{ label }}</label>
+    <ng-container [ngSwitch]="type">
+        <div *ngSwitchCase="'select'" class="dropdown">      
+            <select class="dropbtn" [(ngModel)]="value">
+                <option class="dropdown-content" selected disabled>{{placeholder}}</option>
+                <option class="dropdown-content value" *ngFor="let option of options" [value]="option.value"> {{ option.value }}</option>
+            </select>
+        </div>
+    </ng-container>
+  </div>
+  

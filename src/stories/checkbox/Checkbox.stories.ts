@@ -1,52 +1,35 @@
-import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
-import { ReactiveFormsModule } from '@angular/forms';
+import { Meta, StoryFn } from '@storybook/angular';
+import { moduleMetadata } from '@storybook/angular';
 import { CheckboxComponent } from './checkbox.component';
+import { CommonModule } from '@angular/common';
 
-const meta: Meta<CheckboxComponent> = {
-    title: 'Components/Checkbox',
-//   title: 'Checkbox',
+export default {
+  title: 'Checkbox/Checkbox',
   component: CheckboxComponent,
+  tags: ['autodocs'],
   decorators: [
     moduleMetadata({
       declarations: [CheckboxComponent],
-      imports: [ReactiveFormsModule],
+      imports: [CommonModule],
     }),
   ],
-  argTypes: {
-    checkboxText: { control: 'text' },
-    termsLink: { control: 'text' },
-    privacyLink: { control: 'text' },
-    showError: { control: 'boolean' }
-  }
+} as Meta;
+
+const Template: StoryFn<CheckboxComponent> = (args: CheckboxComponent) => ({
+  props: args,
+});
+
+export const Unchecked = Template.bind({});
+Unchecked.args = {
+   state: 0,
 };
 
-export default meta;
-
-type Story = StoryObj<CheckboxComponent>;
-
-export const Default: Story = {
-  args: {
-    checkboxText: "J'ai lu et j’accepte",
-    termsLink: "/terms",
-    privacyLink: "/privacy",
-    showError: false
-  }
+export const Checked = Template.bind({});
+Checked.args = {
+  state: 1,
 };
 
-export const Checked: Story = {
-  args: {
-    checkboxText: "J'ai lu et j’accepte",
-    termsLink: "/terms",
-    privacyLink: "/privacy",
-    showError: false
-  }
-};
-
-export const Error: Story = {
-  args: {
-    checkboxText: "J'ai lu et j’accepte",
-    termsLink: "/terms",
-    privacyLink: "/privacy",
-    showError: true
-  }
+export const Indeterminate = Template.bind({});
+Indeterminate.args = {
+  state: 2,
 };

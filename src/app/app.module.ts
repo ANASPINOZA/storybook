@@ -5,26 +5,21 @@ import { AppComponent } from './app.component';
 import { InputComponent } from './../stories/input.component';
 import { TextAreaComponent } from './../stories/textArea.component';
 import { SideBarComponent } from '../stories/side-bar/side-bar.component';
-import { InputTextComponent } from '../stories/input-text/input-text.component';
 import { ButtonComponent } from '../stories/buttonstory/button.component';
 import { InputsComponent } from 'src/stories/inputs/inputs.component';
 import { FormsModule } from '@angular/forms';
-import { NavigationComponent } from '../stories/navigation/navigation.component';
 import { CheckboxComponent } from '../stories/checkbox/checkbox.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { dropdownComponent } from '../stories/dropdown/dropdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ButtonComponent,
     SideBarComponent,
-   InputTextComponent,
    InputsComponent,
-   NavigationComponent,
    CheckboxComponent,
-   
-                  
+   dropdownComponent,                
   ],
   imports: [
     BrowserModule,
@@ -33,7 +28,6 @@ import { ReactiveFormsModule } from '@angular/forms';
     InputComponent,
     TextAreaComponent,
     ReactiveFormsModule,
-
   ],
   providers: [],
   bootstrap: [AppComponent]

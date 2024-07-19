@@ -1,18 +1,12 @@
 <div class="label">
-    <label>{{ label }}</label>
-    <ng-container [ngSwitch]="type">
-        <input *ngSwitchCase="'text'" class="text" type="text" [placeholder]="placeholder"/>
-        <div *ngSwitchCase="'select'" class="dropdown">
-        <!-- <button class="dropbtn" (click)="toggleDropdown()">Choose option</button>
-        <div class="dropdown-content" [class.show]="isDropdownOpen">
-          <a href="#" *ngFor="let option of options" (click)="selectOption(option)">{{ option }}</a>
-        </div> -->
-        <select class="dropbtn" [(ngModel)]="value" >
-     <option class="dropdown-content" selected disabled>{{placeholder}}</option>
-     <option class="dropdown-content option" *ngFor="let option of options" [value]="option.value">{{ option.value }}</option>
-    
-    </select>
-      </div>
-      
-    </ng-container>
-  </div>  
+  <label>{{ label }}</label>
+  <ng-container *ngIf="type === 'text'">
+      <input  class="text" type="text" [placeholder]="placeholder"/>
+  </ng-container>
+  <ng-container *ngIf="type === 'text'">
+      <input  class="text" type="text" [placeholder]="placeholder"/>
+  </ng-container>
+  <ng-container *ngIf="type === 'number'">
+    <input class="number" type="number" [placeholder]="placeholder"/>
+  </ng-container>
+</div>
